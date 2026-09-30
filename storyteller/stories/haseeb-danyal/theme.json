@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "name": "Haseeb Danyal: gold and ink",
+  "mode": "dark",
+  "colors": {
+    "bg": "#1c190f",
+    "surface": "#292518",
+    "text": "#f6f3e8",
+    "muted": "#d2cbb7",
+    "line": "rgba(255,255,255,0.16)",
+    "accent": "#ffd235"
+  },
+  "clusters": {
+    "direction": "#ffd235",
+    "design-ops": "#84b8dc",
+    "team-growth": "#70c5a9",
+    "product-design": "#c4a0e8",
+    "leadership": "#f39b7e"
+  },
+  "font": {
+    "body": "Arial, 'Segoe UI', system-ui, sans-serif",
+    "display": "'Trebuchet MS', Arial, sans-serif"
+  },
+  "wordmark": { "text": "Haseeb Danyal", "letterSpacing": "0.02em" },
+  "brandSources": [
+    {
+      "what": "accent",
+      "from": "https://haseebdanyal.webflow.io/ · CSS custom property --gold · probed 2026-09-30",
+      "note": "Used the portfolio's exact #ffd235 gold as the signature accent. The site's text is #333333 and its canvas is predominantly white."
+    },
+    {
+      "what": "background and contrast decision",
+      "from": "https://haseebdanyal.webflow.io/ · brand probe and homepage · 2026-09-30",
+      "note": "The portfolio uses a light canvas, but its exact gold does not meet the graph's accent contrast requirement on white. The dark warm ink background keeps the gold recognizable and legible; this is an intentional contrast adaptation, not a claim that the source site is dark."
+    },
+    {
+      "what": "cluster colours",
+      "from": "Chosen from compatible cool and warm tones around the portfolio gold; checked by the StoryTeller build",
+      "note": "The five clusters use distinct restrained hues to separate career direction, operations, team growth, product design, and leadership."
+    },
+    {
+      "what": "fonts",
+      "from": "System font stacks; the portfolio's Atkinson Hyperlegible face is proprietary to its Webflow assets",
+      "note": "Used Arial, Segoe UI, and system fallbacks without a remote font request. No logo is embedded."
+    }
+  ]
+}

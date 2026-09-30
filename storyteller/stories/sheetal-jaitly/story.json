@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "title": "Sheetal Jaitly",
+  "subject": { "name": "Sheetal Jaitly", "kind": "person", "url": "https://www.tribalscale.com/in-focus/sheetal-jaitly" },
+  "tagline": "A map of a sales-trained founder who built, nearly lost and rebuilt a software consultancy, and who now tells enterprises to redesign themselves around AI rather than bolt it on.",
+  "root": "sheetal",
+  "credit": "An independent StoryTellr study by Nikhil Khedkar.",
+  "disclaimer": "Built only from Sheetal Jaitly's publicly published professional record: his writing, interviews, press coverage and company pages. Personal and family details in those sources are deliberately left out. Not affiliated with or endorsed by Sheetal Jaitly or TribalScale.",
+  "generated": { "date": "2026-09-30" },
+  "clusters": [
+    { "id": "path", "label": "Path into tech" },
+    { "id": "build", "label": "Building TribalScale" },
+    { "id": "reset", "label": "Crisis and reset" },
+    { "id": "values", "label": "How he says he leads" },
+    { "id": "ideas", "label": "The AI-native argument" },
+    { "id": "voice", "label": "Roles and voice" }
+  ],
+  "sources": [
+    { "id": "tsfocus", "title": "Sheetal Jaitly (In Focus)", "url": "https://www.tribalscale.com/in-focus/sheetal-jaitly", "accessed": "2026-09-30", "publisher": "TribalScale" },
+    { "id": "dontadd", "title": "Don't Add AI. Redesign the Company.", "url": "https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company", "accessed": "2026-09-30", "publisher": "TribalScale (by Sheetal Jaitly)" },
+    { "id": "ainative", "title": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company", "url": "https://www.tribalscale.com/insights/ai-native-enterprise-12-things", "accessed": "2026-09-30", "publisher": "TribalScale (by Sheetal Jaitly)" },
+    { "id": "seats", "title": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done", "url": "https://www.tribalscale.com/insights/stop-buying-ai-seats", "accessed": "2026-09-30", "publisher": "TribalScale (by Sheetal Jaitly)" },
+    { "id": "deploygap", "title": "The Deployment Gap, Now in the Agentic Era (intro only)", "url": "https://www.tribalscale.com/insights/the-deployment-gap-now-in-the-agentic-era", "accessed": "2026-09-30", "publisher": "TribalScale (by Sheetal Jaitly)" },
+    { "id": "insgap", "title": "The Insurance AI Gap, Now an Agent-Era Catch-Up Race (intro only)", "url": "https://www.tribalscale.com/insights/the-insurance-ai-gap-now-an-agent-era-catch-up-race", "accessed": "2026-09-30", "publisher": "TribalScale (by Sheetal Jaitly)" },
+    { "id": "swagger", "title": "SWAGGERMAGAZINE: SELFMADE, Sheetal Jaitly (undated)", "url": "https://www.swaggermagazine.com/home/selfmade/SheetalJaitly/", "accessed": "2026-09-30", "publisher": "Swagger Publications" },
+    { "id": "medium20", "title": "TribalScale 2.0: Restructuring & Resilience", "url": "https://medium.com/tribalscale/tribalscale-2-0-restructuring-resilience-66b957484e87", "accessed": "2026-09-30", "publisher": "TribalScale on Medium (Feb 25, 2021)" },
+    { "id": "takeoverstory", "title": "The TakeOver Story", "url": "https://medium.com/tribalscale/the-takeover-story-196ba3cc2998", "accessed": "2026-09-30", "publisher": "TribalScale on Medium (Sep 26, 2017)" },
+    { "id": "tribe2", "title": "Tribe Turns 2!", "url": "https://medium.com/tribalscale/tribe-turns-2-8109fe06a7c6", "accessed": "2026-09-30", "publisher": "TribalScale on Medium (Nov 2, 2017)" },
+    { "id": "bkinsolv", "title": "With $5.8 million owed to creditors, TribalScale files for insolvency in bid to restructure company", "url": "https://betakit.com/with-5-8-million-owed-to-creditors-tribalscale-files-for-insolvency-in-bid-to-restructure-company/", "accessed": "2026-09-30", "publisher": "BetaKit (Jun 16, 2020)" },
+    { "id": "bwexit", "title": "TribalScale Exits Creditor Protection", "url": "https://www.businesswire.com/news/home/20210222005241/en/TribalScale-Exits-Creditor-Protection", "accessed": "2026-09-30", "publisher": "Business Wire (Feb 22, 2021)" },
+    { "id": "bkvs", "title": "TribalScale launches $100 million Venture Studios program to co-create AI and blockchain startups", "url": "https://betakit.com/tribalscale-launches-100-million-venture-studios-program-to-co-create-ai-and-blockchain-startups/", "accessed": "2026-09-30", "publisher": "BetaKit (Feb 7, 2018)" },
+    { "id": "globexl", "title": "California firm buys Toronto mobile developer Xtreme Labs", "url": "https://www.theglobeandmail.com/technology/california-firm-buys-toronto-mobile-developer-xtreme-labs/article14664751/", "accessed": "2026-09-30", "publisher": "The Globe and Mail (Oct 2, 2013)" },
+    { "id": "who", "title": "Who We Are", "url": "https://www.tribalscale.com/company/who-we-are", "accessed": "2026-09-30", "publisher": "TribalScale" },
+    { "id": "how", "title": "How We Work", "url": "https://www.tribalscale.com/company/how-we-work", "accessed": "2026-09-30", "publisher": "TribalScale" },
+    { "id": "vsite", "title": "Tribal Venture Studio", "url": "https://www.tribalscale.com/company/venture-studio", "accessed": "2026-09-30", "publisher": "TribalScale" },
+    { "id": "finpr", "title": "FinScale Magazine Launches to Guide the Future of Financial Services and Insurance", "url": "https://www.tribalscale.com/press-release/tribalscale-launches-finscale-magazine-issue-01", "accessed": "2026-09-30", "publisher": "TribalScale (May 5, 2025)" },
+    { "id": "top10", "title": "TribalScale CEO Sheetal Jaitly Named One of the Top 10 Leading Men in 2025 in MSN", "url": "https://www.tribalscale.com/press-release/tribalscale-ceo-sheetal-jaitly-named-one-of-the-top-10-leading-men-in-2025", "accessed": "2026-09-30", "publisher": "TribalScale (Dec 3, 2025)" },
+    { "id": "fnb", "title": "Always Be Learning with Sheetal Jaitly from TribalScale (First Name Basis, Ep. 64)", "url": "https://www.tribalscale.com/podcast/always-be-learning", "accessed": "2026-09-30", "publisher": "TribalScale" },
+    { "id": "hardpart", "title": "Sheetal Jaitly from TribalScale (The Hard Part with Evan McCann)", "url": "https://podcasts.apple.com/nz/podcast/sheetal-jaitly-from-tribalscale/id1634787423?i=1000703046792", "accessed": "2026-09-30", "publisher": "Apple Podcasts (Apr 10, 2025)" },
+    { "id": "ms", "title": "Innovating the Foundations of Industry 4.0 with Sheetal Jaitly", "url": "https://marketscale.com/industries/podcast-network/wavelengths/innovating-the-foundations-of-industry-4-0-with-sheetal-jaitly/", "accessed": "2026-09-30", "publisher": "MarketScale (Nov 3, 2022)" },
+    { "id": "oc", "title": "Sheetal Jaitly, Founder and CEO of TribalScale (Open Concept)", "url": "https://www.listennotes.com/podcasts/open-concept/sheetal-jaitly-founder-and-IBepTvmbjaD/", "accessed": "2026-09-30", "publisher": "Listen Notes" },
+    { "id": "tblp", "title": "TBLP044 | Sheetal Jaitly: Start With An Entrepreneurial Mindset", "url": "https://edwin100x.substack.com/p/tblp044-sheetal-jaitly-start-with-dd7", "accessed": "2026-09-30", "publisher": "The Business Leadership Podcast (Jan 23, 2018)" }
+  ],
+  "nodes": [
+    {
+      "id": "sheetal", "title": "Sheetal Jaitly", "type": "person", "cluster": "build", "featured": true,
+      "summary": "Founder and CEO of TribalScale, a Toronto-based software and AI consultancy, and the author of a run of 2026 essays on becoming AI-native.",
+      "evidence": "Founder and Chief Executive Officer @ TribalScale",
+      "sources": ["tsfocus"]
+    },
+    {
+      "id": "keating", "title": "Shipping desk at Keating", "type": "job", "cluster": "path",
+      "summary": "His first tech job, per a magazine profile, was in shipping and receiving at Keating Technologies, where he watched a company scale fast.",
+      "details": "The profile is undated, and the period is not given. Nothing earlier in his career could be confirmed from pages I read.",
+      "evidence": "I saw what rapid growth from 30 to 300 people looked like.",
+      "sources": ["swagger"]
+    },
+    {
+      "id": "ricoh", "title": "Copiers, then analytics sales", "type": "job", "cluster": "path",
+      "summary": "He learned to sell at Ricoh and was then recruited by a customer to sell predictive analytics, a product clients did not yet know they wanted.",
+      "details": "The profile places this in the mid 2000s and says he was a director-level employee at 27 before joining Xtreme Labs. An Open Concept blurb separately mentions his time as a door-to-door photocopier salesman.",
+      "evidence": "landed at Ricoh as a copy machine salesman",
+      "sources": ["swagger", "oc"]
+    },
+    {
+      "id": "xtreme", "title": "Xtreme Labs", "type": "company", "cluster": "path", "featured": true,
+      "summary": "A Toronto mobile-app shop where he joined friends at its launch and, per the profile, helped grow revenue to $37.5m in five years.",
+      "details": "The Globe and Mail describes Xtreme Labs as founded in 2007 by Amar Varma and Sundeep Madra with 350 staff in 2013; it does not mention Jaitly. His role and the $37.5m figure rest on the magazine profile alone. A 2025 podcast lists 'Xtreme Labs Experience and Mafia' among its topics.",
+      "evidence": "helped grow the business to $37.5m in revenue in five years",
+      "when": "2007 founding; acquired 2013",
+      "sources": ["swagger", "globexl", "hardpart"]
+    },
+    {
+      "id": "pivotal", "title": "Pivotal buys Xtreme Labs", "type": "event", "cluster": "path",
+      "summary": "In October 2013 Pivotal bought Xtreme Labs; the profile says the company later passed to Dell, and that he struggled to find his place in the larger organisation.",
+      "details": "The Globe reports the price was undisclosed and cites All Things Digital for $65 million (US). The Dell step is stated only in the profile.",
+      "evidence": "Xtreme Labs was acquired by Pivotal, and then by Dell",
+      "when": "Oct 2, 2013",
+      "sources": ["globexl", "swagger"]
+    },
+    {
+      "id": "founding", "title": "TribalScale is founded", "type": "event", "cluster": "build", "featured": true,
+      "summary": "He started the company in November 2015, saying he saw a gap in how organisations deliver digital products in an Agile way.",
+      "details": "In the same profile he says that in a big organisation he felt like one person at a desk in a big machine, which he gives as a reason for leaving.",
+      "evidence": "I first started TS because I saw there was a big gap in the market.",
+      "when": "November 2015",
+      "sources": ["medium20", "swagger"]
+    },
+    {
+      "id": "first-client", "title": "The $1.2m first client", "type": "episode", "cluster": "build",
+      "summary": "In his telling, a media-company buyer he had advised at Pivotal cut his pitch short and signed a $1.2m contract because he had once talked that buyer out of a bigger purchase.",
+      "details": "The client is unnamed and the account is single-sourced to the magazine profile, so treat the figure as his account.",
+      "evidence": "you rejected the opportunity for a huge commission just to do what was right by me.",
+      "sources": ["swagger"]
+    },
+    {
+      "id": "growth", "title": "0 to 100 in two years", "type": "milestone", "cluster": "build",
+      "summary": "By the second anniversary TribalScale reported 100+ employees and offices in Toronto, California and Dubai, the first stretch of fast growth.",
+      "details": "TribalScale's own count at two years: over 125 members globally; a Dubai team of 14; new Toronto HQ at 200 Wellington St W. These are company statements.",
+      "evidence": "In less than two years, we went from 0 to 100 employees.",
+      "when": "Nov 2017",
+      "sources": ["tribe2"]
+    },
+    {
+      "id": "takeover", "title": "TakeOver conference", "type": "event", "cluster": "build", "featured": true,
+      "summary": "A conference he started because he wanted a less cookie-cutter tech event in Toronto; it grew from 800 attendees in 2017 to a sold-out 1,700 in 2018.",
+      "details": "TribalScale says 83 speakers in 2017 (52% women) and that Prime Minister Justin Trudeau opened the 2018 event, which raised money for SickKids. BetaKit later reports a 2019 edition was cancelled, leaving a hotel claim in the insolvency filings.",
+      "evidence": "We did our first TakeOver in 2017 with over 800 attendees.",
+      "when": "Oct 2017; 2018",
+      "sources": ["medium20", "takeoverstory", "tribe2", "bkinsolv"]
+    },
+    {
+      "id": "venture-studios", "title": "Venture Studios", "type": "initiative", "cluster": "build",
+      "summary": "A startup-creation arm announced in 2018 with a $100 million target, offering $500,000 in cash and support to accepted startups in blockchain, AI and voice.",
+      "details": "Launched with chief innovation officer Roger Chabra; Kirstine Stewart joined as president and chief revenue officer around the announcement (BetaKit). TribalScale's site today still runs a Venture Studio and says 'Most venture studios advise. We build.'",
+      "evidence": "create startups in the blockchain, AI, and voice space over the next five years",
+      "when": "Announced Feb 7, 2018",
+      "sources": ["bkvs", "tribe2", "vsite"]
+    },
+    {
+      "id": "voice-ai", "title": "Voice and Alexa skills", "type": "capability", "cluster": "build",
+      "summary": "An early bet on voice interfaces: TribalScale said in 2017 that Amazon and Google recognised it as an expert builder for their voice platforms.",
+      "details": "This is TribalScale's own claim; I found no Amazon or Google statement. The 2017 TakeOver programme also listed Voice among its topics.",
+      "evidence": "Being recognized by Amazon and Google as expert Alexa skill and Action builders for their voice platforms",
+      "when": "2017",
+      "sources": ["tribe2", "takeoverstory"]
+    },
+    {
+      "id": "client-loss", "title": "A large client leaves (2019)", "type": "event", "cluster": "reset", "featured": true,
+      "summary": "He dates the trouble to a large client restructuring and ending its engagement, leaving an oversized team; revenue concentrated in two clients.",
+      "details": "BetaKit adds that, per Jaitly, a second client also hired away staff, and that debts began to build in early 2019. These are his explanations; the clients are not named.",
+      "evidence": "We had a large client restructure their company and exit our engagement and we struggled to maintain our large staff capacity.",
+      "when": "2019",
+      "sources": ["medium20", "bkinsolv"]
+    },
+    {
+      "id": "noi", "title": "Insolvency filing, May 2020", "type": "event", "cluster": "reset", "featured": true,
+      "summary": "Independent trade press reported TribalScale filing a notice of intention under Canada's Bankruptcy and Insolvency Act, a formal route to restructure rather than go bankrupt.",
+      "details": "BetaKit, working from public filings, says the filing was May 19 and that the company's lawyer described a landlord's lease-default claim as the trigger. Jaitly told BetaKit the filing belonged to a restructuring plan begun over a year earlier. His own 2021 essay describes the landlord disagreement as what brought the company into CCAA protection.",
+      "evidence": "TribalScale owes more than $5.8 million to 45 creditors",
+      "when": "May 19, 2020",
+      "sources": ["bkinsolv", "medium20"]
+    },
+    {
+      "id": "pandemic", "title": "Pandemic shock, 2020", "type": "event", "cluster": "reset",
+      "summary": "The profile says the company lost most of its customers in early 2020 and he chose to keep serving clients at no charge; the Toronto office closed on March 16.",
+      "details": "The 80% figure and the free reinvestment are the magazine's wording of what he said, not independently checked. BetaKit separately says the pandemic accelerated the filing timeline and ended a possible sale of the company (his claim).",
+      "evidence": "The first months of 2020 saw TribalScale lose 80 percent of their customers.",
+      "when": "2020",
+      "sources": ["swagger", "medium20", "bkinsolv"]
+    },
+    {
+      "id": "exit", "title": "Out of creditor protection", "type": "event", "cluster": "reset", "featured": true,
+      "summary": "The company says it exited its restructuring proceeding under Canada's CCAA on January 27, 2021 and describes itself as leaner and healthier.",
+      "details": "The press release and his essay are the company's account; the terms of the restructuring were not read. The release also says the company 'closed over $81 million of funding in five years' (company claim, unclear what is counted).",
+      "evidence": "TribalScale emerged from creditor protection on January 27, 2021.",
+      "when": "Jan 27, 2021",
+      "sources": ["bwexit", "medium20"]
+    },
+    {
+      "id": "ts2", "title": "The 'TribalScale 2.0' essay", "type": "text", "cluster": "reset",
+      "summary": "His own account of the reset: what went wrong, how the team shut the office, and why he calls the rebuilt company more sustainable.",
+      "details": "Written by Jaitly as CEO and published on the company's Medium page; it frames the episode around resilience and ends with a pitch to clients.",
+      "evidence": "Clawing our way out of creditor protection was the greatest and most difficult feat our company has ever faced.",
+      "when": "Feb 25, 2021",
+      "sources": ["medium20"]
+    },
+    {
+      "id": "accounts", "title": "Three sets of growth figures", "type": "open-question", "cluster": "reset",
+      "summary": "Sources give different numbers for the boom years, and none is independently verified, so this map does not pick one.",
+      "details": "Profile: 'just over $50m in revenue', 250+ staff, seven offices in three years. BetaKit quoting Jaitly: $60 million over three years, $30 million in 2018. Company press release: 'over $81 million of funding in five years'. Headcount also appears as 125+ (Nov 2017) and about 60 (June 2020).",
+      "evidence": "In three years, TribalScale earned just over $50m in revenue, grew the staff to 250+",
+      "sources": ["swagger", "bkinsolv", "bwexit", "tribe2"]
+    },
+    {
+      "id": "fail-fast", "title": "Fail Fast", "type": "value", "cluster": "values",
+      "summary": "A motto he hands out on stickers; he frames setbacks as something to learn from quickly, and used it again to describe the 2020 recovery.",
+      "evidence": "Sheetal Jaitly gives his employees stickers that say “Fail Fast”.",
+      "sources": ["swagger", "medium20"]
+    },
+    {
+      "id": "do-right", "title": "Do right by the client", "type": "principle", "cluster": "values", "featured": true,
+      "summary": "A recurring claim in his own accounts: advising clients against a bigger sale, and later serving them free when revenue collapsed, pays back over time.",
+      "details": "Both episodes are told by Jaitly via the magazine profile; neither was independently confirmed.",
+      "evidence": "doing what’s right comes back to you exponentially when you develop the right bonds",
+      "sources": ["swagger"]
+    },
+    {
+      "id": "values-2021", "title": "Core values after the reset", "type": "value", "cluster": "values",
+      "summary": "After exiting creditor protection he set out the company's values as Resilience, Empowerment, and Challenge & Collaborate.",
+      "evidence": "Our next step was to define our Core Values.",
+      "when": "2021",
+      "sources": ["medium20"]
+    },
+    {
+      "id": "transp-dropped", "title": "'Transparency' dropped", "type": "decision", "cluster": "values",
+      "summary": "In the profile he says he removed transparency from the core values because people used it as cover for attacks, replacing it with resiliency.",
+      "details": "He adds the company is 'still transparent'; he objected to the word as a value, not to openness. The profile is undated.",
+      "evidence": "The term was used to attack people.",
+      "sources": ["swagger"]
+    },
+    {
+      "id": "transp-today", "title": "Transparency on the site today", "type": "observation", "cluster": "values",
+      "summary": "The current Who We Are page lists Transparency again, beside Empowerment and Meritocracy; I found no source explaining the change.",
+      "details": "The two sources are undated or differently dated, so this records a difference in wording, not a reversal or its cause. The page footer reads 2025.",
+      "evidence": "Built on Empowerment, Meritocracy, Transparency",
+      "sources": ["who"]
+    },
+    {
+      "id": "strawberry", "title": "Friendly, not friends", "type": "principle", "cluster": "values",
+      "summary": "Citing a peer's 'rotten strawberry' idea, he says he now keeps a professional distance from staff and sees removing bad apples as important, having earlier tried to work through problems instead.",
+      "evidence": "I have to be friendly – not friends – with my employees.",
+      "sources": ["swagger"]
+    },
+    {
+      "id": "dont-add-ai", "title": "Redesign, don't add AI", "type": "essay", "cluster": "ideas", "featured": true,
+      "summary": "His headline argument: companies are buying copilots and running pilots but leaving workflows intact, and should instead redesign workflow, jobs, teams, product, stack, governance and measurement.",
+      "evidence": "Most companies are adding 2026 AI to 2016 workflows.",
+      "when": "2026 (undated on page)",
+      "sources": ["dontadd"]
+    },
+    {
+      "id": "ai-native", "title": "The AI-native enterprise", "type": "essay", "cluster": "ideas", "featured": true,
+      "summary": "A twelve-point checklist that moves from copilots to agents, treats context as infrastructure and calls AI-native an operating-model change rather than a technology one.",
+      "evidence": "Copilots help people perform tasks. Agents perform work.",
+      "when": "2026 (undated on page)",
+      "sources": ["ainative"]
+    },
+    {
+      "id": "seats", "title": "Stop buying AI seats", "type": "essay", "cluster": "ideas",
+      "summary": "He argues per-employee AI licences rarely change how a business operates, and that AI should be built into the work so it becomes invisible.",
+      "evidence": "Buying everyone an AI seat is not AI transformation.",
+      "when": "2026 (undated on page)",
+      "sources": ["seats"]
+    },
+    {
+      "id": "build-buy", "title": "Build vs buy, reopened", "type": "claim", "cluster": "ideas",
+      "summary": "Because AI lowers the cost of custom software, he says enterprises should weigh building the workflows that differentiate them instead of defaulting to SaaS.",
+      "details": "He still says to buy standardised commodity capabilities; the essay includes a buy/build comparison table.",
+      "evidence": "This is why I am increasingly bullish on building custom software again.",
+      "sources": ["seats"]
+    },
+    {
+      "id": "governed", "title": "Governed autonomy", "type": "claim", "cluster": "ideas",
+      "summary": "Agents that act inside enterprise systems need identity, permissions, audit and approval designed in from the start, not added after a pilot works.",
+      "evidence": "Governance therefore has to move into the architecture.",
+      "sources": ["dontadd", "ainative"]
+    },
+    {
+      "id": "leverage", "title": "Measure leverage, not activity", "type": "claim", "cluster": "ideas",
+      "summary": "If agents do the repetitive work, he says the useful question about an employee changes from what they did to what they built that keeps producing results.",
+      "evidence": "Companies should begin measuring leverage—not activity.",
+      "sources": ["ainative", "dontadd"]
+    },
+    {
+      "id": "own-case", "title": "Be your own AI case study", "type": "claim", "cluster": "ideas",
+      "summary": "Point twelve of his list: a firm that sells AI advice should run its own operations on AI first. TribalScale's site lists an internal enterprise agentic platform among its cases.",
+      "details": "The How We Work page lists a case titled 'Building an Enterprise Agentic Platform for Delivery, Operations, and Personal Productivity'; I read only the title, not the case.",
+      "evidence": "Use AI internally. Aggressively.",
+      "sources": ["ainative", "how"]
+    },
+    {
+      "id": "finscale", "title": "FinScale Magazine", "type": "publication", "cluster": "ideas",
+      "summary": "A free digital magazine for financial-services and insurance leaders, launched in May 2025, where several of his later pieces first appeared.",
+      "evidence": "AI, data, and digital transformation are no longer future-focused buzzwords",
+      "when": "May 5, 2025",
+      "sources": ["finpr", "deploygap"]
+    },
+    {
+      "id": "deploy-gap", "title": "The deployment gap", "type": "essay", "cluster": "ideas",
+      "summary": "He argues the coming failures in financial-services AI will be agent projects that reach production and then fail silently, which old monitoring does not catch.",
+      "details": "Only the introduction is public; the rest is gated behind a FinScale download. It cites a VentureBeat analysis from April 2026 that I did not read.",
+      "evidence": "is the service behaving correctly?",
+      "when": "2026",
+      "sources": ["deploygap"]
+    },
+    {
+      "id": "ins-gap", "title": "The insurance AI gap", "type": "essay", "cluster": "ideas",
+      "summary": "An essay opening with an unnamed insurer executive's complaint that most of her firm's AI initiatives are not in production, then arguing insurance lags banking.",
+      "details": "The statistics (McKinsey 2024, Deloitte, Accenture) are quoted by him from third parties and were not checked. Only the introduction is public.",
+      "evidence": "fewer than 10 percent of P&C and life insurers have deployed AI at scale",
+      "when": "2026",
+      "sources": ["insgap"]
+    },
+    {
+      "id": "boards", "title": "Feed Ontario and SickKids", "type": "role", "cluster": "voice",
+      "summary": "His company profile lists a board seat at Feed Ontario and membership of the Tech4SickKids Council.",
+      "details": "Self-described and undated; I found no independent listing of either role or their dates. Separately, TakeOver 2018 raised money for SickKids.",
+      "evidence": "Sheetal is a board member of Feed Ontario, a member of Tech4SickKids Council",
+      "sources": ["tsfocus", "medium20"]
+    },
+    {
+      "id": "mentor", "title": "DMZ and Techstars", "type": "role", "cluster": "voice",
+      "summary": "The same profile lists him as a DMZ member and a Techstars mentor, tying him to Toronto's startup support ecosystem.",
+      "details": "Self-described and undated; not independently confirmed.",
+      "evidence": "DMZ, and a TechStars Mentor",
+      "sources": ["tsfocus"]
+    },
+    {
+      "id": "hbs", "title": "Harvard OPM program", "type": "education", "cluster": "voice",
+      "summary": "A Harvard Business School programme for owner-presidents, which he discusses on the company podcast and which a magazine profile says he was enrolled in.",
+      "details": "Enrolment dates and completion are not stated in the sources I read.",
+      "evidence": "the Owner/President Management Program at Harvard Business School",
+      "sources": ["fnb", "swagger"]
+    },
+    {
+      "id": "fnb", "title": "First Name Basis podcast", "type": "podcast", "cluster": "voice",
+      "summary": "TribalScale's own interview podcast; in episode 64 a marketing coordinator interviews him about learning and working in teams.",
+      "evidence": "Episode 64, 27 min",
+      "sources": ["fnb"]
+    },
+    {
+      "id": "interviews", "title": "Outside interviews", "type": "press", "cluster": "voice",
+      "summary": "Third-party podcasts and shows from 2018 to 2025, on innovation, digital transformation and building a services business.",
+      "details": "Read as show notes only: The Business Leadership Podcast (Jan 2018), Open Concept (undated), MarketScale on Industry 4.0 (Nov 2022), The Hard Part with Evan McCann (Apr 2025).",
+      "evidence": "The things that we thought were impossible are now being shown to us that they can be possible.",
+      "when": "2018-2025",
+      "sources": ["tblp", "oc", "ms", "hardpart"]
+    },
+    {
+      "id": "top10", "title": "'Top 10 Leading Men' (MSN)", "type": "recognition", "cluster": "voice",
+      "summary": "TribalScale's press release says an MSN global profile named him one of ten leading men of 2025; I could not find the MSN piece itself.",
+      "details": "Treat as a company claim; the feature may be sponsored or syndicated.",
+      "evidence": "named one of the Top 10 Leading Men in 2025 in MSN",
+      "when": "Oct-Dec 2025",
+      "sources": ["top10"]
+    }
+  ],
+  "edges": [
+    { "source": "sheetal", "target": "keating", "label": "started in tech at", "kind": "explicit", "sources": ["swagger"] },
+    { "source": "keating", "target": "ricoh", "label": "then", "kind": "explicit", "sources": ["swagger"] },
+    { "source": "ricoh", "target": "xtreme", "label": "then joined", "kind": "explicit", "sources": ["swagger"] },
+    { "source": "xtreme", "target": "pivotal", "label": "acquired by", "kind": "explicit", "sources": ["globexl", "swagger"] },
+    { "source": "pivotal", "target": "founding", "label": "preceded", "kind": "explicit", "sources": ["swagger"] },
+    { "source": "sheetal", "target": "founding", "label": "founded", "kind": "explicit", "sources": ["swagger", "medium20"] },
+    { "source": "founding", "target": "first-client", "label": "won early", "kind": "explicit", "sources": ["swagger"] },
+    { "source": "first-client", "target": "do-right", "label": "told as proof of", "kind": "explicit", "sources": ["swagger"] },
+    { "source": "ricoh", "target": "do-right", "label": "early lesson toward", "kind": "inferred" },
+    { "source": "founding", "target": "growth", "label": "grew into", "kind": "explicit", "sources": ["tribe2"] },
+    { "source": "founding", "target": "voice-ai", "label": "built a reputation in", "kind": "explicit", "sources": ["tribe2"] },
+    { "source": "growth", "target": "takeover", "label": "peaked with", "kind": "explicit", "sources": ["medium20"] },
+    { "source": "takeover", "target": "venture-studios", "label": "ran alongside", "kind": "inferred" },
+    { "source": "venture-studios", "target": "voice-ai", "label": "targeted", "kind": "explicit", "sources": ["bkvs"] },
+    { "source": "takeover", "target": "boards", "label": "raised money for the same cause as", "kind": "inferred" },
+    { "source": "growth", "target": "client-loss", "label": "was strained by", "kind": "explicit", "sources": ["medium20", "bkinsolv"] },
+    { "source": "client-loss", "target": "noi", "label": "led to", "kind": "explicit", "sources": ["medium20", "bkinsolv"] },
+    { "source": "noi", "target": "pandemic", "label": "was sped up by", "kind": "explicit", "sources": ["bkinsolv"] },
+    { "source": "noi", "target": "accounts", "label": "surfaced figures for", "kind": "explicit", "sources": ["bkinsolv"] },
+    { "source": "accounts", "target": "growth", "label": "puts numbers on", "kind": "inferred" },
+    { "source": "pandemic", "target": "exit", "label": "then", "kind": "explicit", "sources": ["medium20", "bwexit"] },
+    { "source": "noi", "target": "exit", "label": "ended with", "kind": "explicit", "sources": ["bwexit"] },
+    { "source": "pandemic", "target": "do-right", "label": "put to the test", "kind": "explicit", "sources": ["swagger"] },
+    { "source": "exit", "target": "ts2", "label": "was followed by", "kind": "explicit", "sources": ["medium20"] },
+    { "source": "ts2", "target": "values-2021", "label": "set out", "kind": "explicit", "sources": ["medium20"] },
+    { "source": "ts2", "target": "fail-fast", "label": "echoes", "kind": "explicit", "sources": ["medium20"] },
+    { "source": "transp-dropped", "target": "values-2021", "label": "replaced by resilience in", "kind": "explicit", "sources": ["swagger", "medium20"] },
+    { "source": "transp-dropped", "target": "transp-today", "label": "contrasts with", "kind": "inferred" },
+    { "source": "strawberry", "target": "values-2021", "label": "sits beside", "kind": "inferred" },
+    { "source": "sheetal", "target": "dont-add-ai", "label": "wrote", "kind": "explicit", "sources": ["dontadd"] },
+    { "source": "sheetal", "target": "ai-native", "label": "wrote", "kind": "explicit", "sources": ["ainative"] },
+    { "source": "sheetal", "target": "seats", "label": "wrote", "kind": "explicit", "sources": ["seats"] },
+    { "source": "dont-add-ai", "target": "ai-native", "label": "is followed by", "kind": "explicit", "sources": ["ainative"] },
+    { "source": "ai-native", "target": "seats", "label": "is followed by", "kind": "explicit", "sources": ["seats"] },
+    { "source": "seats", "target": "build-buy", "label": "argues for", "kind": "explicit", "sources": ["seats"] },
+    { "source": "dont-add-ai", "target": "governed", "label": "calls for", "kind": "explicit", "sources": ["dontadd"] },
+    { "source": "ai-native", "target": "leverage", "label": "calls for", "kind": "explicit", "sources": ["ainative"] },
+    { "source": "ai-native", "target": "own-case", "label": "ends by demanding", "kind": "explicit", "sources": ["ainative"] },
+    { "source": "own-case", "target": "ts2", "label": "echoes the company's own rebuild in", "kind": "inferred" },
+    { "source": "ts2", "target": "dont-add-ai", "label": "foreshadows", "kind": "inferred" },
+    { "source": "finscale", "target": "deploy-gap", "label": "first published", "kind": "explicit", "sources": ["deploygap"] },
+    { "source": "finscale", "target": "ins-gap", "label": "first published", "kind": "explicit", "sources": ["insgap"] },
+    { "source": "governed", "target": "deploy-gap", "label": "is tested in", "kind": "inferred" },
+    { "source": "ins-gap", "target": "dont-add-ai", "label": "gives a case of the pilot trap in", "kind": "inferred" },
+    { "source": "sheetal", "target": "boards", "label": "serves on", "kind": "explicit", "sources": ["tsfocus"] },
+    { "source": "sheetal", "target": "mentor", "label": "mentors through", "kind": "explicit", "sources": ["tsfocus"] },
+    { "source": "sheetal", "target": "hbs", "label": "studies at", "kind": "explicit", "sources": ["swagger", "fnb"] },
+    { "source": "fnb", "target": "hbs", "label": "discusses", "kind": "explicit", "sources": ["fnb"] },
+    { "source": "sheetal", "target": "fnb", "label": "guest on", "kind": "explicit", "sources": ["fnb"] },
+    { "source": "sheetal", "target": "interviews", "label": "speaks in", "kind": "explicit", "sources": ["tblp", "ms", "hardpart", "oc"] },
+    { "source": "interviews", "target": "xtreme", "label": "revisit", "kind": "explicit", "sources": ["hardpart"] },
+    { "source": "sheetal", "target": "top10", "label": "named in", "kind": "explicit", "sources": ["top10"] },
+    { "source": "sheetal", "target": "finscale", "label": "is quoted launching", "kind": "explicit", "sources": ["finpr"] }
+  ],
+  "stories": [
+    {
+      "id": "sales-to-founder",
+      "title": "From the sales floor to founder",
+      "summary": "A career that moved from shipping desks to copiers to analytics to a mobile studio, ending in his own company. The profile ties the start to one principle he repeats: advise the client even when it costs you a sale.",
+      "steps": ["keating", "ricoh", "xtreme", "pivotal", "founding", "first-client", "do-right"]
+    },
+    {
+      "id": "boom-and-reset",
+      "title": "Boom, filing, reset",
+      "summary": "Fast growth, a big-client loss, an insolvency filing made worse by the pandemic, and an exit in January 2021. Sources disagree on the boom-year numbers, so the sequence is firmer than the figures.",
+      "steps": ["founding", "growth", "client-loss", "noi", "pandemic", "exit", "ts2", "values-2021"]
+    },
+    {
+      "id": "values-moving",
+      "title": "How the values moved",
+      "summary": "A motto, a rebuild, a value dropped and a value that seems to have returned. Only the wording is documented; the reasons behind the later wording are not.",
+      "steps": ["fail-fast", "ts2", "values-2021", "transp-dropped", "transp-today"]
+    },
+    {
+      "id": "rebuilt-then-redesign",
+      "title": "From rebuilding a company to redesigning one",
+      "summary": "The editorial thread of this map: after rebuilding his own firm he argues others should redesign theirs. The middle links are dashed because no source connects them; it is a reading, not a finding.",
+      "steps": ["ts2", "dont-add-ai", "ai-native", "own-case", "seats", "build-buy"]
+    },
+    {
+      "id": "agent-era-risks",
+      "title": "Agents in regulated industries",
+      "summary": "His 2026 financial-services pieces extend the redesign argument into governance: autonomy is useful only if actions stay visible and bounded, and failures may be silent.",
+      "steps": ["dont-add-ai", "governed", "deploy-gap", "finscale", "ins-gap"]
+    }
+  ]
+}
