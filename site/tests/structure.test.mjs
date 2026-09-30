@@ -6,6 +6,7 @@ const siteRoot = new URL("../", import.meta.url);
 const html = await readFile(new URL("index.html", siteRoot), "utf8");
 const css = await readFile(new URL("styles.css", siteRoot), "utf8");
 const manifest = await readFile(new URL("content.js", siteRoot), "utf8");
+const app = await readFile(new URL("app.js", siteRoot), "utf8");
 
 test("the page exposes the six editorial regions", () => {
   for (const id of ["intro", "boardy", "method", "supporting-work", "evidence", "close"]) {
@@ -22,28 +23,31 @@ test("the page has one primary heading and the intended project story", () => {
 });
 
 test("the semantic shell includes evidence and interaction hooks", () => {
-  for (const hook of ["evidence-rail", "case-study", "status-mark", "source-link", "disclosure", "reveal"]) {
+  for (const hook of ["evidence-rail", "disclosure", "reveal"]) {
     assert.match(html, new RegExp(`class=["'][^"']*\\b${hook}\\b`), `missing .${hook}`);
+  }
+  for (const hook of ["case-study", "status-mark", "source-link"]) {
+    assert.match(app, new RegExp(`class=["'][^"']*\\b${hook}\\b`), `missing .${hook}`);
   }
   assert.match(css, /prefers-reduced-motion/i);
 });
 
 test("the visible project rows have a manifest-backed render mount", () => {
   assert.match(html, /data-project-mount/);
-  assert.match(html, /import ["']\.\/content\.js["']/);
-  assert.match(html, /globalThis\.TribalScaleContent/);
-  assert.match(html, /pageContent/);
-  assert.match(html, /projectEvidence/);
   assert.match(html, /data-boardy-status/);
   assert.match(html, /data-boardy-boundaries/);
   assert.match(html, /data-boardy-email-note/);
   assert.match(html, /data-boardy-links/);
-  assert.match(html, /const boardy = pageContent\.boardy/);
-  assert.match(html, /boardy\.boundaries/);
-  assert.match(html, /boardy\.emailNote/);
-  assert.match(html, /boardyRecord\.links/);
-  assert.match(html, /project\.indexLabel/);
-  assert.match(html, /projectMount\.innerHTML/);
+  assert.match(app, /import ["']\.\/content\.js["']/);
+  assert.match(app, /globalThis\.TribalScaleContent/);
+  assert.match(app, /pageContent/);
+  assert.match(app, /projectEvidence/);
+  assert.match(app, /const boardy = pageContent\.boardy/);
+  assert.match(app, /boardy\.boundaries/);
+  assert.match(app, /boardy\.emailNote/);
+  assert.match(app, /boardyRecord\.links/);
+  assert.match(app, /project\.indexLabel/);
+  assert.match(app, /projectMount\.innerHTML/);
   assert.match(manifest, /const pageContent\s*=/);
   assert.match(manifest, /const projectEvidence\s*=/);
 });
@@ -64,9 +68,9 @@ test("mobile keeps compact section navigation visible", () => {
 
 test("RyFine keeps the local Figma artifact and exact source visible", () => {
   assert.match(manifest, /assets\/ryfine-figma-cover\.png/);
-  assert.match(html, /project\.media\.src/);
-  assert.match(html, /project\.figma\.localAsset/);
-  assert.match(html, /renderMedia\s*=|renderMedia\s*\(/);
+  assert.match(app, /project\.media\.src/);
+  assert.match(app, /project\.figma\.localAsset/);
+  assert.match(app, /renderMedia\s*=|renderMedia\s*\(/);
   assert.match(manifest, /label:\s*"Figma artifact"/);
   assert.match(manifest, /inspectedOn:\s*"2026-09-30"/);
   assert.match(manifest, /https:\/\/www\.figma\.com\/design\/LSYLrYfT8MjcYO0vltJqP5/);
