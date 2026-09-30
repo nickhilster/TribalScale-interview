@@ -62,6 +62,7 @@ const pageContent = {
   boardy: {
     slug: "boardy",
     title: "Boardy",
+    indexLabel: "FEATURED CASE",
     role: "Product thesis, presentation design, agent access, human-control boundaries, and interoperability exploration around an external AI product.",
     thesis: "Exploring what comes after the superconnector",
     summary:
@@ -135,6 +136,7 @@ const pageContent = {
     {
       slug: "ltb-buddy",
       title: "LTB Buddy",
+      indexLabel: "AI WORKFLOW & TRUST",
       role: "AI workflow design where trust, evidence, escalation, and human authority are part of the UX.",
       summary:
         "A built/public-beta workflow for tenant evidence and guided self-help, designed with human review boundaries. Its retrieval evaluation measures retrieval quality, not legal correctness.",
@@ -178,6 +180,7 @@ const pageContent = {
     {
       slug: "ryfine",
       title: "RyFine",
+      indexLabel: "AI PRODUCT EXPERIENCE",
       role: "Product and interface craft: turning AI capability into a clear, usable experience with a coherent design system.",
       summary:
         "A built browser product for prompt refinement with repo context, provider choice, and local-first/BYOK paths. The Figma cover is a real design artifact; it is not proof that every principle or screen is shipped in the live product.",
@@ -238,6 +241,7 @@ const pageContent = {
     {
       slug: "code2motion",
       title: "Code2Motion",
+      indexLabel: "TECHNICAL CONCEPT & INTERACTION",
       role: "Novel interaction and creative technology: making a difficult technical idea tangible and testable.",
       summary:
         "A repo-backed interactive-art product thesis with substantial implementation: PlayRoom is the audience surface, ToyMaker is the creator surface, and a c2merse is the unit that moves between creation and distribution. Current runtime and operational caveats mean the page treats the work as observable and experimental, not as a clean production release.",
@@ -274,6 +278,7 @@ const pageContent = {
     {
       slug: "easybuddy",
       title: "EasyBuddy",
+      indexLabel: "MOBILE OPERATIONS SUPPORT",
       role: "Mobile-first operational assistance for jobs, training, voice, retrieval, and technician support.",
       summary:
         "A development-ready React/Vite workflow for automotive technicians: jobs, training, a voice-capable AI assistant, and knowledge-base operations in one mobile-first app. The documented local posture has authentication disabled by default, so this is not presented as a verified production deployment.",

@@ -34,6 +34,15 @@ test("the visible project rows have a manifest-backed render mount", () => {
   assert.match(html, /globalThis\.TribalScaleContent/);
   assert.match(html, /pageContent/);
   assert.match(html, /projectEvidence/);
+  assert.match(html, /data-boardy-status/);
+  assert.match(html, /data-boardy-boundaries/);
+  assert.match(html, /data-boardy-email-note/);
+  assert.match(html, /data-boardy-links/);
+  assert.match(html, /const boardy = pageContent\.boardy/);
+  assert.match(html, /boardy\.boundaries/);
+  assert.match(html, /boardy\.emailNote/);
+  assert.match(html, /boardyRecord\.links/);
+  assert.match(html, /project\.indexLabel/);
   assert.match(html, /projectMount\.innerHTML/);
   assert.match(manifest, /const pageContent\s*=/);
   assert.match(manifest, /const projectEvidence\s*=/);

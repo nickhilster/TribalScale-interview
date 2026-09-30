@@ -18,6 +18,7 @@ test("manifest contains the five ordered projects", () => {
 test("every project has authored role, summary, status, and evidence", () => {
   for (const project of projectEvidence) {
     assert.equal(typeof project.title, "string", `${project.slug} has a title`);
+    assert.ok(project.indexLabel.trim(), `${project.slug} has a compact index label`);
     assert.ok(project.role.trim(), `${project.slug} has a role`);
     assert.ok(project.summary.trim(), `${project.slug} has a summary`);
     assert.ok(project.status.length > 0, `${project.slug} has status labels`);
