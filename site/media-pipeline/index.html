@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing the pipeline that makes the media</title>
+<meta name="description" content="A production-systems case study: two AI-native media pipelines (visual and audio) built on one architecture of intelligent direction, strict contracts, local generation and human acceptance.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <p class="mono top__id">NIKHIL KHEDKAR <span aria-hidden="true">/</span> MEDIA PIPELINE CASE STUDY</p>
+    <nav aria-label="Sections" class="top__nav">
+      <a href="#shift">The shift</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#visual">Visual</a>
+      <a href="#audio">Audio</a>
+      <a href="#principle">Principle</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wrap" aria-labelledby="h-hero">
+    <p class="mono eyebrow">PRODUCTION SYSTEMS / VISUAL + AUDIO</p>
+    <h1 id="h-hero">I don&rsquo;t just make the artifact. I design the pipeline that makes&nbsp;it.</h1>
+    <p class="lede">My background started in animation, VFX and production coordination. Today I apply the same production thinking to AI-native systems: specialised roles, creative direction, canonical source material, strict handoffs, local generation, quality control and human approval. The result is repeatable media production built with technology that small teams can actually access.</p>
+    <ul class="chips mono" aria-label="Summary">
+      <li>Visual + audio</li>
+      <li>Local-first production</li>
+      <li>Consumer GPU</li>
+      <li>Human quality gates</li>
+      <li>Repeatable pipelines</li>
+      <li>Real outputs</li>
+    </ul>
+    <p class="note mono">Follow-up to a conversation with Heather Page at TribalScale about media and AI product work. The private source repositories stay private; the outputs below are the evidence.</p>
+  </section>
+
+  <!-- 1. THE SHIFT -->
+  <section id="shift" class="sec wrap" aria-labelledby="h-shift">
+    <div class="sec__head">
+      <p class="mono eyebrow">01 / THE SHIFT</p>
+      <h2 id="h-shift">The production model survived. The crew changed.</h2>
+    </div>
+    <div class="shift">
+      <div class="shift__col">
+        <p class="mono shift__tag">TRADITIONAL</p>
+        <ol class="flow flow--v" aria-label="Traditional production">
+          <li>Human intent</li>
+          <li>Coordinated specialists</li>
+          <li>Production tooling</li>
+          <li>Review</li>
+          <li class="flow__end">Artifact</li>
+        </ol>
+      </div>
+      <div class="shift__col shift__col--now">
+        <p class="mono shift__tag">AI-NATIVE</p>
+        <ol class="flow flow--v" aria-label="AI-native production">
+          <li>Human intent</li>
+          <li>Humans + agents + models</li>
+          <li>Production contracts</li>
+          <li>Generative tooling</li>
+          <li>Review</li>
+          <li class="flow__end">Repeatable artifacts</li>
+        </ol>
+      </div>
+    </div>
+    <p class="shift__copy">Humans are still in the loop. What changed is the roster: a traditional production coordinates artists, editors, technical specialists, software, review rounds and delivery. An AI-native one coordinates humans, agents, local and cloud models, deterministic scripts, manifests and review gates. The skill underneath is the same: turn creative intent into a controlled process that reliably reaches delivery.</p>
+    <p class="pull">I used to make assets inside production pipelines. Now I design the pipelines.</p>
+  </section>
+
+  <!-- 2. ARCHITECTURE -->
+  <section id="architecture" class="sec wrap" aria-labelledby="h-arch">
+    <div class="sec__head">
+      <p class="mono eyebrow">02 / ONE PHILOSOPHY, TWO MEDIA PIPELINES</p>
+      <h2 id="h-arch">Same production philosophy. Different media.</h2>
+    </div>
+    <p class="sec__intro">Two systems I built share one architecture. Step through the stages to see what each one does in a visual pipeline and an audio pipeline.</p>
+
+    <div class="explorer" data-explorer>
+      <div class="explorer__rail" role="tablist" aria-label="Pipeline stages" aria-orientation="vertical"></div>
+      <div class="explorer__panel" role="tabpanel" aria-live="polite" tabindex="0">
+        <p class="mono explorer__n"></p>
+        <h3 class="explorer__title"></h3>
+        <p class="explorer__generic"></p>
+        <div class="explorer__lanes">
+          <div class="lane">
+            <p class="mono lane__tag">VISUAL &middot; PANELFORGE</p>
+            <p class="lane__text" data-lane="visual"></p>
+          </div>
+          <div class="lane">
+            <p class="mono lane__tag">AUDIO &middot; AUDIO STUDIO</p>
+            <p class="lane__text" data-lane="audio"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <noscript><p class="note mono">Stages: human intent &rarr; source or brief &rarr; intelligent direction &rarr; strict production contract &rarr; deterministic orchestration &rarr; generative engine &rarr; validation, retry and resume &rarr; produced artifact &rarr; human acceptance.</p></noscript>
+  </section>
+
+  <!-- 3. VISUAL -->
+  <section id="visual" class="sec sec--dark" aria-labelledby="h-visual">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="mono eyebrow">03 / VISUAL &middot; PANELFORGE &rarr; NEURAL BREACH</p>
+        <h2 id="h-visual">The hard problem isn&rsquo;t whether a model can make one good image. It&rsquo;s whether the system can keep making the right&nbsp;images.</h2>
+      </div>
+
+      <figure class="art">
+        <img src="assets/art/page-12-mayas-model.jpg" width="1496" height="1051" alt="A four-panel comic page from Neural Breach. A scientist in a lab coat studies a holographic city model, turns to a wall display of a glowing route, looks out over a night skyline with the same route traced across it, and finally gazes at it in close-up. Her face, hair and coat stay consistent across all four panels.">
+        <figcaption><span class="mono">OUTPUT / NEURAL BREACH, ISSUE 01, PAGE 12</span> One character, four camera setups, one continuous identity. The page is shown without lettering; the public reader overlays it as independent HTML text.</figcaption>
+      </figure>
+
+      <div class="cols">
+        <div>
+          <h3>What PanelForge is</h3>
+          <p><strong>PanelForge is a local-first visual production pipeline built to solve a problem that single-image generation doesn&rsquo;t: continuity at production scale.</strong> Story briefs and approved visual references are interpreted into structured art direction, passed through a strict production contract, and rendered locally through a reference-conditioned image pipeline. Preflight checks, deterministic seeds, sequential GPU scheduling, recovery and resumable production turn generation into a repeatable workflow rather than a collection of prompts.</p>
+          <p><strong>The output is Neural Breach</strong>, a continuing comic project presented through a custom digital reader. The reader is the presentation layer for the finished work; the pipeline&rsquo;s job is the frames.</p>
+          <p><a class="btn" href="https://neuralbreach.nikdesign.ca/" target="_blank" rel="noopener">Read Neural Breach <span class="sr">(opens the live comic in a new tab)</span><span aria-hidden="true">&nearr;</span></a></p>
+        </div>
+        <div>
+          <h3>Canon is a production asset</h3>
+          <p>A single good frame is easy. Keeping a cast, costumes and locations stable across hundreds of frames is the production problem. The production-reference design, written to take Neural Breach beyond isolated panels, gives every canonical reference:</p>
+          <ul class="ticks">
+            <li>a stable ID and a type: character, location, entity, interface or style;</li>
+            <li>an approval state: draft, approved or retired;</li>
+            <li>an ordered place in the reference set sent to both director and renderer;</li>
+            <li>a deterministic seed per panel, and output dimensions independent of reference size.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="split" aria-labelledby="h-split">
+        <h3 id="h-split" class="sr">Intelligence versus machinery</h3>
+        <div class="split__col">
+          <p class="mono split__tag">CREATIVE INTELLIGENCE</p>
+          <ol>
+            <li>Brief + canon</li>
+            <li>AI director reads both</li>
+            <li class="hot">Structured direction: camera, composition, lighting, continuity</li>
+          </ol>
+        </div>
+        <div class="split__bridge mono" aria-hidden="true">CONTRACT &rarr;</div>
+        <div class="split__col split__col--m">
+          <p class="mono split__tag">PRODUCTION MACHINERY</p>
+          <ol>
+            <li>Validate before any GPU work</li>
+            <li>Render, one panel at a time</li>
+            <li>Recover, checkpoint, resume</li>
+            <li class="hot">Output &rarr; human creative review</li>
+          </ol>
+        </div>
+      </div>
+      <p class="pull pull--dark">Use intelligence where judgment is required. Use deterministic machinery where repeatability is required.</p>
+
+      <div class="strip" role="group" aria-label="More Neural Breach pages">
+        <figure>
+          <img loading="lazy" src="assets/art/page-13-sols-calculation.jpg" width="1497" height="1051" alt="A comic page in which an analyst at a bank of holographic screens reviews a scenario, ranks it, and strikes it out with a stylus.">
+          <figcaption class="mono">ISSUE 01 / PAGE 13</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/art/page-18-the-review-room.jpg" width="1497" height="1051" alt="A comic page set in a boardroom: executives watch a wall display, one speaks, and the last panel looks out over a neon skyline.">
+          <figcaption class="mono">ISSUE 01 / PAGE 18</figcaption>
+        </figure>
+      </div>
+
+      <details class="more">
+        <summary>How it works, and what it runs on</summary>
+        <div class="more__body">
+          <p>The pipeline was developed for one consumer machine: Windows with a single RTX&nbsp;4070 (12&nbsp;GB VRAM), Ollama running Qwen3-VL as a local art director, and ComfyUI running FLUX.2 Klein for reference-conditioned rendering, orchestrated with Python and PowerShell.</p>
+          <p>The single-GPU limit shaped the design: director and renderer never share the card at the same moment, the director model is unloaded before rendering, and a known ComfyUI out-of-memory failure state is detected and recovered from automatically. A hosted model can direct panels instead when a piece justifies the cost; local direction remains the default for bulk work. Orchestration logic is covered by unit tests that need no live GPU services.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 4. AUDIO -->
+  <section id="audio" class="sec wrap" aria-labelledby="h-audio">
+    <div class="sec__head">
+      <p class="mono eyebrow">04 / AUDIO &middot; AUDIO STUDIO</p>
+      <h2 id="h-audio">Text remains canonical. Audio is a production rendering of&nbsp;it.</h2>
+    </div>
+    <p class="sec__intro"><strong>Audio Studio applies the same production architecture to sound.</strong> Canonical conversations and documents move through editorial roles, producer synthesis and a strict episode contract before local voice generation. Individual segments can be regenerated independently, final audio is assembled deterministically, and technical validation remains separate from human listening approval.</p>
+
+    <div class="player" data-player>
+      <div class="player__matrix" role="group" aria-labelledby="pm-label">
+        <p id="pm-label" class="mono player__label">ONE SOURCE, FOUR CONTROLLED TAKES</p>
+        <div class="matrix">
+          <span class="matrix__corner" aria-hidden="true"></span>
+          <span class="mono matrix__ax" aria-hidden="true">CONVERSATIONAL</span>
+          <span class="mono matrix__ax" aria-hidden="true">MEASURED</span>
+          <span class="mono matrix__ay" aria-hidden="true">VERBATIM</span>
+          <button type="button" class="take" data-src="assets/audio/verbatim-conversational.wav" data-ed="Verbatim" data-dl="Conversational" data-blurb="Source wording preserved, delivered in a natural conversational register." aria-pressed="false"><span class="take__t">Verbatim</span><span class="take__s mono">Conversational</span></button>
+          <button type="button" class="take" data-src="assets/audio/verbatim-measured.wav" data-ed="Verbatim" data-dl="Measured" data-blurb="Source wording preserved, delivered at a slower, more deliberate pace." aria-pressed="false"><span class="take__t">Verbatim</span><span class="take__s mono">Measured</span></button>
+          <span class="mono matrix__ay" aria-hidden="true">PRODUCED</span>
+          <button type="button" class="take" data-src="assets/audio/produced-conversational.wav" data-ed="Produced" data-dl="Conversational" data-blurb="Ideas and positions kept, edited for spoken flow, delivered conversationally." aria-pressed="true"><span class="take__t">Produced</span><span class="take__s mono">Conversational</span></button>
+          <button type="button" class="take" data-src="assets/audio/produced-measured.wav" data-ed="Produced" data-dl="Measured" data-blurb="Ideas and positions kept, edited for spoken flow, delivered at a measured pace." aria-pressed="false"><span class="take__t">Produced</span><span class="take__s mono">Measured</span></button>
+        </div>
+        <p class="mono matrix__key"><span>ROWS</span> editorial treatment <span>COLUMNS</span> delivery treatment</p>
+      </div>
+      <div class="player__deck">
+        <p class="mono player__label">NOW SELECTED</p>
+        <p class="player__now" aria-live="polite" data-now>Produced &middot; Conversational</p>
+        <p class="player__blurb" data-blurb>Ideas and positions kept, edited for spoken flow, delivered conversationally.</p>
+        <audio controls preload="none" data-audio src="assets/audio/produced-conversational.wav">Your browser does not support audio playback.</audio>
+        <p class="player__meta mono">Four clips of roughly 20&ndash;25 seconds each, 24&nbsp;kHz mono, rendered from one David&ndash;Boardy conversation. Nothing plays until you press play.</p>
+      </div>
+    </div>
+
+    <p class="sec__intro">Verbatim and produced differ in <em>what is said</em>; conversational and measured differ in <em>how it is performed</em>. Two independent dials, four predictable outputs: the pipeline makes controlled variants, not random ones.</p>
+
+    <div class="cols cols--tight">
+      <div>
+        <h3>Who decides what</h3>
+        <ul class="ticks">
+          <li><strong>Source</strong> stays canonical and read-only, with its provenance and a content hash.</li>
+          <li><strong>Writer&rsquo;s Room</strong> agents advise on tightening, structure, explanation, humour and audience. They never generate audio.</li>
+          <li><strong>One producer</strong> resolves the competing advice and emits a strict, versioned episode contract. That is how it avoids prompt soup.</li>
+          <li><strong>Cast and voice</strong> are separate registries, so a speaker identity persists across productions.</li>
+          <li><strong>Segments</strong> render one line at a time, so a failed line is retried alone and an engine can be swapped behind an adapter.</li>
+        </ul>
+      </div>
+      <div class="gate">
+        <p class="mono gate__tag">THE HUMAN GATE</p>
+        <p class="gate__q">Automation can prove that a file rendered correctly. It can&rsquo;t prove that the performance is good.</p>
+        <p>Technical checks confirm the file exists, parses, has the right format, a plausible duration and a matching hash. They cannot tell you whether it is intelligible, faithful, correctly voiced, well paced or pleasant to hear. A person listens against a checklist: dialogue accuracy, intelligibility, speaker identity, delivery and pacing, artifacts. Acceptance is bound to the exact WAV hash, so if the audio changes, the old approval does not carry over.</p>
+      </div>
+    </div>
+
+    <details class="more more--light">
+      <summary>How it works, and what it runs on</summary>
+      <div class="more__body">
+        <p>Cloud-capable agents can handle editorial reasoning and script development. Voice generation runs on local text-to-speech, behind an adapter boundary so the contract never depends on a single engine; Qwen3-TTS and Chatterbox-class models are the initial candidates under evaluation. Final assembly uses deterministic tooling for sequencing, pauses, loudness normalisation, fades and metadata, with a production manifest recording each take.</p>
+        <p>The four clips above are the pilot output. They are embedded here as static files; the source conversation text and voice references stay private.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- 5. PRINCIPLE -->
+  <section id="principle" class="sec sec--ink" aria-labelledby="h-principle">
+    <div class="wrap">
+      <p class="mono eyebrow">05 / THE PRODUCTION PRINCIPLE</p>
+      <h2 id="h-principle" class="big">Use intelligence where judgment is required. Use deterministic machinery where repeatability is required. Keep the human at the acceptance boundary.</h2>
+      <div class="table" role="table" aria-label="Who does what in an AI-native production">
+        <div role="row" class="table__r table__h mono"><span role="columnheader">HUMAN</span><span role="columnheader">AGENTS / MODELS</span><span role="columnheader">DETERMINISTIC SYSTEMS</span></div>
+        <div role="row" class="table__r"><span role="cell">Intent</span><span role="cell">Interpretation</span><span role="cell">Validation</span></div>
+        <div role="row" class="table__r"><span role="cell">Canon approval</span><span role="cell">Creative direction</span><span role="cell">Orchestration</span></div>
+        <div role="row" class="table__r"><span role="cell">Quality judgment</span><span role="cell">Editorial transformation</span><span role="cell">Rendering</span></div>
+        <div role="row" class="table__r"><span role="cell">Final acceptance</span><span role="cell">Candidate generation</span><span role="cell">Retry and resume</span></div>
+        <div role="row" class="table__r"><span role="cell">Strategic tradeoffs</span><span role="cell">Variant exploration</span><span role="cell">Assembly and manifests</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ACCESSIBLE TECH -->
+  <section class="sec wrap" aria-labelledby="h-cost">
+    <div class="sec__head">
+      <p class="mono eyebrow">06 / WHY ACCESSIBLE TECHNOLOGY MATTERS</p>
+      <h2 id="h-cost">Frontier models are an option, not the architecture.</h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p>A production system is only useful if its economics survive repeated use. I design around the actual constraints: available hardware, model cost, latency, failure rates, quality thresholds and human review time.</p>
+        <p>The goal isn&rsquo;t to show what is possible with unlimited compute. It&rsquo;s to find out what production capability an individual or small team can build with hardware and software they can realistically get.</p>
+      </div>
+      <ul class="ticks">
+        <li><strong>Visual:</strong> runs on a single consumer GPU, with paid cloud direction reserved for work that justifies it.</li>
+        <li><strong>Audio:</strong> spend intelligence on editorial decisions, run repeatable synthesis locally, regenerate only the segment that failed.</li>
+        <li>Local generation still has hardware, power, setup and time costs. The claim is low marginal generation cost, not zero cost.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. BACKGROUND -->
+  <section class="sec wrap" aria-labelledby="h-bg">
+    <div class="sec__head">
+      <p class="mono eyebrow">07 / WHERE THE SYSTEMS APPROACH COMES FROM</p>
+      <h2 id="h-bg">A production background, applied to a new crew.</h2>
+    </div>
+    <ol class="timeline">
+      <li><span class="mono">01</span> Animation / VFX</li>
+      <li><span class="mono">02</span> Production coordination</li>
+      <li><span class="mono">03</span> Product &amp; experience design</li>
+      <li><span class="mono">04</span> AI production systems</li>
+    </ol>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="close wrap" aria-labelledby="h-close">
+    <h2 id="h-close">Then I build the system and produce the output.</h2>
+    <p>What is canonical? Where does judgment happen? What must be structured, and what can be deterministic? What can run locally, and where is frontier intelligence worth paying for? How does it recover from failure, and where does a human approve the result? Those are the questions I start with. These two pipelines are what came out the other side.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="mono">WHAT THIS PAGE CLAIMS</p>
+    <p>Both pipelines are built systems, and the outputs on this page are the evidence. Neural Breach is a public output associated with the PanelForge visual production work, not a claim that every page was made with its current version. This page states no production costs, per-asset costs or generation speeds, and it does not describe either pipeline as fully autonomous. The source repositories are private and intentionally not linked.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
