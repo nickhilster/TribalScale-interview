@@ -75,3 +75,10 @@ test("RyFine keeps the local Figma artifact and exact source visible", () => {
   assert.match(manifest, /inspectedOn:\s*"2026-09-30"/);
   assert.match(manifest, /https:\/\/www\.figma\.com\/design\/LSYLrYfT8MjcYO0vltJqP5/);
 });
+
+test("the renderer fails loudly on missing records and validates Figma alignment", () => {
+  assert.match(app, /throw new Error\([^)]+missing/i);
+  assert.doesNotMatch(app, /\.filter\(Boolean\)/);
+  assert.match(app, /project\.media\.src\s*!==\s*project\.figma\.localAsset/);
+  assert.match(app, /link\.href\s*!==\s*project\.figma\.sourceUrl/);
+});

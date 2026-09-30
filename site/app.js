@@ -24,13 +24,48 @@ const renderStatus = (states, accentClass = "status-mark-yellow") => states
   .map((state, stateIndex) => `<span class="status-mark ${stateIndex === 0 ? accentClass : ""}">${escapeHtml(state)}</span>`)
   .join("");
 
+function validateFigmaAlignment(project) {
+  if (!project.figma) return;
+  if (!project.media || project.media.src !== project.figma.localAsset) {
+    throw new Error(`Figma media mismatch for project "${project.slug}": media src must match localAsset.`);
+  }
+
+  const link = project.links?.find((candidate) => candidate.label === "Inspect in Figma");
+  if (!link || link.href !== project.figma.sourceUrl) {
+    throw new Error(`Figma source mismatch for project "${project.slug}": Inspect in Figma must match sourceUrl.`);
+  }
+}
+
+function getEvidenceRecord(slug, label) {
+  if (!Array.isArray(projectEvidence)) {
+    throw new Error("Missing project evidence manifest.");
+  }
+
+  const record = projectEvidence.find((project) => project.slug === slug);
+  if (!record) {
+    throw new Error(`Missing evidence record for declared ${label} "${slug}".`);
+  }
+  if (!Array.isArray(record.evidence)) {
+    throw new Error(`Missing evidence entries for declared ${label} "${slug}".`);
+  }
+  if (!Array.isArray(record.links)) {
+    throw new Error(`Missing source links for declared ${label} "${slug}".`);
+  }
+  validateFigmaAlignment(record);
+  return record;
+}
+
 const renderMedia = (project) => {
-  if (!project.media || !project.figma) return "";
+  if (!project.media && !project.figma) return "";
+  if (!project.media || !project.figma) {
+    throw new Error(`Missing Figma media record for project "${project.slug}".`);
+  }
+  validateFigmaAlignment(project);
 
   return `
     <figure class="artifact-frame" data-local-asset="${escapeHtml(project.figma.localAsset)}">
       <div class="artifact-label"><span>${escapeHtml(project.figma.label)}</span><span>Node ${escapeHtml(project.figma.nodeId)}</span></div>
-      <img src="${escapeHtml(project.media.src)}" alt="${escapeHtml(project.media.alt)}" />
+      <img src="${escapeHtml(project.figma.localAsset)}" alt="${escapeHtml(project.media.alt)}" />
       <figcaption>${escapeHtml(project.figma.caption).replace("September 30, 2026", '<time datetime="2026-09-30">September 30, 2026</time>')}</figcaption>
     </figure>`;
 };
@@ -66,11 +101,16 @@ const renderProject = (project, index) => {
 
 function renderManifestContent() {
   const boardy = pageContent.boardy;
-  const boardyRecord = projectEvidence.find((project) => project.slug === boardy.slug);
+  const boardyRecord = getEvidenceRecord(boardy.slug, "featured project");
   const projectMount = document.querySelector("[data-project-mount]");
-  const supportingProjects = pageContent.projects
-    .map(({ slug }) => projectEvidence.find((project) => project.slug === slug))
-    .filter(Boolean);
+  if (!Array.isArray(pageContent.projects)) {
+    throw new Error("Missing declared supporting project list.");
+  }
+  const supportingProjects = pageContent.projects.map((declaredProject) => {
+    const slug = declaredProject?.slug;
+    if (!slug) throw new Error("Missing slug for a declared supporting project.");
+    return getEvidenceRecord(slug, "supporting project");
+  });
 
   document.querySelector("#supporting-title").textContent =
     `${supportingProjects.length} ways I apply the same thinking.`;

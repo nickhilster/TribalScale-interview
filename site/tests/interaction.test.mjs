@@ -3,7 +3,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { test, before, after } from "node:test";
+import { test, before, after, afterEach } from "node:test";
 import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 
@@ -18,6 +18,7 @@ const mimeTypes = {
 let server;
 let origin;
 let browser;
+const contexts = new Set();
 
 before(async () => {
   server = createServer(async (request, response) => {
@@ -57,19 +58,30 @@ after(async () => {
   ]);
 });
 
+afterEach(async () => {
+  await Promise.all([...contexts].map((context) => context.close()));
+  contexts.clear();
+});
+
 async function openPage(viewport, reducedMotion = false) {
   const context = await browser.newContext({
     viewport,
     reducedMotion: reducedMotion ? "reduce" : "no-preference",
   });
+  contexts.add(context);
   const page = await context.newPage();
   await page.goto(`${origin}/`, { waitUntil: "networkidle", timeout: 10000 });
   return { context, page };
 }
 
+async function assertNoAxeViolations(page, label) {
+  const axeResults = await new AxeBuilder({ page }).analyze();
+  assert.deepEqual(axeResults.violations, [], `${label} has axe violations`);
+}
+
 test("renders manifest-backed projects and verified Figma evidence at both target widths", { concurrency: false, timeout: 20000 }, async () => {
   for (const width of [390, 1440]) {
-    const { context, page } = await openPage({ width, height: 900 });
+    const { page } = await openPage({ width, height: 900 });
 
     assert.equal(await page.locator(".case-study").count(), 4);
     for (const project of ["LTB Buddy", "RyFine", "Code2Motion", "EasyBuddy"]) {
@@ -85,17 +97,16 @@ test("renders manifest-backed projects and verified Figma evidence at both targe
     assert.match(await page.locator("#boardy").innerText(), /Symphony.*Boardy.*no automated integration/i);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
 
-    const axeResults = await new AxeBuilder({ page }).analyze();
-    assert.deepEqual(
-      axeResults.violations.filter((violation) => ["serious", "critical"].includes(violation.impact)),
-      [],
-    );
-    await context.close();
+    await assertNoAxeViolations(page, `${width}px collapsed disclosures`);
+    await page.locator("details.disclosure summary").evaluateAll((summaries) => {
+      summaries.forEach((summary) => summary.click());
+    });
+    await assertNoAxeViolations(page, `${width}px expanded disclosures`);
   }
 });
 
 test("supports skip-link focus, anchor navigation, disclosures, and keyboard-focusable controls", { concurrency: false, timeout: 20000 }, async () => {
-  const { context, page } = await openPage({ width: 390, height: 900 });
+  const { page } = await openPage({ width: 390, height: 900 });
   await page.getByRole("link", { name: "Skip to content" }).focus();
   await page.getByRole("link", { name: "Skip to content" }).press("Enter");
   assert.equal(await page.evaluate(() => location.hash), "#main-content");
@@ -105,17 +116,53 @@ test("supports skip-link focus, anchor navigation, disclosures, and keyboard-foc
   assert.equal(await page.evaluate(() => location.hash), "#supporting-work");
   assert.equal(await page.evaluate(() => document.activeElement?.id), "supporting-work");
 
-  const disclosure = page.locator("details.disclosure").first();
+  const boardyDisclosure = page.locator("#boardy details.disclosure");
+  const boardySummary = boardyDisclosure.locator("summary");
+  const boardyPanelId = await boardySummary.getAttribute("aria-controls");
+  assert.ok(boardyPanelId);
+  assert.equal(await boardySummary.getAttribute("aria-expanded"), "false");
+  await boardySummary.evaluate((element) => element.click());
+  assert.equal(await boardySummary.getAttribute("aria-expanded"), "true");
+  assert.equal(await page.locator(`#${boardyPanelId}`).isVisible(), true);
+  await boardySummary.evaluate((element) => element.click());
+  assert.equal(await boardySummary.getAttribute("aria-expanded"), "false");
+
+  const disclosure = page.locator(".case-study-ltb-buddy details.disclosure");
   const summary = disclosure.locator("summary");
   const panelId = await summary.getAttribute("aria-controls");
   assert.ok(panelId);
   assert.equal(await summary.getAttribute("aria-expanded"), "false");
   assert.equal(await disclosure.getAttribute("open"), null);
-  await summary.evaluate((element) => element.click());
+  await disclosure.scrollIntoViewIfNeeded();
+  await summary.focus();
+  await page.keyboard.press("Enter");
+  await page.waitForFunction(() => {
+    const details = document.querySelector(".case-study-ltb-buddy details");
+    return details?.open === true && details.querySelector("summary")?.getAttribute("aria-expanded") === "true";
+  }, null, { timeout: 2000 });
   assert.equal(await summary.getAttribute("aria-expanded"), "true");
   assert.equal(await disclosure.getAttribute("open"), "");
-  assert.equal(await page.locator(`#${panelId}`).isVisible(), true);
-  await summary.evaluate((element) => element.click());
+  await summary.focus();
+  await page.keyboard.press("Space");
+  await page.waitForFunction(() => {
+    const details = document.querySelector(".case-study-ltb-buddy details");
+    return details?.open === false && details.querySelector("summary")?.getAttribute("aria-expanded") === "false";
+  }, null, { timeout: 2000 });
+  assert.equal(await summary.getAttribute("aria-expanded"), "false");
+  assert.equal(await disclosure.getAttribute("open"), null);
+  await summary.focus();
+  await page.keyboard.press("Space");
+  await page.waitForFunction(() => {
+    const details = document.querySelector(".case-study-ltb-buddy details");
+    return details?.open === true && details.querySelector("summary")?.getAttribute("aria-expanded") === "true";
+  }, null, { timeout: 2000 });
+  assert.equal(await summary.getAttribute("aria-expanded"), "true");
+  await summary.focus();
+  await page.keyboard.press("Enter");
+  await page.waitForFunction(() => {
+    const details = document.querySelector(".case-study-ltb-buddy details");
+    return details?.open === false && details.querySelector("summary")?.getAttribute("aria-expanded") === "false";
+  }, null, { timeout: 2000 });
   assert.equal(await summary.getAttribute("aria-expanded"), "false");
 
   const focusableCount = await page.locator("a[href], summary").evaluateAll((controls) =>
@@ -125,11 +172,10 @@ test("supports skip-link focus, anchor navigation, disclosures, and keyboard-foc
     }).length,
   );
   assert.ok(focusableCount >= 12, `expected keyboard-usable navigation, sources, and disclosures; got ${focusableCount}`);
-  await context.close();
 });
 
 test("leaves reveal content visible and scrolling non-smooth when reduced motion is requested", { concurrency: false, timeout: 20000 }, async () => {
-  const { context, page } = await openPage({ width: 390, height: 900 }, true);
+  const { page } = await openPage({ width: 390, height: 900 }, true);
 
   assert.equal(await page.evaluate(() => matchMedia("(prefers-reduced-motion: reduce)").matches), true);
   assert.equal(await page.locator(".reveal").evaluateAll((elements) => elements.every((element) => {
@@ -141,5 +187,4 @@ test("leaves reveal content visible and scrolling non-smooth when reduced motion
   await page.getByRole("link", { name: "Method" }).first().evaluate((link) => link.click());
   assert.equal(await page.evaluate(() => location.hash), "#method");
   assert.equal(await page.evaluate(() => document.activeElement?.id), "method");
-  await context.close();
 });
