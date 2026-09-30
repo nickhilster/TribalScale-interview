@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NIKHIL × TRIBALSCALE</title>
+<style>
+:root{--bg:#090b0d;--panel:#101419;--text:#f4f6f8;--muted:#9da7b1;--line:#29313a;--accent:#ef6c3e;--soft:#171d23}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 70% -10%,#202a33 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+.shell{max-width:1680px;margin:auto;padding:4.5vw} .hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:clamp(14px,1.15vw,22px);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
+h1{font-size:clamp(56px,7.4vw,142px);line-height:.88;letter-spacing:-.065em;margin:.18em 0 .2em;max-width:13ch}
+.subtitle{font-size:clamp(22px,2vw,38px);line-height:1.3;color:#c5ccd3;max-width:44ch}
+.rule{margin-top:6vh;display:flex;gap:1rem;align-items:center;font-size:clamp(18px,1.4vw,28px);font-weight:750} .rule b{color:var(--accent)} .arrow{color:#65717c}
+.graph{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:5vh 0}
+.node{position:relative;background:linear-gradient(145deg,var(--panel),#0d1115);border:1px solid var(--line);border-radius:24px;padding:clamp(26px,2.5vw,48px);min-height:360px;transition:.2s}
+.node:hover,.node:focus{transform:translateY(-3px);border-color:#53606c;outline:none} .node-top{display:flex;justify-content:space-between;color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:.12em}
+.num{color:var(--accent);font-weight:900} .tag{font-weight:700} h2{font-size:clamp(30px,3vw,56px);line-height:1;letter-spacing:-.035em;margin:.65em 0 .28em}
+.lead{font-size:clamp(18px,1.35vw,27px);line-height:1.4;color:#d8dde2;margin:0 0 1em} ul{margin:0;padding-left:1.2em;color:#aeb7c0;font-size:clamp(17px,1.15vw,23px);line-height:1.55}
+li+li{margin-top:.35em} .sources{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px} .sources a{color:#cbd3da;text-decoration:none;border-bottom:1px solid #56616c;font-size:14px}
+footer{border-top:1px solid var(--line);padding:5vh 0 2vh;color:var(--muted);font-size:clamp(15px,1vw,19px);line-height:1.5}
+.stop{display:inline-block;color:var(--accent);font-weight:900;letter-spacing:.12em}
+@media(max-width:850px){.graph{grid-template-columns:1fr}.hero{min-height:70vh}}
+@media(min-width:2200px){.shell{max-width:2100px}}
+</style></head>
+<body><main class="shell">
+<section class="hero"><div class="eyebrow">A short explorable story for Heather, Sheetal &amp; the TribalScale team</div><h1>NIKHIL × TRIBALSCALE</h1><p class="subtitle">Different paths. Similar questions: how do we redesign products and workflows around what people and AI can now do together?</p>
+<div class="rule">WHY <span class="arrow">→</span> WORKFLOW <span class="arrow">→</span> EVIDENCE <span class="arrow">→</span> OUTCOME</div></section>
+<section class="graph">
+        <article class="node" id="node-0" tabindex="0">
+          <div class="node-top"><span class="num">01</span><span class="tag">01 · Thesis</span></div>
+          <h2>Start with the outcome</h2>
+          <p class="lead">The interesting AI question is rarely “where can we add AI?” It is “what should this workflow become now?”</p>
+          <ul><li>That is the common thread I see between my work and TribalScale’s current AI-native direction.</li><li>Design begins before the interface: people, constraints, decisions, handoffs and the outcome the system exists to create.</li></ul>
+          <div class="sources"><a href="https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company" target="_blank" rel="noreferrer">Sheetal — Don’t Add AI. Redesign the Company.</a></div>
+        </article>
+        <article class="node" id="node-1" tabindex="0">
+          <div class="node-top"><span class="num">02</span><span class="tag">02 · Practice</span></div>
+          <h2>Design the workflow</h2>
+          <p class="lead">My path has moved through animation/VFX, frontline operations, production, UX/product and AI — but the recurring work is workflow design.</p>
+          <ul><li>Find the friction.</li><li>Understand the humans and constraints around it.</li><li>Prototype the smallest useful intervention.</li><li>Put it in front of people.</li><li>Measure, learn and change direction when the evidence says to.</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-2" tabindex="0">
+          <div class="node-top"><span class="num">03</span><span class="tag">03 · Evidence</span></div>
+          <h2>Best Buy</h2>
+          <p class="lead">Before AI, the lesson was already the same: redesigning a workflow can matter more than adding another tool.</p>
+          <ul><li>A service process was taking roughly seven days.</li><li>I worked on changing the operating workflow around the bottleneck.</li><li>The cycle moved to under 48 hours.</li><li>The durable lesson: improve the system people work inside, not just the surface they touch.</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-3" tabindex="0">
+          <div class="node-top"><span class="num">04</span><span class="tag">04 · Evidence</span></div>
+          <h2>RBH → independent build</h2>
+          <p class="lead">A consultancy environment exposed an internal AI opportunity; the later independent build tested whether the architecture could stand on its own.</p>
+          <ul><li>The exploration began from a workflow need, not a model demo.</li><li>The implementation separated predictable system behaviour from generative behaviour.</li><li>Human approval, guardrails and failure handling were treated as product architecture.</li><li>The independent build is distinct from the work performed while at RBH.</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-4" tabindex="0">
+          <div class="node-top"><span class="num">05</span><span class="tag">05 · Evidence</span></div>
+          <h2>LTB Buddy</h2>
+          <p class="lead">A tenant does not need an “AI lawyer.” They need help moving through a difficult process without surrendering authority.</p>
+          <ul><li>Organize information → understand the situation → prepare → identify the next step.</li><li>AI assists navigation; consequential decisions remain with people.</li><li>Evidence, uncertainty, escalation and review are part of the experience design.</li><li>The product is in public beta so real use can challenge the assumptions.</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-5" tabindex="0">
+          <div class="node-top"><span class="num">06</span><span class="tag">06 · Craft</span></div>
+          <h2>RyFine</h2>
+          <p class="lead">AI-native thinking still has to become a coherent human experience.</p>
+          <ul><li>Interaction design translates system capability into understandable choices.</li><li>Prototyping makes assumptions visible early enough to change them.</li><li>The interface is one layer of the product — alongside workflow, behaviour, trust and feedback.</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-6" tabindex="0">
+          <div class="node-top"><span class="num">07</span><span class="tag">07 · Convergence</span></div>
+          <h2>People + agents + systems</h2>
+          <p class="lead">The human role becomes more important as machine execution increases.</p>
+          <ul><li>People define intent, context, judgment and accountability.</li><li>Agents can absorb execution where the workflow and guardrails are clear.</li><li>The design problem is the relationship between them — including when the machine should stop.</li><li>Human-in-the-loop is not only a safety fallback; it is a mechanism for catching intent drift.</li></ul>
+          <div class="sources"><a href="https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company" target="_blank" rel="noreferrer">Sheetal — Redesign the Company</a><a href="https://www.tribalscale.com/capabilities/ai-for-enterprise" target="_blank" rel="noreferrer">TribalScale — AI for Enterprise</a></div>
+        </article>
+        <article class="node" id="node-7" tabindex="0">
+          <div class="node-top"><span class="num">08</span><span class="tag">08 · Product discipline</span></div>
+          <h2>Define “working”</h2>
+          <p class="lead">A compelling demo is not the same thing as a dependable product.</p>
+          <ul><li>Define success before turning the agent loose.</li><li>Evaluate behaviour before the user or client becomes the test suite.</li><li>Make important system behaviour explainable.</li><li>Design for iteration after launch, not merely the launch itself.</li></ul>
+          <div class="sources"><a href="https://tribalscale.substack.com/p/88-use-it-7-scaled-it" target="_blank" rel="noreferrer">Heather — 88% Use It. 7% Scaled It.</a></div>
+        </article>
+        <article class="node" id="node-8" tabindex="0">
+          <div class="node-top"><span class="num">09</span><span class="tag">09 · Delivery</span></div>
+          <h2>Build together</h2>
+          <p class="lead">Product, design and engineering make better AI decisions when they work concurrently rather than throwing requirements over walls.</p>
+          <ul><li>Architecture changes experience possibilities.</li><li>Experience decisions change technical requirements.</li><li>Real constraints should enter discovery, not appear at handoff.</li><li>For consulting, the client team should gain capability while the product gains capability.</li></ul>
+          <div class="sources"><a href="https://tribalscale.substack.com/p/90-of-executives-said-they-could" target="_blank" rel="noreferrer">Heather — Product studio model</a><a href="https://www.tribalscale.com/insights/ai-transformation-embedded-teams" target="_blank" rel="noreferrer">TribalScale — Embedded AI transformation</a></div>
+        </article>
+        <article class="node" id="node-9" tabindex="0">
+          <div class="node-top"><span class="num">10</span><span class="tag">10 · Why this conversation</span></div>
+          <h2>Nikhil × TribalScale</h2>
+          <p class="lead">I did not start with TribalScale’s language and work backward. What interests me is that doing the work seems to have led us toward several of the same questions.</p>
+          <ul><li>Outcome before tool.</li><li>Workflow before feature.</li><li>Human judgment alongside machine execution.</li><li>Prototype before certainty.</li><li>Production and learning after the demo.</li><li>That overlap is what I wanted to explore in this conversation.</li></ul>
+          <div class="sources"></div>
+        </article></section>
+<footer>Prepared for a conversation with TribalScale · Sep 30, 2026 · Research references are linked at the relevant nodes.</footer></main></body></html>

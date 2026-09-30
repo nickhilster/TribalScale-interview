@@ -1,0 +1,181 @@
+- navigation:
+  - link:
+    - /url: ./
+- heading "AI-First , Relentlessly Human." [level=1]
+- paragraph: We’re the elite team that delivers strategy, design, engineering, and AI with precision, speed, and purpose. No generic playbooks, just tailored solutions that push what’s possible.
+- link "Let’s build what others can’t":
+  - /url: ./company/contact
+  - paragraph: Let’s build what others can’t
+- link "See our Work":
+  - /url: ./work
+  - paragraph: See our Work
+- paragraph: Trusted by global brands when there’s no room for compromise.
+- iframe
+- heading "Why TribalScale?" [level=2]
+- paragraph: We are TribalScale — a global innovation partner transforming vision into reality with AI-powered engineering, human-centred design, and agility at scale.
+- heading "AI-First Engineering" [level=4]
+- paragraph: Elite engineers delivering enterprise-grade, scalable solutions tuned for performance and longevity.
+- heading "Human Design" [level=4]
+- paragraph: Beyond pixels—our interfaces are built to connect with real humans, guiding them with clarity and delight.
+- heading "Agility at Scale" [level=4]
+- paragraph: Models, pipelines, and automation designed not for hype, but for lasting impact on business and customers.
+- heading "Insights" [level=2]
+- paragraph: Unlock the Future
+- heading "Explore FinScale Magazine" [level=3]
+- paragraph: FinScale Magazine, from TribalScale, provides in-depth analysis and actionable recommendations for financial services and insurance leaders. Stay ahead of the curve.
+- link "Explore The Latest Issue":
+  - /url: ./finscale/issue-three
+  - paragraph: Explore The Latest Issue
+- link "Don't Add AI. Redesign the Company.":
+  - /url: ./insights/dont-add-ai-redesign-the-company
+  - paragraph: Don't Add AI. Redesign the Company.
+- 'link "Person typing on a laptop with a network diagram connecting AI to agents, workflows, context, and governance. The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company"':
+  - /url: ./insights/ai-native-enterprise-12-things
+  - img "Person typing on a laptop with a network diagram connecting AI to agents, workflows, context, and governance."
+  - paragraph: "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company"
+- link "Stop Buying AI Seats. Start Rebuilding How Work Gets Done":
+  - /url: ./insights/stop-buying-ai-seats
+  - paragraph: Stop Buying AI Seats. Start Rebuilding How Work Gets Done
+- 'link "How Modern GPU Architecture Actually Works: A Developer''s Field Guide"':
+  - /url: ./insights/gpu-architecture-developer-guide
+  - paragraph: "How Modern GPU Architecture Actually Works: A Developer's Field Guide"
+- link "EXPLORE ALL INSIGHTS":
+  - /url: ./insights
+  - paragraph: EXPLORE ALL INSIGHTS
+- heading "700+" [level=1]
+- paragraph: Products Launched
+- heading "90+" [level=1]
+- paragraph: Global Partners
+- heading "95%" [level=1]
+- paragraph: Repeat Client Rate
+- list
+- heading "Our Human-Centred, Results-Driven Approach" [level=2]
+- paragraph: Direct, hands-on collaboration that turns insight into impact—fast. We combine design-thinking principles with the precision and urgency of a high-performance team.
+- heading "Frame" [level=4]
+- paragraph: Clarify the challenge with laser-sharp focus.
+- heading "Ideate" [level=4]
+- paragraph: Generate bold, business-ready and human-centred ideas.
+- heading "Empathize" [level=4]
+- paragraph: Understand humans at the core of the solution.
+- heading "Validate" [level=4]
+- paragraph: Prototype,Test fast with users, validate, refine.
+- heading "Next Bets" [level=4]
+- paragraph: Scale wins and uncover what’s next.
+- blockquote:
+  - heading "Your Next Breakthrough Starts Here." [level=2]
+- paragraph: Discuss your next big idea with our team of solutions architect.
+- link "Let's work together":
+  - /url: ./company/contact
+  - paragraph: Let's work together
+- contentinfo:
+  - link:
+    - /url: ./
+  - paragraph: Global innovation partner transforming vision into reality with AI-powered engineering, human-centred design, and agility at scale.
+  - paragraph: Toronto - New York - Miami
+  - paragraph: SUBSCRIBE TO OUR NEWSLETTER
+  - iframe
+  - paragraph: AI & DATA
+  - link "AI & LLMs":
+    - /url: ./capabilities/ai-data/ai-llms
+    - paragraph: AI & LLMs
+  - link "AI Agent Development":
+    - /url: ./capabilities/ai-data/ai-agents
+    - paragraph: AI Agent Development
+  - link "Databricks":
+    - /url: ./capabilities/ai-data/databricks
+    - paragraph: Databricks
+  - paragraph: DESIGN & RESEARCH
+  - link "UX Research":
+    - /url: ./capabilities/design-research/ux-research
+    - paragraph: UX Research
+  - link "Product Design":
+    - /url: ./capabilities/design-research/product-design
+    - paragraph: Product Design
+  - link "Design Systems":
+    - /url: ./capabilities/design-research/design-systems
+    - paragraph: Design Systems
+  - paragraph: DIGITAL PRODUCTS
+  - link "Product Strategy":
+    - /url: ./capabilities/digital-products/product-strategy
+    - paragraph: Product Strategy
+  - link "Product Validation":
+    - /url: ./capabilities/digital-products/product-validation
+    - paragraph: Product Validation
+  - link "Product Discovery":
+    - /url: ./capabilities/digital-products/product-discovery
+    - paragraph: Product Discovery
+  - paragraph: TRANSFORMATION
+  - link "Service Design":
+    - /url: ./capabilities/transformation/service-design
+    - paragraph: Service Design
+  - link "AI Readiness":
+    - /url: ./capabilities/transformation/ai-readiness
+    - paragraph: AI Readiness
+  - link "Capability Building":
+    - /url: ./capabilities/transformation/capability-building
+    - paragraph: Capability Building
+  - paragraph: SOFTWARE DEVELOPMENT
+  - link "Mobile & Web Applications":
+    - /url: ./capabilities/software-dev/mobile-web-apps
+    - paragraph: Mobile & Web Applications
+  - link "Cloud Deployment":
+    - /url: ./capabilities/software-dev/cloud-deployment
+    - paragraph: Cloud Deployment
+  - link "Software Quality Assurance":
+    - /url: ./capabilities/software-dev/software-qa
+    - paragraph: Software Quality Assurance
+  - paragraph: SUPPORT
+  - link "Dedicated Teams":
+    - /url: ./capabilities/support/dedicated-teams
+    - paragraph: Dedicated Teams
+  - link "Staff Augmentation Plus":
+    - /url: ./capabilities/support/staff-aug-plus
+    - paragraph: Staff Augmentation Plus
+  - link "Professional Services Plus":
+    - /url: ./capabilities/support/prof-services-plus
+    - paragraph: Professional Services Plus
+  - paragraph: TRIBALSCALE
+  - link "Work":
+    - /url: ./work
+    - paragraph: Work
+  - link "Insights":
+    - /url: ./insights
+    - paragraph: Insights
+  - link "Podcast":
+    - /url: ./podcast
+    - paragraph: Podcast
+  - paragraph: CORPORATE
+  - link "TribalScale Careers":
+    - /url: ./company/careers
+    - paragraph: TribalScale Careers
+  - link "Press Releases":
+    - /url: ./press-release
+    - paragraph: Press Releases
+  - link "Contact":
+    - /url: ./company/contact
+    - paragraph: Contact
+  - paragraph: TRIBAL DIFFERENCE
+  - link "Who We Are":
+    - /url: ./company/who-we-are
+    - paragraph: Who We Are
+  - link "How We Work?":
+    - /url: ./company/how-we-work
+    - paragraph: How We Work?
+  - link "Careers":
+    - /url: ./company/careers
+    - paragraph: Careers
+  - paragraph: VENTURE STUDIO
+  - link "Tribal Venture Studio":
+    - /url: ./company/venture-studio
+    - paragraph: Tribal Venture Studio
+  - link "Enroll your startup":
+    - /url: ./company/contact
+    - paragraph: Enroll your startup
+- contentinfo:
+  - paragraph: © 2025 TRIBALSCALE INC
+  - paragraph: 💪 Developed by TribalScale Design Team
+  - paragraph:
+    - link "Privacy Policy":
+      - /url: ./company/privacy-policy
+- region "Chat Widget":
+  - iframe

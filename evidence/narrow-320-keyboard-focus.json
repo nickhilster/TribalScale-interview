@@ -1,0 +1,2102 @@
+[
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "w": 87,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 269,
+      "y": 16,
+      "w": 31,
+      "h": 31
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let’s build what others can’t",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 470,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "See our Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 522,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": -270,
+      "y": -817,
+      "w": 761,
+      "h": 1367
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Explore The Latest Issue",
+    "href": "https://www.tribalscale.com/finscale/issue-three",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 403,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Don't Add AI. Redesign the Company.",
+    "href": "https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 481,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "href": "https://www.tribalscale.com/insights/ai-native-enterprise-12-things",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 591,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "href": "https://www.tribalscale.com/insights/stop-buying-ai-seats",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 701,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "href": "https://www.tribalscale.com/insights/gpu-architecture-developer-guide",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 754,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "EXPLORE ALL INSIGHTS",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 37,
+      "y": 407,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 389,
+      "w": 212,
+      "h": 67
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let's work together",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 481,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 612,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 216,
+      "h": 375
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 216,
+      "h": 375
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 216,
+      "h": 375
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 216,
+      "h": 375
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 216,
+      "h": 375
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 804,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Insights",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 811,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Podcast",
+    "href": "https://www.tribalscale.com/podcast",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 406,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "TribalScale Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 481,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Press Releases",
+    "href": "https://www.tribalscale.com/press-release",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 514,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Contact",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Who We Are",
+    "href": "https://www.tribalscale.com/company/who-we-are",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 621,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How We Work?",
+    "href": "https://www.tribalscale.com/company/how-we-work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 654,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 687,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Tribal Venture Studio",
+    "href": "https://www.tribalscale.com/company/venture-studio",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 762,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Enroll your startup",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 794,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Privacy Policy",
+    "href": "https://www.tribalscale.com/company/privacy-policy",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 114,
+      "y": 803,
+      "w": 92,
+      "h": 16
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "body",
+    "id": null,
+    "role": null,
+    "name": "AI-First , Relentlessly Human. We’re the elite team that delivers strategy, design, engineering, and AI with precision, speed, and purpose. No generic playbooks, just tailored solu",
+    "href": null,
+    "tabIndex": -1,
+    "visible": true,
+    "rect": {
+      "x": 0,
+      "y": -5898,
+      "w": 320,
+      "h": 6742
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "w": 87,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 269,
+      "y": 16,
+      "w": 31,
+      "h": 31
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let’s build what others can’t",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 404,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "See our Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 456,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": -270,
+      "y": -817,
+      "w": 761,
+      "h": 1367
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Explore The Latest Issue",
+    "href": "https://www.tribalscale.com/finscale/issue-three",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 403,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Don't Add AI. Redesign the Company.",
+    "href": "https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 481,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "href": "https://www.tribalscale.com/insights/ai-native-enterprise-12-things",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 591,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "href": "https://www.tribalscale.com/insights/stop-buying-ai-seats",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 701,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "href": "https://www.tribalscale.com/insights/gpu-architecture-developer-guide",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 754,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "EXPLORE ALL INSIGHTS",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 37,
+      "y": 407,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 388,
+      "w": 212,
+      "h": 67
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let's work together",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 480,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 661,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 406,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Insights",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 438,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Podcast",
+    "href": "https://www.tribalscale.com/podcast",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 471,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "TribalScale Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Press Releases",
+    "href": "https://www.tribalscale.com/press-release",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 579,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Contact",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 611,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Who We Are",
+    "href": "https://www.tribalscale.com/company/who-we-are",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 686,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How We Work?",
+    "href": "https://www.tribalscale.com/company/how-we-work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 719,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 752,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Tribal Venture Studio",
+    "href": "https://www.tribalscale.com/company/venture-studio",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 812,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Enroll your startup",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 638,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Privacy Policy",
+    "href": "https://www.tribalscale.com/company/privacy-policy",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 114,
+      "y": 803,
+      "w": 92,
+      "h": 16
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "body",
+    "id": null,
+    "role": null,
+    "name": "AI-First , Relentlessly Human. We’re the elite team that delivers strategy, design, engineering, and AI with precision, speed, and purpose. No generic playbooks, just tailored solu",
+    "href": null,
+    "tabIndex": -1,
+    "visible": true,
+    "rect": {
+      "x": 0,
+      "y": -5898,
+      "w": 320,
+      "h": 6742
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "w": 87,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 269,
+      "y": 16,
+      "w": 31,
+      "h": 31
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let’s build what others can’t",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 404,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "See our Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 456,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": -270,
+      "y": -817,
+      "w": 761,
+      "h": 1367
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Explore The Latest Issue",
+    "href": "https://www.tribalscale.com/finscale/issue-three",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 403,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Don't Add AI. Redesign the Company.",
+    "href": "https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 481,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "href": "https://www.tribalscale.com/insights/ai-native-enterprise-12-things",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 591,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "href": "https://www.tribalscale.com/insights/stop-buying-ai-seats",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 701,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "href": "https://www.tribalscale.com/insights/gpu-architecture-developer-guide",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 754,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "EXPLORE ALL INSIGHTS",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 37,
+      "y": 407,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 389,
+      "w": 212,
+      "h": 67
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let's work together",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 481,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 662,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 406,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Insights",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 438,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Podcast",
+    "href": "https://www.tribalscale.com/podcast",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 471,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "TribalScale Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Press Releases",
+    "href": "https://www.tribalscale.com/press-release",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 579,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Contact",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 611,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Who We Are",
+    "href": "https://www.tribalscale.com/company/who-we-are",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 686,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How We Work?",
+    "href": "https://www.tribalscale.com/company/how-we-work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 719,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 752,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Tribal Venture Studio",
+    "href": "https://www.tribalscale.com/company/venture-studio",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 812,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Enroll your startup",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 638,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Privacy Policy",
+    "href": "https://www.tribalscale.com/company/privacy-policy",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 114,
+      "y": 803,
+      "w": 92,
+      "h": 16
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "body",
+    "id": null,
+    "role": null,
+    "name": "AI-First , Relentlessly Human. We’re the elite team that delivers strategy, design, engineering, and AI with precision, speed, and purpose. No generic playbooks, just tailored solu",
+    "href": null,
+    "tabIndex": -1,
+    "visible": true,
+    "rect": {
+      "x": 0,
+      "y": -5898,
+      "w": 320,
+      "h": 6742
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "w": 87,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 269,
+      "y": 16,
+      "w": 31,
+      "h": 31
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let’s build what others can’t",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 404,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "See our Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 23,
+      "y": 456,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": -270,
+      "y": -817,
+      "w": 761,
+      "h": 1367
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Explore The Latest Issue",
+    "href": "https://www.tribalscale.com/finscale/issue-three",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 403,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Don't Add AI. Redesign the Company.",
+    "href": "https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 481,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "href": "https://www.tribalscale.com/insights/ai-native-enterprise-12-things",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 591,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "href": "https://www.tribalscale.com/insights/stop-buying-ai-seats",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 701,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "href": "https://www.tribalscale.com/insights/gpu-architecture-developer-guide",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 20,
+      "y": 754,
+      "w": 280,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "EXPLORE ALL INSIGHTS",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 37,
+      "y": 407,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "id": null,
+    "role": null,
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 389,
+      "w": 212,
+      "h": 67
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Let's work together",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 54,
+      "y": 481,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": "https://www.tribalscale.com/",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 662,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": null,
+    "role": null,
+    "name": "",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 380,
+      "w": 216,
+      "h": 450
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Work",
+    "href": "https://www.tribalscale.com/work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 406,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Insights",
+    "href": "https://www.tribalscale.com/insights",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 438,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Podcast",
+    "href": "https://www.tribalscale.com/podcast",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 471,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "TribalScale Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Press Releases",
+    "href": "https://www.tribalscale.com/press-release",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 579,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Contact",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 611,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Who We Are",
+    "href": "https://www.tribalscale.com/company/who-we-are",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 686,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "How We Work?",
+    "href": "https://www.tribalscale.com/company/how-we-work",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 719,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Careers",
+    "href": "https://www.tribalscale.com/company/careers",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 752,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Tribal Venture Studio",
+    "href": "https://www.tribalscale.com/company/venture-studio",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 812,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Enroll your startup",
+    "href": "https://www.tribalscale.com/company/contact",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 40,
+      "y": 638,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "id": null,
+    "role": null,
+    "name": "Privacy Policy",
+    "href": "https://www.tribalscale.com/company/privacy-policy",
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 114,
+      "y": 803,
+      "w": 92,
+      "h": 16
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "name": "Chat Widget",
+    "href": null,
+    "tabIndex": 0,
+    "visible": true,
+    "rect": {
+      "x": 38,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "body",
+    "id": null,
+    "role": null,
+    "name": "AI-First , Relentlessly Human. We’re the elite team that delivers strategy, design, engineering, and AI with precision, speed, and purpose. No generic playbooks, just tailored solu",
+    "href": null,
+    "tabIndex": -1,
+    "visible": true,
+    "rect": {
+      "x": 0,
+      "y": -5898,
+      "w": 320,
+      "h": 6742
+    }
+  }
+]

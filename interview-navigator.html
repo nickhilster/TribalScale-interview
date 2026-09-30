@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRIBALSCALE / INTERVIEW NAVIGATOR</title>
+<style>
+:root{--bg:#090b0d;--panel:#101419;--text:#f4f6f8;--muted:#9da7b1;--line:#29313a;--accent:#ef6c3e;--soft:#171d23}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 70% -10%,#202a33 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+.shell{max-width:1680px;margin:auto;padding:4.5vw} .hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:clamp(14px,1.15vw,22px);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
+h1{font-size:clamp(56px,7.4vw,142px);line-height:.88;letter-spacing:-.065em;margin:.18em 0 .2em;max-width:13ch}
+.subtitle{font-size:clamp(22px,2vw,38px);line-height:1.3;color:#c5ccd3;max-width:44ch}
+.rule{margin-top:6vh;display:flex;gap:1rem;align-items:center;font-size:clamp(18px,1.4vw,28px);font-weight:750} .rule b{color:var(--accent)} .arrow{color:#65717c}
+.graph{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:5vh 0}
+.node{position:relative;background:linear-gradient(145deg,var(--panel),#0d1115);border:1px solid var(--line);border-radius:24px;padding:clamp(26px,2.5vw,48px);min-height:360px;transition:.2s}
+.node:hover,.node:focus{transform:translateY(-3px);border-color:#53606c;outline:none} .node-top{display:flex;justify-content:space-between;color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:.12em}
+.num{color:var(--accent);font-weight:900} .tag{font-weight:700} h2{font-size:clamp(30px,3vw,56px);line-height:1;letter-spacing:-.035em;margin:.65em 0 .28em}
+.lead{font-size:clamp(18px,1.35vw,27px);line-height:1.4;color:#d8dde2;margin:0 0 1em} ul{margin:0;padding-left:1.2em;color:#aeb7c0;font-size:clamp(17px,1.15vw,23px);line-height:1.55}
+li+li{margin-top:.35em} .sources{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px} .sources a{color:#cbd3da;text-decoration:none;border-bottom:1px solid #56616c;font-size:14px}
+footer{border-top:1px solid var(--line);padding:5vh 0 2vh;color:var(--muted);font-size:clamp(15px,1vw,19px);line-height:1.5}
+.stop{display:inline-block;color:var(--accent);font-weight:900;letter-spacing:.12em}
+@media(max-width:850px){.graph{grid-template-columns:1fr}.hero{min-height:70vh}}
+@media(min-width:2200px){.shell{max-width:2100px}}
+</style></head>
+<body><main class="shell">
+<section class="hero"><div class="eyebrow">Nikhil · Sep 30 · 4K glance mode</div><h1>TRIBALSCALE / INTERVIEW NAVIGATOR</h1><p class="subtitle">A map, not a script. Find the route. Give one proof. Stop talking.</p>
+<div class="rule">POINT <span class="arrow">→</span> EVIDENCE <span class="arrow">→</span> <b>STOP</b></div></section>
+<section class="graph">
+        <article class="node" id="node-0" tabindex="0">
+          <div class="node-top"><span class="num">01</span><span class="tag">30–60 sec</span></div>
+          <h2>Tell me about yourself</h2>
+          <p class="lead">Design + technology + operations → product + AI systems.</p>
+          <ul><li>Frontline/team leadership → production → UX/product → AI systems</li><li>Today: design products and workflows, not just interfaces</li><li>I start with why it should exist, then prototype the smallest useful thing</li><li>Connect to TribalScale: client problems + multidisciplinary delivery + AI</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-1" tabindex="0">
+          <div class="node-top"><span class="num">02</span><span class="tag">Research-backed</span></div>
+          <h2>Why TribalScale?</h2>
+          <p class="lead">The overlap is workflow redesign, not AI decoration.</p>
+          <ul><li>Sheetal: start from the outcome and redesign the workflow around what AI makes possible</li><li>Heather: Discovery → Design → Build → Test → Launch, with AI throughout the lifecycle</li><li>TribalScale: move pilots into production; embed with teams rather than advise from the sidelines</li><li>My evidence: Best Buy workflow redesign + RBH + LTB Buddy + RyFine</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-2" tabindex="0">
+          <div class="node-top"><span class="num">03</span><span class="tag">Core answer</span></div>
+          <h2>How I design</h2>
+          <p class="lead">Understand why → map system → prototype → humans → iterate.</p>
+          <ul><li>Users + business outcome + constraints first</li><li>Expose the highest-risk assumption</li><li>Build the smallest test that can change the decision</li><li>Design + engineering together, not sequential handoff</li><li>Measure what &#x27;working&#x27; means before scaling</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-3" tabindex="0">
+          <div class="node-top"><span class="num">04</span><span class="tag">AI-native</span></div>
+          <h2>How I use AI</h2>
+          <p class="lead">Capability follows the problem. Human authority follows consequence.</p>
+          <ul><li>Separate deterministic behaviour from generative behaviour</li><li>Use agents where they change the workflow, not merely speed up a step</li><li>Guardrails + auditability + human review where consequences matter</li><li>Evaluate the outcome, not whether the chatbot produced text</li><li>Example: LTB Buddy or RBH</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-4" tabindex="0">
+          <div class="node-top"><span class="num">05</span><span class="tag">Evidence</span></div>
+          <h2>Best Buy</h2>
+          <p class="lead">The cleanest conventional leadership + measurable workflow story.</p>
+          <ul><li>Observed service workflow bottleneck</li><li>Changed the process, not merely the interface</li><li>Delivery cycle: ~7 days → under 48 hours</li><li>Use for leadership, operations, ambiguity, stakeholder questions</li><li>Give the number. Explain mechanics only if Heather asks.</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-5" tabindex="0">
+          <div class="node-top"><span class="num">06</span><span class="tag">Evidence</span></div>
+          <h2>RBH</h2>
+          <p class="lead">Internal AI exploration → later independent implementation.</p>
+          <ul><li>Saw an internal opportunity outside the assigned role</li><li>Explored marketer/copilot workflow in consultancy context</li><li>Later rebuilt the concept independently — keep that boundary explicit</li><li>Portable architecture, guardrails, human approval, failure handling</li><li>Use for initiative + AI product architecture</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-6" tabindex="0">
+          <div class="node-top"><span class="num">07</span><span class="tag">Evidence</span></div>
+          <h2>LTB Buddy</h2>
+          <p class="lead">AI navigation where trust and human authority are product requirements.</p>
+          <ul><li>Tenant journey: organize → understand → prepare → next step</li><li>AI guides; it does not decide legal outcomes</li><li>Evidence, uncertainty, escalation and human review are part of UX</li><li>Public beta; learning from real use</li><li>Use for discovery, trust, responsible AI, end-to-end ownership</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-7" tabindex="0">
+          <div class="node-top"><span class="num">08</span><span class="tag">Evidence</span></div>
+          <h2>RyFine</h2>
+          <p class="lead">Use when the conversation needs visible product/design craft.</p>
+          <ul><li>Shift from system explanation to concrete product experience</li><li>Talk interaction decisions, iteration and Figma/design depth</li><li>Keep it as supporting evidence — don&#x27;t turn interview into portfolio tour</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-8" tabindex="0">
+          <div class="node-top"><span class="num">09</span><span class="tag">Heather lens</span></div>
+          <h2>What she may probe</h2>
+          <p class="lead">Can this person turn AI experimentation into repeatable product delivery?</p>
+          <ul><li>What does &#x27;working&#x27; mean?</li><li>How do you evaluate before the client discovers failure?</li><li>How do product, design and engineering work simultaneously?</li><li>How do you explain why an agent did something?</li><li>How do you leave the client able to operate what you built?</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-9" tabindex="0">
+          <div class="node-top"><span class="num">10</span><span class="tag">Ask Heather</span></div>
+          <h2>Questions worth spending time on</h2>
+          <p class="lead">Use 2–3. Follow the conversation.</p>
+          <ul><li>Why does this role exist now — what gap should it fill?</li><li>AI Product Design here: AI-native client products, AI changing how products are built, or both?</li><li>How far does designer ownership run — first client conversation through production?</li><li>How standardized is the internal AI stack vs project-by-project?</li><li>After deployment, what does handoff / ongoing client ownership look like?</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-10" tabindex="0">
+          <div class="node-top"><span class="num">11</span><span class="tag">Emergency router</span></div>
+          <h2>Unexpected question</h2>
+          <p class="lead">“There are probably two parts to that.”</p>
+          <ul><li>1. Principle — how I think about it</li><li>2. One concrete example</li><li>Answer both</li><li>STOP. Silence is Heather’s turn.</li></ul>
+          <div class="sources"></div>
+        </article>
+        <article class="node" id="node-11" tabindex="0">
+          <div class="node-top"><span class="num">12</span><span class="tag">Do not forget</span></div>
+          <h2>Interview operating system</h2>
+          <p class="lead">You do not need to prove everything.</p>
+          <ul><li>Headline first</li><li>One piece of evidence</li><li>Do not demo six things</li><li>Do not expose every intermediate thought</li><li>If the answer landed, stop talking</li><li>Your job: show problem → system → prototype → ship → learn</li></ul>
+          <div class="sources"></div>
+        </article></section>
+<footer>Private interview surface · Research refreshed Sep 30, 2026 · <span class="stop">POINT → EVIDENCE → STOP</span></footer></main></body></html>

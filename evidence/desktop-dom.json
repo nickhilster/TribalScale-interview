@@ -1,0 +1,705 @@
+{
+  "title": "TribalScale - Global Innovation Partner",
+  "lang": "en-US",
+  "viewport": {
+    "innerWidth": 1440,
+    "innerHeight": 1000,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 4654
+  },
+  "horizontalOverflow": false,
+  "headings": [
+    {
+      "level": "H1",
+      "text": "AI-First , Relentlessly Human."
+    },
+    {
+      "level": "H2",
+      "text": "Why TribalScale?"
+    },
+    {
+      "level": "H4",
+      "text": "AI-First Engineering"
+    },
+    {
+      "level": "H4",
+      "text": "Human Design"
+    },
+    {
+      "level": "H4",
+      "text": "Agility at Scale"
+    },
+    {
+      "level": "H2",
+      "text": "Insights"
+    },
+    {
+      "level": "H3",
+      "text": "Explore FinScale Magazine"
+    },
+    {
+      "level": "H1",
+      "text": "700+"
+    },
+    {
+      "level": "H1",
+      "text": "90+"
+    },
+    {
+      "level": "H1",
+      "text": "95%"
+    },
+    {
+      "level": "H2",
+      "text": "Our Human-Centred, Results-Driven Approach"
+    },
+    {
+      "level": "H4",
+      "text": "Frame"
+    },
+    {
+      "level": "H4",
+      "text": "Ideate"
+    },
+    {
+      "level": "H4",
+      "text": "Empathize"
+    },
+    {
+      "level": "H4",
+      "text": "Validate"
+    },
+    {
+      "level": "H4",
+      "text": "Next Bets"
+    },
+    {
+      "level": "H2",
+      "text": "Your Next Breakthrough Starts Here."
+    }
+  ],
+  "inputs": [],
+  "links": [
+    {
+      "name": "",
+      "href": "https://www.tribalscale.com/"
+    },
+    {
+      "name": "Our Work",
+      "href": ""
+    },
+    {
+      "name": "Insights",
+      "href": "https://www.tribalscale.com/insights"
+    },
+    {
+      "name": "Book a call",
+      "href": "https://meetings.hubspot.com/will-tam/tsbookcall"
+    },
+    {
+      "name": "Let’s build what others can’t",
+      "href": "https://www.tribalscale.com/company/contact"
+    },
+    {
+      "name": "See our Work",
+      "href": "https://www.tribalscale.com/work"
+    },
+    {
+      "name": "Explore The Latest Issue",
+      "href": "https://www.tribalscale.com/finscale/issue-three"
+    },
+    {
+      "name": "Don't Add AI. Redesign the Company.",
+      "href": "https://www.tribalscale.com/insights/dont-add-ai-redesign-the-company"
+    },
+    {
+      "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+      "href": "https://www.tribalscale.com/insights/ai-native-enterprise-12-things"
+    },
+    {
+      "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+      "href": "https://www.tribalscale.com/insights/stop-buying-ai-seats"
+    },
+    {
+      "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+      "href": "https://www.tribalscale.com/insights/gpu-architecture-developer-guide"
+    },
+    {
+      "name": "EXPLORE ALL INSIGHTS",
+      "href": "https://www.tribalscale.com/insights"
+    },
+    {
+      "name": "Let's work together",
+      "href": "https://www.tribalscale.com/company/contact"
+    },
+    {
+      "name": "",
+      "href": "https://www.tribalscale.com/"
+    },
+    {
+      "name": "AI & LLMs",
+      "href": "https://www.tribalscale.com/capabilities/ai-data/ai-llms"
+    },
+    {
+      "name": "AI Agent Development",
+      "href": "https://www.tribalscale.com/capabilities/ai-data/ai-agents"
+    },
+    {
+      "name": "Databricks",
+      "href": "https://www.tribalscale.com/capabilities/ai-data/databricks"
+    },
+    {
+      "name": "UX Research",
+      "href": "https://www.tribalscale.com/capabilities/design-research/ux-research"
+    },
+    {
+      "name": "Product Design",
+      "href": "https://www.tribalscale.com/capabilities/design-research/product-design"
+    },
+    {
+      "name": "Design Systems",
+      "href": "https://www.tribalscale.com/capabilities/design-research/design-systems"
+    },
+    {
+      "name": "Product Strategy",
+      "href": "https://www.tribalscale.com/capabilities/digital-products/product-strategy"
+    },
+    {
+      "name": "Product Validation",
+      "href": "https://www.tribalscale.com/capabilities/digital-products/product-validation"
+    },
+    {
+      "name": "Product Discovery",
+      "href": "https://www.tribalscale.com/capabilities/digital-products/product-discovery"
+    },
+    {
+      "name": "Service Design",
+      "href": "https://www.tribalscale.com/capabilities/transformation/service-design"
+    },
+    {
+      "name": "AI Readiness",
+      "href": "https://www.tribalscale.com/capabilities/transformation/ai-readiness"
+    },
+    {
+      "name": "Capability Building",
+      "href": "https://www.tribalscale.com/capabilities/transformation/capability-building"
+    },
+    {
+      "name": "Mobile & Web Applications",
+      "href": "https://www.tribalscale.com/capabilities/software-dev/mobile-web-apps"
+    },
+    {
+      "name": "Cloud Deployment",
+      "href": "https://www.tribalscale.com/capabilities/software-dev/cloud-deployment"
+    },
+    {
+      "name": "Software Quality Assurance",
+      "href": "https://www.tribalscale.com/capabilities/software-dev/software-qa"
+    },
+    {
+      "name": "Dedicated Teams",
+      "href": "https://www.tribalscale.com/capabilities/support/dedicated-teams"
+    },
+    {
+      "name": "Staff Augmentation Plus",
+      "href": "https://www.tribalscale.com/capabilities/support/staff-aug-plus"
+    },
+    {
+      "name": "Professional Services Plus",
+      "href": "https://www.tribalscale.com/capabilities/support/prof-services-plus"
+    },
+    {
+      "name": "Work",
+      "href": "https://www.tribalscale.com/work"
+    },
+    {
+      "name": "Insights",
+      "href": "https://www.tribalscale.com/insights"
+    },
+    {
+      "name": "Podcast",
+      "href": "https://www.tribalscale.com/podcast"
+    },
+    {
+      "name": "TribalScale Careers",
+      "href": "https://www.tribalscale.com/company/careers"
+    },
+    {
+      "name": "Press Releases",
+      "href": "https://www.tribalscale.com/press-release"
+    },
+    {
+      "name": "Contact",
+      "href": "https://www.tribalscale.com/company/contact"
+    },
+    {
+      "name": "Who We Are",
+      "href": "https://www.tribalscale.com/company/who-we-are"
+    },
+    {
+      "name": "How We Work?",
+      "href": "https://www.tribalscale.com/company/how-we-work"
+    },
+    {
+      "name": "Careers",
+      "href": "https://www.tribalscale.com/company/careers"
+    },
+    {
+      "name": "Tribal Venture Studio",
+      "href": "https://www.tribalscale.com/company/venture-studio"
+    },
+    {
+      "name": "Enroll your startup",
+      "href": "https://www.tribalscale.com/company/contact"
+    },
+    {
+      "name": "Privacy Policy",
+      "href": "https://www.tribalscale.com/company/privacy-policy"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Search Icon",
+      "role": null,
+      "expanded": null
+    }
+  ],
+  "iframes": [
+    {
+      "title": "",
+      "src": "https://my.spline.design/claritystream-tpIS2seNDOjLOYmdKfblGXVu/",
+      "visible": true
+    },
+    {
+      "title": "",
+      "src": "",
+      "visible": true
+    },
+    {
+      "title": "Chat Widget",
+      "src": "https://app.hubspot.com/conversations-visitor/2269546/threads/utk/79c54e35937a4fc48335468e320034b0?uuid=d8e20df3fe724fe19f3532a086062375&mobile=false&mobileSafari=false&hideWelcomeMessage=false&hstc=&domain=tribalscale.com&inApp53=false&messagesUtk=79c54e35937a4fc48335468e320034b0&url=https%3A%2F%2Fwww.tribalscale.com%2F&inline=false&isFullscreen=false&globalCookieOptOut=&isFirstVisitorSession=true&isAttachmentDisabled=false&isInitialInputFocusDisabled=false&enableWidgetCookieBanner=false&isInCMS=false&hideScrollToButton=true&isIOSMobile=false",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "Person typing on a laptop with a network diagram connecting AI to agents, workflows, context, and governance.",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    },
+    {
+      "alt": "",
+      "role": null,
+      "ariaHidden": null,
+      "visible": true
+    }
+  ],
+  "landmarks": [
+    {
+      "tag": "nav",
+      "role": null,
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "svg",
+      "role": "presentation",
+      "label": null
+    },
+    {
+      "tag": "footer",
+      "role": null,
+      "label": null
+    },
+    {
+      "tag": "footer",
+      "role": null,
+      "label": null
+    },
+    {
+      "tag": "div",
+      "role": "region",
+      "label": "Chat Widget"
+    }
+  ],
+  "positiveTabindex": [],
+  "counts": {
+    "focusable": 46,
+    "links": 44,
+    "buttons": 1,
+    "images": 53,
+    "iframes": 3
+  }
+}

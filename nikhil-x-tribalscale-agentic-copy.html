@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A deliberately fast visual study for TribalScale: copying a surface is easy in an agentic world; designing the system worth copying is not.">
+<title>Nikhil × TribalScale — Copy the surface. Earn the system.</title>
+<style>
+:root{
+  --ink:#050505; --paper:#f5f3ed; --white:#f8f8f5; --muted:#aaa9a3;
+  --line:#292929; --yellow:#f3e900; --gold:#8f7b4b; --panel:#101010;
+  --max:1540px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.35}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:5px}
+.skip{position:absolute;left:18px;top:-100px;background:var(--yellow);color:#000;padding:12px 16px;z-index:20;font-weight:800}
+.skip:focus{top:18px}
+.wrap{width:min(calc(100% - 64px),var(--max));margin:auto}
+header{height:92px;display:flex;align-items:center;border-bottom:1px solid var(--line);position:relative;z-index:2}
+nav{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.mark{font-size:13px;font-weight:800;letter-spacing:.35em;line-height:1.15}
+.mark span{display:block}
+.kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.navlinks{display:flex;gap:26px;align-items:center;font-size:13px}
+.navlinks a{text-decoration:none;color:#c9c9c4}
+.navlinks a:hover{text-decoration:underline;text-underline-offset:5px}
+.hero{min-height:calc(100vh - 92px);display:grid;grid-template-columns:1.4fr .6fr;align-items:end;gap:5vw;padding:8vh 0 7vh;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);margin-bottom:3vh}
+.display{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;font-size:clamp(62px,8.6vw,154px);line-height:.88;letter-spacing:-.055em;margin:0;max-width:10ch}
+.display em{color:var(--yellow);font-style:inherit}
+.hero-copy{font-size:clamp(20px,1.55vw,28px);color:#d0d0cb;max-width:30ch;margin:4vh 0 0}
+.hero-side{align-self:center;border-left:1px solid var(--line);padding-left:32px}
+.hero-side strong{font-size:clamp(22px,2vw,34px);font-weight:500;display:block;margin-bottom:18px}
+.hero-side p{color:var(--muted);font-size:16px;max-width:31ch}
+.hero-side .tiny{margin-top:34px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;font-size:11px}
+.statement{padding:11vh 0;border-bottom:1px solid var(--line)}
+.statement h2{font-size:clamp(42px,5.2vw,92px);font-weight:400;letter-spacing:-.045em;line-height:.95;margin:0 0 6vh;max-width:15ch}
+.statement h2 span{color:var(--yellow)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.split>div{padding:46px 4vw 46px 0}
+.split>div+div{border-left:1px solid var(--line);padding-left:4vw}
+.split h3{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 24px}
+.split p{font-family:Georgia,"Times New Roman",serif;font-size:clamp(27px,2.2vw,40px);line-height:1.18;margin:0;max-width:21ch}
+.split ul{padding:0;margin:28px 0 0;list-style:none;color:#aaa;font-size:15px}
+.split li{padding:10px 0;border-top:1px solid #1e1e1e}
+.split li::before{content:"→";color:var(--yellow);margin-right:12px}
+.section{padding:10vh 0;border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:.42fr 1.58fr;gap:4vw;margin-bottom:7vh}
+.section-no{color:var(--gold);font-size:13px;letter-spacing:.12em}
+.section h2{font-size:clamp(44px,5.7vw,98px);font-weight:400;letter-spacing:-.05em;line-height:.92;margin:0;max-width:13ch}
+.section h2.serif{font-family:Georgia,"Times New Roman",serif;font-style:italic}
+.section-intro{font-size:clamp(19px,1.4vw,25px);color:#bdbdb7;max-width:50ch;margin:26px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.card{padding:42px 4vw 48px 0;border-bottom:1px solid var(--line);min-height:330px}
+.card:nth-child(even){border-left:1px solid var(--line);padding-left:4vw}
+.card .label{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:11px}
+.card h3{font-size:clamp(28px,2.4vw,44px);font-weight:400;letter-spacing:-.035em;margin:18px 0}
+.card p{font-size:17px;color:#b7b7b1;max-width:52ch}
+.card strong{color:var(--white);font-weight:600}
+.metric{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(48px,5vw,88px);color:var(--yellow);line-height:1;margin:14px 0 10px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step{padding:30px 24px;border-right:1px solid var(--line);min-height:190px}
+.step:last-child{border-right:0}
+.step b{display:block;color:var(--yellow);font-size:12px;margin-bottom:45px}
+.step span{font-size:clamp(18px,1.4vw,26px)}
+.audit{background:var(--paper);color:#111}
+.audit .section-no,.audit .label{color:#77673e}
+.audit .section-intro{color:#4f4f4b}
+.audit .grid{border-color:#cfcac0}
+.audit .card{border-color:#cfcac0}
+.audit .card:nth-child(even){border-color:#cfcac0}
+.audit .card p{color:#55544f}
+.audit .card strong{color:#111}
+.audit .metric{color:#111}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #aaa49a;border-radius:999px;padding:8px 12px;font-size:12px;margin:4px 8px 4px 0}
+.dot{width:8px;height:8px;border-radius:50%;background:#1d7b4b}
+.caveat{margin-top:30px;font-size:13px;color:#6d6b65;max-width:76ch}
+.final{min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:10vh 0}
+.final .big{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(54px,7vw,126px);line-height:.9;letter-spacing:-.055em;max-width:12ch;margin:0}
+.final .big span{color:var(--yellow)}
+.final p{font-size:clamp(19px,1.5vw,27px);color:#aaa;max-width:45ch;margin-top:5vh}
+footer{border-top:1px solid var(--line);padding:34px 0 50px;color:#777;font-size:12px;display:flex;justify-content:space-between;gap:24px}
+footer a{text-underline-offset:4px}
+@media(max-width:900px){
+ .wrap{width:min(calc(100% - 34px),var(--max))}
+ .navlinks{display:none}.hero{grid-template-columns:1fr;align-items:center}.hero-side{border-left:0;border-top:1px solid var(--line);padding:28px 0 0}
+ .section-head{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.card:nth-child(even){border-left:0;padding-left:0}
+ .split{grid-template-columns:1fr}.split>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}
+ .flow{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line);min-height:auto}.step b{margin-bottom:14px}
+ footer{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Primary">
+      <div class="mark" aria-label="Nikhil Khedkar"><span>NIKHIL</span><span>KHEDKAR</span></div>
+      <div class="navlinks">
+        <a href="#point">The point</a><a href="#work">Evidence</a><a href="#audit">Audit</a>
+      </div>
+      <div class="kicker">A visual study for TribalScale</div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="wrap hero" aria-labelledby="hero-title">
+  <div>
+    <div class="eyebrow">AI-FIRST / HUMAN-DESIGNED</div>
+    <h1 class="display" id="hero-title">Copy the surface.<br><em>Earn the system.</em></h1>
+    <p class="hero-copy">In an agentic world, reproducing a visual language is becoming cheap. Creating one worth reproducing still isn't.</p>
+  </div>
+  <aside class="hero-side" aria-label="Context">
+    <strong>This page is deliberately familiar.</strong>
+    <p>I asked an AI agent to study TribalScale's public site and rebuild my story using some of its visual grammar — without copying its source code or assets.</p>
+    <p class="tiny">The imitation is the demonstration.</p>
+  </aside>
+</section>
+
+<section class="statement" id="point">
+  <div class="wrap">
+    <h2>Agents collapse the cost of <span>execution.</span> They do not collapse the cost of <span>judgment.</span></h2>
+    <div class="split">
+      <div>
+        <h3>Easy to reproduce</h3>
+        <p>Palette. Type contrast. Grid. Rhythm. Interaction patterns. Component structure.</p>
+        <ul><li>Observe a system</li><li>Infer its rules</li><li>Generate a credible implementation</li></ul>
+      </div>
+      <div>
+        <h3>Still hard to design</h3>
+        <p>What to say. What to remove. Where to create tension. What deserves attention. What the brand should feel like.</p>
+        <ul><li>Choose the problem</li><li>Make the trade-offs</li><li>Build the taste</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" aria-labelledby="why-title">
+  <div class="section-head">
+    <div class="section-no">01 / CONVERGENCE</div>
+    <div><h2 class="serif" id="why-title">Why this caught my attention.</h2>
+      <p class="section-intro">The visual exercise is fun. The more interesting overlap is underneath it: TribalScale's recent writing and my own work keep arriving at the same design question — what should the workflow become now?</p>
+    </div>
+  </div>
+  <div class="flow" aria-label="Shared workflow">
+    <div class="step"><b>01</b><span>Outcome</span></div>
+    <div class="step"><b>02</b><span>Workflow</span></div>
+    <div class="step"><b>03</b><span>People + agents</span></div>
+    <div class="step"><b>04</b><span>Evidence</span></div>
+    <div class="step"><b>05</b><span>Learn + redesign</span></div>
+  </div>
+</section>
+
+<section class="section wrap" id="work" aria-labelledby="work-title">
+  <div class="section-head">
+    <div class="section-no">02 / EVIDENCE</div>
+    <div><h2 id="work-title">The work behind the point.</h2>
+      <p class="section-intro">Different contexts, same habit: start with the human and operating problem, then choose the interface, automation or AI that changes the outcome.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="label">BEST BUY / WORKFLOW</div><div class="metric">7d → &lt;48h</div><h3>Redesign the process, not just the screen.</h3><p>A frontline service bottleneck became a workflow problem to solve. The durable lesson was that <strong>system design can matter more than interface design.</strong></p></article>
+    <article class="card"><div class="label">RBH / AI PRODUCT</div><h3>Prototype the architecture, not the hype.</h3><p>An internal AI opportunity led to exploration of a marketer/copilot workflow. A later independent implementation tested portability, guardrails, predictable vs. generative behaviour, human approval and failure handling.</p></article>
+    <article class="card"><div class="label">LTB BUDDY / HUMAN AUTHORITY</div><h3>AI that helps a person move through complexity.</h3><p>Organize → understand → prepare → next step. The AI guides the process; consequential decisions remain with people. <strong>Uncertainty, evidence and escalation are part of the UX.</strong></p></article>
+    <article class="card"><div class="label">RYFINE / PRODUCT CRAFT</div><h3>Capability still has to become an experience.</h3><p>Interaction design turns system capability into understandable choices. The interface is one layer alongside behaviour, workflow, trust and feedback.</p></article>
+  </div>
+</section>
+
+<section class="section wrap" aria-labelledby="agent-title">
+  <div class="section-head">
+    <div class="section-no">03 / AGENTIC DESIGN</div>
+    <div><h2 class="serif" id="agent-title">Human-in-the-loop is not merely a safety net.</h2>
+      <p class="section-intro">A human catches something an automated evaluation often misses: intent drift. The output can be technically valid and still fail the reason the workflow exists.</p>
+    </div>
+  </div>
+  <div class="split">
+    <div><h3>Agent</h3><p>Research. Synthesize. Generate. Test. Iterate at machine speed.</p></div>
+    <div><h3>Human</h3><p>Set intent. Judge relevance. Notice drift. Make consequential calls. Raise the quality bar.</p></div>
+  </div>
+</section>
+
+<section class="section audit" id="audit" aria-labelledby="audit-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-no">04 / SITE AUDIT</div>
+      <div><h2 id="audit-title">What makes TribalScale's site worth copying.</h2>
+        <p class="section-intro">The current public site is built in Framer and uses a Spline experience on the homepage. More important than the tools is the restraint: editorial typography, aggressive hierarchy, clear section rhythm, high contrast and a small visual vocabulary used consistently.</p>
+      </div>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="label">VISUAL SYSTEM</div><h3>Distinct without being noisy.</h3><p>The black / white / electric-yellow language is memorable because it is disciplined. Large editorial type does the emotional work; thin rules, compact labels and diagrams provide structure.</p></article>
+      <article class="card"><div class="label">INFORMATION ARCHITECTURE</div><h3>Positioning becomes navigation.</h3><p>The homepage moves from promise → trust → capabilities → evidence → process → CTA. The copy and hierarchy reinforce the same three ideas: <strong>AI-first, human-centred, execution-oriented.</strong></p></article>
+      <article class="card"><div class="label">LIGHTHOUSE / DESKTOP</div><div class="metric">94</div><h3>Fast while staying visually ambitious.</h3><p>The landing page scored <strong>94 Performance</strong> on the desktop Lighthouse run. Highlights included a <strong>0.6 s LCP</strong>, <strong>0.9 s Speed Index</strong> and roughly <strong>40 ms Total Blocking Time</strong> — strong results for a visually rich Framer experience.</p></article>
+      <article class="card"><div class="label">LIGHTHOUSE / ACCESSIBILITY + SEO</div><div class="metric">90 / 100</div><h3>A strong automated baseline.</h3><p>The landing page scored <strong>90 Accessibility on both desktop and mobile</strong>, plus <strong>100 SEO on both runs</strong>. The mobile run also reached a <strong>2.0 s Speed Index</strong>. A deeper A11Y pass can now move beyond Lighthouse into keyboard, accessibility-tree, screen-reader and interaction testing.</p></article>
+    </div>
+    <div>
+      <span class="badge"><span class="dot"></span>Semantic landmarks in this study</span>
+      <span class="badge"><span class="dot"></span>Keyboard-visible focus</span>
+      <span class="badge"><span class="dot"></span>Reduced-motion support</span>
+      <span class="badge"><span class="dot"></span>No external JS / fonts / images</span>
+    </div>
+    <p class="caveat">Lighthouse highlights above are from the TribalScale landing page runs supplied on September 30, 2026. Automated accessibility testing is a strong baseline, not a complete WCAG conformance assessment; the next pass should add keyboard, accessibility-tree, zoom/reflow, motion and assistive-technology testing.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow">THE ACTUAL POINT</div>
+    <h2 class="big">AI made this page <span>cheap to build.</span><br>It didn't make the original <span>cheap to design.</span></h2>
+    <p>That distinction is where I think product design gets more interesting, not less. Execution gets abundant. Intent, systems thinking, judgment and taste become the scarce layer.</p>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div>Nikhil Khedkar · Toronto · September 2026</div>
+  <div>This is an independent visual study for a conversation with TribalScale — not a TribalScale property.</div>
+  <div><a href="https://www.tribalscale.com/">Original TribalScale site</a></div>
+</footer>
+</body>
+</html>

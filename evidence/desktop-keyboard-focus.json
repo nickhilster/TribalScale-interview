@@ -1,0 +1,1262 @@
+[
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 160,
+      "y": 22,
+      "w": 268,
+      "h": 21
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Insights",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1026,
+      "y": 16,
+      "w": 81,
+      "h": 33
+    }
+  },
+  {
+    "tag": "button",
+    "name": "Search Icon",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1109,
+      "y": 16,
+      "w": 32,
+      "h": 32
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Book a call",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1157,
+      "y": 18,
+      "w": 123,
+      "h": 29
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let’s build what others can’t",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 202,
+      "y": 415,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "See our Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 524,
+      "y": 415,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": -119,
+      "y": -478,
+      "w": 1634,
+      "h": 1680
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Explore The Latest Issue",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 708,
+      "y": 481,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Don't Add AI. Redesign the Company.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 200,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 465,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 730,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 995,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "EXPLORE ALL INSIGHTS",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 597,
+      "y": 485,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 250,
+      "y": 488,
+      "w": 865,
+      "h": 25
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let's work together",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 250,
+      "y": 538,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 725,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 456,
+      "w": 420,
+      "h": 345
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 456,
+      "w": 420,
+      "h": 345
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 456,
+      "w": 420,
+      "h": 345
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 456,
+      "w": 420,
+      "h": 345
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 456,
+      "w": 420,
+      "h": 345
+    }
+  },
+  {
+    "tag": "a",
+    "name": "AI & LLMs",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 200,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "AI Agent Development",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 233,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Databricks",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 266,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "UX Research",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 340,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Design",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 373,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Design Systems",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 406,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Strategy",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 481,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Validation",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 514,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Discovery",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Service Design",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 621,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "AI Readiness",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 654,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Capability Building",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 687,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Mobile & Web Applications",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 762,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Cloud Deployment",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 794,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Software Quality Assurance",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 827,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Dedicated Teams",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 902,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Staff Augmentation Plus",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 935,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Professional Services Plus",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 968,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 200,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Insights",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 233,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Podcast",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 266,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "TribalScale Careers",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 340,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Press Releases",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 373,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Contact",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 406,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Who We Are",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 481,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How We Work?",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 514,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Careers",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Tribal Venture Studio",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 621,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Enroll your startup",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 997,
+      "y": 654,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Privacy Policy",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1308,
+      "y": 958,
+      "w": 92,
+      "h": 16
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1158,
+      "y": 747,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1158,
+      "y": 747,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1158,
+      "y": 747,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "body",
+    "name": "Our Work Capabilities Company Insights Book a call AI-First , Relentlessly Human. We’re the elite team that delivers strategy, design, engineering, and AI with ",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": -1,
+    "rect": {
+      "x": 0,
+      "y": -3654,
+      "w": 1440,
+      "h": 4654
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 160,
+      "y": 22,
+      "w": 268,
+      "h": 21
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Insights",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1026,
+      "y": 16,
+      "w": 81,
+      "h": 33
+    }
+  },
+  {
+    "tag": "button",
+    "name": "Search Icon",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1109,
+      "y": 16,
+      "w": 32,
+      "h": 32
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Book a call",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 1157,
+      "y": 18,
+      "w": 123,
+      "h": 29
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let’s build what others can’t",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 202,
+      "y": 415,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "See our Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 524,
+      "y": 415,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": -119,
+      "y": -478,
+      "w": 1634,
+      "h": 1680
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Explore The Latest Issue",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 708,
+      "y": 481,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Don't Add AI. Redesign the Company.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 200,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 465,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 730,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 995,
+      "y": 652,
+      "w": 245,
+      "h": 340
+    }
+  },
+  {
+    "tag": "a",
+    "name": "EXPLORE ALL INSIGHTS",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 597,
+      "y": 485,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 250,
+      "y": 487,
+      "w": 865,
+      "h": 25
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let's work together",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 250,
+      "y": 537,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 761,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 457,
+      "w": 420,
+      "h": 420
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 457,
+      "w": 420,
+      "h": 420
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 457,
+      "w": 420,
+      "h": 420
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 457,
+      "w": 420,
+      "h": 420
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 120,
+      "y": 457,
+      "w": 420,
+      "h": 420
+    }
+  },
+  {
+    "tag": "a",
+    "name": "AI & LLMs",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 201,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "AI Agent Development",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 234,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Databricks",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 267,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "UX Research",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 341,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Design",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 374,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Design Systems",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 407,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Strategy",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 482,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Validation",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 515,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Product Discovery",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 547,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Service Design",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 622,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "AI Readiness",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 655,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Capability Building",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 688,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Mobile & Web Applications",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 763,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Cloud Deployment",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 664,
+      "y": 795,
+      "w": 229,
+      "h": 33
+    }
+  }
+]

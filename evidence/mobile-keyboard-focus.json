@@ -1,0 +1,1262 @@
+[
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "w": 87,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 339,
+      "y": 16,
+      "w": 31,
+      "h": 31
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let’s build what others can’t",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 24,
+      "y": 447,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "See our Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 24,
+      "y": 500,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": -269,
+      "y": -817,
+      "w": 828,
+      "h": 1385
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Explore The Latest Issue",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 404,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Don't Add AI. Redesign the Company.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 481,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 591,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 701,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 754,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "EXPLORE ALL INSIGHTS",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 72,
+      "y": 407,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 54,
+      "y": 399,
+      "w": 282,
+      "h": 45
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let's work together",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 54,
+      "y": 469,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 600,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 378,
+      "w": 279,
+      "h": 360
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 378,
+      "w": 279,
+      "h": 360
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 378,
+      "w": 279,
+      "h": 360
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 378,
+      "w": 279,
+      "h": 360
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 378,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 405,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Insights",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 438,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Podcast",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 471,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "TribalScale Careers",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Press Releases",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 578,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Contact",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 611,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Who We Are",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 686,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How We Work?",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 719,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Careers",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 752,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Tribal Venture Studio",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 811,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Enroll your startup",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 655,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Privacy Policy",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 149,
+      "y": 803,
+      "w": 92,
+      "h": 16
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 108,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 108,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 108,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "body",
+    "name": "AI-First , Relentlessly Human. We’re the elite team that delivers strategy, design, engineering, and AI with precision, speed, and purpose. No generic playbooks",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": -1,
+    "rect": {
+      "x": 0,
+      "y": -5455,
+      "w": 390,
+      "h": 6299
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "w": 87,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 339,
+      "y": 16,
+      "w": 31,
+      "h": 31
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let’s build what others can’t",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 24,
+      "y": 403,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "See our Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 24,
+      "y": 456,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": -269,
+      "y": -817,
+      "w": 828,
+      "h": 1385
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Explore The Latest Issue",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 404,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Don't Add AI. Redesign the Company.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 481,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 591,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 701,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 754,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "EXPLORE ALL INSIGHTS",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 72,
+      "y": 407,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 54,
+      "y": 399,
+      "w": 282,
+      "h": 45
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let's work together",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 54,
+      "y": 469,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 650,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 405,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Insights",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 438,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Podcast",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 471,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "TribalScale Careers",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 546,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Press Releases",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 578,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Contact",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 611,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Who We Are",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 686,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How We Work?",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 719,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Careers",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 752,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Tribal Venture Studio",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 811,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Enroll your startup",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 655,
+      "w": 229,
+      "h": 33
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Privacy Policy",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 149,
+      "y": 803,
+      "w": 92,
+      "h": 16
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 108,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 108,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "Chat Widget",
+    "id": "hubspot-conversations-iframe",
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 108,
+      "y": 591,
+      "w": 282,
+      "h": 253
+    }
+  },
+  {
+    "tag": "body",
+    "name": "AI-First , Relentlessly Human. We’re the elite team that delivers strategy, design, engineering, and AI with precision, speed, and purpose. No generic playbooks",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": -1,
+    "rect": {
+      "x": 0,
+      "y": -5455,
+      "w": 390,
+      "h": 6299
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 17,
+      "w": 87,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 339,
+      "y": 16,
+      "w": 31,
+      "h": 31
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let’s build what others can’t",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 24,
+      "y": 403,
+      "w": 307,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "See our Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 24,
+      "y": 456,
+      "w": 172,
+      "h": 37
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": -269,
+      "y": -817,
+      "w": 828,
+      "h": 1385
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Explore The Latest Issue",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 404,
+      "w": 272,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Don't Add AI. Redesign the Company.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 481,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "The AI-Native Enterprise: 12 Things You Must Do to Transform Your Company",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 591,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Stop Buying AI Seats. Start Rebuilding How Work Gets Done",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 701,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "How Modern GPU Architecture Actually Works: A Developer's Field Guide",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 20,
+      "y": 754,
+      "w": 350,
+      "h": 90
+    }
+  },
+  {
+    "tag": "a",
+    "name": "EXPLORE ALL INSIGHTS",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 72,
+      "y": 407,
+      "w": 245,
+      "h": 30
+    }
+  },
+  {
+    "tag": "div",
+    "name": "Discuss your next big idea with our team of solutions architect.",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 54,
+      "y": 399,
+      "w": 282,
+      "h": 45
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Let's work together",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 54,
+      "y": 469,
+      "w": 226,
+      "h": 37
+    }
+  },
+  {
+    "tag": "a",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 650,
+      "w": 114,
+      "h": 39
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "iframe",
+    "name": "",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 379,
+      "w": 279,
+      "h": 435
+    }
+  },
+  {
+    "tag": "a",
+    "name": "Work",
+    "id": null,
+    "role": null,
+    "visible": true,
+    "tabIndex": 0,
+    "rect": {
+      "x": 40,
+      "y": 405,
+      "w": 229,
+      "h": 33
+    }
+  }
+]

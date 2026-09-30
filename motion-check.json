@@ -1,0 +1,18 @@
+{
+  "no-preference": {
+    "media": false,
+    "animations": [
+      {
+        "state": "paused",
+        "duration": 83200,
+        "target": "UL"
+      }
+    ],
+    "animatedElements": []
+  },
+  "reduce": {
+    "media": true,
+    "animations": [],
+    "animatedElements": []
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "audit": {
+    "url": "https://www.tribalscale.com/",
+    "date": "2026-09-30",
+    "timezone": "America/Toronto",
+    "standard": "WCAG 2.2 Level AA",
+    "browser": "Microsoft Edge user tab for visual/accessibility-tree inspection; Chromium 153.0.8010.12 via Playwright 1.63.0 for repeatable captures",
+    "tools": ["Playwright", "@axe-core/playwright", "axe-core", "Chrome DevTools Protocol Accessibility.getFullAXTree", "Codex browser accessibility tree"],
+    "viewports": ["1440x1000", "1024x900", "390x844", "320x844"],
+    "limitations": ["No NVDA, JAWS, or VoiceOver user test was performed.", "Actual browser zoom at 200% and 400% was not established; narrow CSS viewport testing was used as a proxy.", "Third-party iframe internals were only partially inspectable from the host page; human verification remains required for announcements and focus management inside HubSpot and Spline content."]
+  },
+  "counts": {
+    "uniqueVerifiedFindings": 8,
+    "critical": 0,
+    "serious": 4,
+    "moderate": 4,
+    "minor": 0,
+    "humanVerificationRequiredAreas": 7
+  },
+  "findings": [
+    {
+      "id": "TS-A11Y-001",
+      "title": "Embedded Spline and newsletter iframes have no accessible name",
+      "severity": "Serious",
+      "wcag": ["4.1.2 Name, Role, Value", "1.3.1 Info and Relationships"],
+      "viewport": "Desktop, tablet, and mobile",
+      "status": "ISSUE",
+      "affectedElements": ["iframe[loading=\"lazy\"]", ".framer-1hkocfv-container > iframe"],
+      "evidence": ["axe frame-title: 2 nodes at 1440x1000, 1024x900, and 390x844", "evidence/desktop-dom.json", "evidence/tablet-dom.json", "evidence/mobile-dom.json", "evidence/desktop-ax-tree.json"],
+      "userImpact": "A screen-reader user encounters embedded experiences without a reliable purpose or context. The Spline region is a large part of the hero and the newsletter iframe contains a task-critical form.",
+      "technicalExplanation": "The Spline iframe and the srcdoc HubSpot form iframe have neither title nor aria-label/aria-labelledby. The HubSpot chat iframe is separately named Chat Widget, showing that a usable pattern is available.",
+      "suggestedRemediation": "Give each iframe a concise, purpose-based title. If an iframe is decorative and intentionally excluded, remove it from the accessibility tree instead of leaving a focusable unnamed frame."
+    },
+    {
+      "id": "TS-A11Y-002",
+      "title": "Focusable links are exposed without discernible names",
+      "severity": "Serious",
+      "wcag": ["2.4.4 Link Purpose (In Context)", "4.1.2 Name, Role, Value"],
+      "viewport": "Desktop, tablet, and mobile",
+      "status": "ISSUE",
+      "affectedElements": ["Desktop logo link with aria-hidden=\"true\"", "Mobile logo link with an aria-hidden SVG and no link name", "Spline watermark link inside the Spline iframe"],
+      "evidence": ["axe link-name: 2 nodes desktop/tablet and 3 nodes mobile", "nav-check.mjs output: the logo anchor is in tab order while aria-hidden and has empty text", "evidence/desktop-keyboard-focus.json", "evidence/mobile-keyboard-focus.json"],
+      "userImpact": "Keyboard and screen-reader users reach a link with no usable name and cannot reliably tell its destination. The logo also remains focusable despite its graphic being aria-hidden.",
+      "technicalExplanation": "The logo anchor is focusable but its only content is an aria-hidden SVG. The Spline watermark anchor is empty. aria-hidden is applied to the graphic, not the interactive link, so the link remains in the tab sequence with no accessible name.",
+      "suggestedRemediation": "Provide an accessible name such as TribalScale home for the logo link, keep decorative SVG descendants hidden, and either label the Spline watermark link or remove it from the tab sequence if it is not intended as page content."
+    },
+    {
+      "id": "TS-A11Y-003",
+      "title": "Visual navigation disclosures lack equivalent keyboard semantics",
+      "severity": "Serious",
+      "wcag": ["2.1.1 Keyboard", "2.4.3 Focus Order", "4.1.2 Name, Role, Value"],
+      "viewport": "Desktop and mobile",
+      "status": "ISSUE",
+      "affectedElements": ["Desktop Capabilities and Company menu triggers", "Mobile hamburger trigger"],
+      "evidence": ["nav-check.mjs: Capabilities and Company are generic divs with tabIndex -1 and no role; hover reveals submenu content", "mobile-nav-check.mjs: hamburger is a generic div with tabIndex=0, no role, no accessible name, and no aria-expanded", "mobile-menu-check.mjs: click, Enter, and Space changed the mobile menu state", "evidence/mobile-menu-open.png"],
+      "userImpact": "The mobile menu can be operated by Enter and Space in Chromium, but assistive technology is not told that the generic focusable object is a menu button, what it controls, or whether it is expanded. On desktop, Capabilities and Company reveal substantial navigation on hover while remaining absent from the tab sequence.",
+      "technicalExplanation": "The implementation relies on visual hover/click behavior and Framer-generated generic containers instead of button semantics and disclosure state. This creates a mismatch between visual controls and the accessibility tree even where the browser happens to execute keyboard activation.",
+      "suggestedRemediation": "Use real buttons for menu disclosures, expose accessible names and aria-expanded/aria-controls, make the submenu links reachable in a predictable order, and support Escape plus focus return. Ensure desktop hover menus have a keyboard equivalent."
+    },
+    {
+      "id": "TS-A11Y-004",
+      "title": "Heading hierarchy skips from H2 to H4",
+      "severity": "Moderate",
+      "wcag": ["1.3.1 Info and Relationships", "2.4.6 Headings and Labels"],
+      "viewport": "Desktop, tablet, and mobile",
+      "status": "ISSUE",
+      "affectedElements": ["AI-First Engineering", "Frame", "and the other service/process cards rendered as H4"],
+      "evidence": ["axe heading-order: 2 nodes in every viewport", "DOM heading sequence in evidence/desktop-dom.json: H1, H2, H4, H4, H4, ... and H2, H4, H4, ..."],
+      "userImpact": "Heading navigation users receive a misleading outline and may infer missing section levels or miss the relationship between card groups and their parent sections.",
+      "technicalExplanation": "The service and process card titles are emitted as h4 immediately after h2 sections, with no h3 parent heading. The three numeric statistics are also exposed as H1 elements, which adds noise to the document outline.",
+      "suggestedRemediation": "Choose heading levels from the information hierarchy rather than visual size; use H3 for card groups under H2 sections and reserve H1 for the page title."
+    },
+    {
+      "id": "TS-A11Y-005",
+      "title": "Landmark structure is incomplete and duplicated",
+      "severity": "Moderate",
+      "wcag": ["1.3.1 Info and Relationships", "2.4.1 Bypass Blocks"],
+      "viewport": "Desktop, tablet, and mobile",
+      "status": "ISSUE",
+      "affectedElements": ["Two visible footer/contentinfo variants", "Main page sections outside semantic landmarks"],
+      "evidence": ["axe landmark-no-duplicate-contentinfo and landmark-unique in every viewport", "axe region: 24-28 affected nodes", "DOM landmark inventory shows nav, two footer elements, and chat region but no reliable page main landmark", "evidence/desktop-ax-tree.json"],
+      "userImpact": "Landmark navigation is noisy and incomplete. Users relying on regions to jump through the page may encounter duplicate footer destinations while the primary content is not grouped under a dependable main region.",
+      "technicalExplanation": "Responsive Framer variants remain exposed as duplicate footer landmarks, while many major content containers are generic div/section elements outside a named main landmark. The automated region rule reports repeated uncontained content rather than one isolated node.",
+      "suggestedRemediation": "Expose exactly one active footer/contentinfo per viewport, give it a distinguishing label only when multiple regions genuinely remain, and wrap the primary landing-page content in a semantic main landmark."
+    },
+    {
+      "id": "TS-A11Y-006",
+      "title": "Newsletter Privacy Policy link fails minimum contrast",
+      "severity": "Serious",
+      "wcag": ["1.4.3 Contrast (Minimum)"],
+      "viewport": "Tablet and mobile; same component is present on desktop",
+      "status": "ISSUE",
+      "affectedElements": ["Privacy Policy link in the HubSpot newsletter form"],
+      "evidence": ["axe color-contrast: foreground #c5a55a on #ffffff, ratio 2.35:1, expected 4.5:1", "evidence/desktop-footer-viewport.png", "evidence/mobile-footer-viewport.png"],
+      "userImpact": "The small privacy link in the consent copy is difficult to read for users with low vision or reduced contrast sensitivity.",
+      "technicalExplanation": "The link uses a muted gold color against a white form background at approximately 12px regular text, below the AA threshold for normal text.",
+      "suggestedRemediation": "Use a darker link color or a larger/bolder treatment that reaches at least 4.5:1 for normal text, and preserve a clear hover/focus distinction."
+    },
+    {
+      "id": "TS-A11Y-007",
+      "title": "Informational images are indistinguishable from decorative images",
+      "severity": "Moderate",
+      "wcag": ["1.1.1 Non-text Content"],
+      "viewport": "Desktop, tablet, and mobile",
+      "status": "ISSUE",
+      "affectedElements": ["Trusted-by customer logo grid", "Most insight-card images", "Other visible image assets"],
+      "evidence": ["image-check.mjs: 53 visible images observed, 52 with empty alt and no aria-hidden; only 1 had non-empty alt", "image-check.json", "The trusted-by section communicates customer identity visually while its logos have no equivalent text in the accessibility tree", "evidence/desktop-initial-viewport.png"],
+      "userImpact": "Nonvisual users cannot identify the brands presented as proof points, and many insight cards lose useful image context. Empty alt is correct for purely decorative images, but the current implementation gives no reliable way to distinguish decorative assets from informative ones.",
+      "technicalExplanation": "The customer logo assets are plain img elements with alt=\"\" and are not explicitly hidden. One insight image has a descriptive alt while neighboring card images do not, indicating inconsistent treatment.",
+      "suggestedRemediation": "Classify each image by purpose. Add concise alt text or adjacent equivalent text for informative logos and article imagery; explicitly mark purely decorative artwork as decorative."
+    },
+    {
+      "id": "TS-A11Y-008",
+      "title": "Narrow mobile layout clips the trusted-by statement and carousel content",
+      "severity": "Moderate",
+      "wcag": ["1.4.10 Reflow", "1.4.4 Resize Text"],
+      "viewport": "390px mobile and 320px narrow viewport",
+      "status": "ISSUE",
+      "affectedElements": ["Trusted by global brands when there’s no room for compromise.", "Logo carousel and adjacent fixed-width content"],
+      "evidence": ["narrow-320.json: the trusted paragraph is x=-76px, width=472px, white-space=pre, inside a 277px overflow-hidden container", "evidence/mobile-initial-viewport.png: the visible line begins mid-sentence and ends clipped", "Page-level scrollWidth equals clientWidth, so the overflow is clipped rather than horizontally scrollable"],
+      "userImpact": "At narrow widths, users lose the start/end of a sentence and portions of the logo presentation. The absence of page-level horizontal scrolling does not make the clipped information available.",
+      "technicalExplanation": "A fixed-width, non-wrapping paragraph and a horizontally oversized logo track are placed inside clipped containers. The visual design prevents the document from scrolling horizontally, but content is still outside the viewport.",
+      "suggestedRemediation": "Allow the statement to wrap within the available width, provide an intentional accessible carousel pattern for logos, and test at 320 CSS px and at 400% zoom."
+    }
+  ],
+  "positiveEvidence": [
+    {
+      "id": "TS-A11Y-P01",
+      "observation": "Meaningful page title and language are present",
+      "evidence": "document.title is TribalScale - Global Innovation Partner and html lang is en-US in all tested viewports",
+      "wcag": ["2.4.2 Page Titled"]
+    },
+    {
+      "id": "TS-A11Y-P02",
+      "observation": "The page has a clear primary H1 and recognizable section headings",
+      "evidence": "The accessibility tree exposes AI-First, Relentlessly Human. plus Why TribalScale?, Insights, Our Human-Centred, Results-Driven Approach, and Your Next Breakthrough Starts Here.",
+      "wcag": ["2.4.6 Headings and Labels"]
+    },
+    {
+      "id": "TS-A11Y-P03",
+      "observation": "Reduced-motion preference is actively honored by the observed page animation layer",
+      "evidence": "With prefers-reduced-motion: reduce, matchMedia matched and document.getAnimations() returned zero animations; no-preference exposed one long-running UL animation",
+      "wcag": ["2.3.3 Animation from Interactions"]
+    },
+    {
+      "id": "TS-A11Y-P04",
+      "observation": "Primary CTAs, search, most content links, and the chat region expose useful names",
+      "evidence": "The tree exposes Let’s build what others can’t, See our Work, Book a call, Explore The Latest Issue, article titles, and Search Icon; the HubSpot chat iframe is titled Chat Widget",
+      "wcag": ["2.4.4 Link Purpose", "4.1.2 Name, Role, Value"]
+    },
+    {
+      "id": "TS-A11Y-P05",
+      "observation": "No main-document keyboard trap was reproduced",
+      "evidence": "A 90-Tab trace at desktop, tablet, and mobile moved through the page’s focusable elements and returned to body; no loop that prevented exit was observed. Mobile menu activation also responded to Enter and Space in Chromium.",
+      "wcag": ["2.1.1 Keyboard", "2.1.2 No Keyboard Trap"]
+    }
+  ],
+  "humanVerification": [
+    "Run NVDA or JAWS on Windows and VoiceOver on macOS/iOS through the complete page, including heading and landmark navigation.",
+    "Verify desktop Capabilities and Company menus with keyboard only: reach the trigger, announce expanded/collapsed state, enter submenu links, press Escape, and confirm focus return.",
+    "Verify the mobile hamburger with a screen reader: accessible name, button role, expanded state, menu order, and focus return after close.",
+    "Verify actual 200% and 400% browser zoom, including the hero, logo grid, insight cards, newsletter, chat widget, and footer.",
+    "Verify focus visibility and focus-not-obscured behavior when the fixed HubSpot chat widget overlaps content, especially on mobile.",
+    "Verify HubSpot form label association, required-field error identification, focus placement, and status/error announcements after an empty submit.",
+    "Verify the Spline experience and HubSpot chat iframe behavior with assistive technology, including whether focus enters/exits cleanly and whether dynamic content is announced.",
+    "Verify forced-colors/high-contrast mode, link states, non-text contrast, and whether any information is communicated by logo color alone."
+  ]
+}

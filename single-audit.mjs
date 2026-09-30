@@ -1,0 +1,44 @@
+import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+const name = process.argv[2] || 'desktop';
+const sizes = { desktop: [1440, 1000], tablet: [1024, 900], mobile: [390, 844], narrow: [320, 844] };
+const [width, height] = sizes[name] || sizes.desktop;
+const root = process.cwd();
+const evidence = path.join(root, 'evidence');
+const browser = await chromium.launch({ headless: true });
+const context = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 1 });
+const page = await context.newPage();
+await page.goto('https://www.tribalscale.com/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+await page.waitForTimeout(6000);
+const axe = await new AxeBuilder({ page }).analyze();
+const dom = await page.evaluate(() => {
+  const vis = (e) => { const s = getComputedStyle(e), r = e.getBoundingClientRect(); return s.display !== 'none' && s.visibility !== 'hidden' && r.width > 0 && r.height > 0; };
+  const name = e => (e.innerText || e.getAttribute('aria-label') || e.getAttribute('title') || '').trim().replace(/\s+/g, ' ').slice(0, 200);
+  const headings = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].filter(vis).map(e => ({level:e.tagName,text:name(e)}));
+  const inputs = [...document.querySelectorAll('input,select,textarea')].map(e => ({tag:e.tagName.toLowerCase(),type:e.type||null,id:e.id||null,label:e.labels?.[0]?.innerText||null,ariaLabel:e.getAttribute('aria-label'),required:e.required}));
+  const links = [...document.querySelectorAll('a')].filter(vis).map(e => ({name:name(e),href:e.href}));
+  const buttons = [...document.querySelectorAll('button,[role="button"]')].filter(vis).map(e => ({name:name(e),role:e.getAttribute('role'),expanded:e.getAttribute('aria-expanded')}));
+  const iframes = [...document.querySelectorAll('iframe')].map(e => ({title:e.title,src:e.src,visible:vis(e)}));
+  const images = [...document.images].map(e => ({alt:e.alt,role:e.getAttribute('role'),ariaHidden:e.getAttribute('aria-hidden'),visible:vis(e)}));
+  const landmarks = [...document.querySelectorAll('header,nav,main,aside,footer,[role]')].filter(vis).map(e => ({tag:e.tagName.toLowerCase(),role:e.getAttribute('role'),label:e.getAttribute('aria-label')}));
+  const focusable = [...document.querySelectorAll('a,button,input,select,textarea,[tabindex]')].filter(vis);
+  const pos = [...document.querySelectorAll('[tabindex]')].filter(e => e.tabIndex > 0).map(e => ({tabIndex:e.tabIndex,text:name(e)}));
+  return {title:document.title,lang:document.documentElement.lang||null,viewport:{innerWidth,innerHeight,scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight},horizontalOverflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+1,headings,inputs,links,buttons,iframes,images,landmarks,positiveTabindex:pos,counts:{focusable:focusable.length,links:links.length,buttons:buttons.length,images:images.length,iframes:iframes.length}};
+});
+const cdp = await context.newCDPSession(page);
+const ax = await cdp.send('Accessibility.getFullAXTree');
+const focus = [];
+for (let i=0;i<90;i++) { await page.keyboard.press('Tab'); focus.push(await page.evaluate(() => { const e=document.activeElement; const r=e?.getBoundingClientRect(); return {tag:e?.tagName?.toLowerCase(),name:(e?.innerText||e?.getAttribute('aria-label')||e?.getAttribute('title')||'').trim().replace(/\s+/g,' ').slice(0,160),id:e?.id||null,role:e?.getAttribute('role'),visible:!!e&&getComputedStyle(e).visibility!=='hidden'&&getComputedStyle(e).display!=='none',tabIndex:e?.tabIndex,rect:r?{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}:null}; })); }
+const animations = await page.evaluate(() => [...document.getAnimations()].map(a=>({state:a.playState,duration:a.effect?.getComputedTiming?.().duration??null,target:a.effect?.target?.tagName||null})).slice(0,100));
+await page.screenshot({path:path.join(evidence,`${name}-viewport.png`),fullPage:false});
+await page.screenshot({path:path.join(evidence,`${name}-fullpage.png`),fullPage:true});
+await fs.writeFile(path.join(evidence,`${name}-dom.json`),JSON.stringify(dom,null,2));
+await fs.writeFile(path.join(evidence,`${name}-ax-tree.json`),JSON.stringify(ax,null,2));
+await fs.writeFile(path.join(evidence,`${name}-keyboard-focus.json`),JSON.stringify(focus,null,2));
+const out = {name,width,height,timestamp:new Date().toISOString(),axe:{violations:axe.violations,passes:axe.passes,incomplete:axe.incomplete},dom,axNodeCount:ax.nodes?.length||0,focus,animations};
+await fs.writeFile(path.join(root,`summary-${name}.json`),JSON.stringify(out,null,2));
+console.log(JSON.stringify({name,axe:axe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length,help:v.help})),horizontalOverflow:dom.horizontalOverflow,focusables:dom.counts.focusable,axNodes:ax.nodes?.length,animations:animations.length},null,2));
+await context.close(); await browser.close();
