@@ -35,7 +35,12 @@ function startStaticServer() {
   server = createServer(async (request, response) => {
     try {
       const requestPath = new URL(request.url ?? "/", "http://127.0.0.1").pathname;
-      const relativePath = requestPath === "/" ? "index.html" : decodeURIComponent(requestPath.slice(1));
+      const decodedPath = decodeURIComponent(requestPath);
+      const relativePath = decodedPath === "/"
+        ? "index.html"
+        : decodedPath.endsWith("/")
+          ? `${decodedPath.slice(1)}index.html`
+          : decodedPath.slice(1);
       const filePath = resolve(siteRoot, relativePath);
 
       if (!isInsideSite(filePath)) {
@@ -79,7 +84,7 @@ async function openPage(width, reducedMotion = false) {
     if (message.type() === "error") consoleErrors.push(message.text());
   });
   page.on("pageerror", (error) => pageErrors.push(error.message));
-  await page.goto(`${origin}/`, { timeout: 10000, waitUntil: "networkidle" });
+  await page.goto(`${origin}/product-design/`, { timeout: 10000, waitUntil: "networkidle" });
   return { context, page, consoleErrors, pageErrors };
 }
 

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const siteRoot = new URL("../", import.meta.url);
+const siteRoot = new URL("../product-design/", import.meta.url);
 const html = await readFile(new URL("index.html", siteRoot), "utf8");
 const css = await readFile(new URL("styles.css", siteRoot), "utf8");
 const manifest = await readFile(new URL("content.js", siteRoot), "utf8");

@@ -4,7 +4,7 @@ import test from "node:test";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
-const { evidenceStates, pageContent, projectEvidence } = require("../content.js");
+const { evidenceStates, pageContent, projectEvidence } = require("../product-design/content.js");
 
 const pageCopy = JSON.stringify({ evidenceStates, pageContent, projectEvidence });
 const approvedSupportingProjectLinks = new Set([
@@ -131,7 +131,7 @@ test("RyFine exposes the verified Figma artifact without promoting it to shipped
   });
 
   assert.deepEqual(ryfine.media.state, ["Documented", "Verified"]);
-  assert.equal(existsSync(new URL("../assets/ryfine-figma-cover.png", import.meta.url)), true);
+  assert.equal(existsSync(new URL("../product-design/assets/ryfine-figma-cover.png", import.meta.url)), true);
   assert.match(ryfine.summary, /not proof that every principle or screen is shipped/i);
   assert.ok(ryfine.evidence.some((entry) => entry.label === "Figma cover / node 2:6"));
   assert.ok(ryfine.links.some((link) => link.label === "Inspect in Figma"));

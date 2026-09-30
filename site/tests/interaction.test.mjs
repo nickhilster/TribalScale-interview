@@ -26,7 +26,11 @@ const contexts = new Set();
 before(async () => {
   server = createServer(async (request, response) => {
     const requestPath = new URL(request.url, "http://localhost").pathname;
-    const relativePath = requestPath === "/" ? "index.html" : requestPath.slice(1);
+    const relativePath = requestPath === "/"
+      ? "index.html"
+      : requestPath.endsWith("/")
+        ? `${requestPath.slice(1)}index.html`
+        : requestPath.slice(1);
     const filePath = resolve(siteRoot, relativePath);
 
     if (!filePath.startsWith(siteRoot)) {
@@ -73,7 +77,7 @@ async function openPage(viewport, reducedMotion = false) {
   });
   contexts.add(context);
   const page = await context.newPage();
-  await page.goto(`${origin}/`, { waitUntil: "networkidle", timeout: 10000 });
+  await page.goto(`${origin}/product-design/`, { waitUntil: "networkidle", timeout: 10000 });
   return { context, page };
 }
 

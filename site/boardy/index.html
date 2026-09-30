@@ -9,8 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .recordings .section-number,
+      .letter .section-number,
+      .related-band .section-number { color: #5f5f5f; }
+    </style>
   </head>
   <body>
+    <nav aria-label="Showcase navigation"><a href="../" aria-label="Back to showcase" style="position:fixed;z-index:20;top:1rem;right:1rem;padding:.55rem .75rem;color:#111316;background:#f1da00;font:700 .68rem/1.2 Consolas,monospace;letter-spacing:.06em;text-decoration:none;text-transform:uppercase;">← Back to showcase</a></nav>
     <header class="site-header">
       <a class="wordmark" href="https://www.boardy.ai/" aria-label="Boardy home">boardy<span>.</span></a>
       <nav aria-label="Primary navigation">
@@ -57,12 +63,12 @@
           <article class="audio-row">
             <div class="audio-index">01</div>
             <div class="audio-meta"><h3>Boardy to Heather / part one</h3><p>Audio record · local source</p></div>
-            <audio controls preload="metadata"><source src="../../boardy/Boardy-to-Heather-1.ogg" type="audio/ogg" />Your browser does not support audio playback.</audio>
+            <audio controls preload="metadata"><source src="./audio/Boardy-to-Heather-1.ogg" type="audio/ogg" />Your browser does not support audio playback.</audio>
           </article>
           <article class="audio-row">
             <div class="audio-index">02</div>
             <div class="audio-meta"><h3>Boardy to Heather / part two</h3><p>Audio record · local source</p></div>
-            <audio controls preload="metadata"><source src="../../boardy/Boardy-to-Heather-2.ogg" type="audio/ogg" />Your browser does not support audio playback.</audio>
+            <audio controls preload="metadata"><source src="./audio/Boardy-to-Heather-2.ogg" type="audio/ogg" />Your browser does not support audio playback.</audio>
           </article>
         </div>
         <p class="sequence-note">Play 01, then 02. The source files remain in the repository as provided; no transcription is used on this page.</p>
