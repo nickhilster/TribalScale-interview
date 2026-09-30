@@ -1,10 +1,10 @@
 # Fidelity ledger — TribalScale post-interview page
 
 **Review date:** 2026-09-30
-**Local source:** `site/index.html`, `site/styles.css`, `site/app.js`, and the approved render at commit `1c3490dcc5e532789bf96dce45ea14504e9e767b`
+**Local source:** `site/index.html`, `site/styles.css`, `site/app.js`, and the approved render at the final `HEAD` after the responsive correction
 **Verification command:** `node site/verify-page.mjs`
 **Concept references:** `overview.png`, `boardy-detail.png`, `supporting-work-detail.png`
-**Render sizes checked:** 390 × 900 and 1440 × 900 Playwright viewports
+**Render sizes checked:** 320 × 900, 390 × 900, 768 × 900, and 1440 × 900 Playwright viewports
 
 This ledger compares the saved concepts with the current local render. The concept images are visual references, not evidence for product claims; generated interface copy and imagery were not copied into the page as facts.
 
@@ -24,7 +24,9 @@ This ledger compares the saved concepts with the current local render. The conce
 
 ## Verification notes
 
-- Playwright covered 390px and 1440px, including horizontal-overflow assertions, visible headings/project names, Boardy boundary/status copy, local Figma image loading, axe checks with collapsed and expanded disclosures, and reduced-motion behavior.
+- Playwright covered 320px, 390px, 768px, and 1440px, including horizontal-overflow assertions, visible headings/project names, Boardy boundary/status copy, local Figma image loading, axe checks with collapsed and expanded disclosures, and reduced-motion behavior.
+- Responsive correction: at the existing `820px` breakpoint, `.page-shell` now uses one available grid column after the evidence rail is hidden. This keeps `.page-content`, the `h1`, project headings, and project copy in a meaningful layout at 320px, 390px, and 768px without changing the compact mobile navigation or visual system.
+- The final responsive verifier covers 320px, 390px, 768px, and 1440px for page-content width, nonzero heading/project-copy boxes, horizontal overflow, axe checks with collapsed and expanded disclosures, and reduced-motion behavior. The RyFine artifact metadata also exposes the inspected Figma frame name, `Cover / RyFine Design System`.
 - Browser provenance is split by execution context: the delegated verification subagent's browser surface could not provide IAB visibility and reported `net::ERR_BLOCKED_BY_CLIENT` when it attempted the local URL. The orchestrator separately loaded the page successfully in the Codex in-app browser at `http://127.0.0.1:8766/` after serving the absolute site directory `C:\Users\nick_\.codex\worktrees\tribalscale-post-interview\TribalScale-interview\site`. Playwright remains the repeatable verifier for this worktree.
 - No external product repository or `docs/` file was edited. No live claim was promoted in Task 4; the verifier checks the approved local manifest and rendered evidence boundaries.
 - This page is a local proof-of-work draft. It is **not deployed or published**, has no canonical URL, and no deployment or publication was performed.

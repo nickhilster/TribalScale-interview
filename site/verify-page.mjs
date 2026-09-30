@@ -15,7 +15,7 @@ const mimeTypes = {
   ".js": "text/javascript; charset=utf-8",
   ".png": "image/png",
 };
-const widths = [390, 1440];
+const widths = [320, 390, 768, 1440];
 const cleanupTimeoutMs = 2000;
 const screenshotRoot = await mkdtemp(join(tmpdir(), "tribalscale-post-interview-qa-"));
 const contexts = new Set();
@@ -89,15 +89,33 @@ async function assertAxeClean(page, label) {
 async function assertCommonPageChecks(page, width, consoleErrors, pageErrors) {
   assert.equal(await page.title(), "I design the system around the outcome. — Nikhil Khedkar");
   assert.equal(await page.locator("h1").count(), 1);
+  const contentWidth = await page.locator(".page-content").evaluate((element) => element.getBoundingClientRect().width);
+  const expectedContentWidth = width === 1440 ? width - 112 : width;
+  assert.ok(contentWidth >= expectedContentWidth - 1, `${width}px page-content is not meaningfully wide: ${contentWidth}px`);
+  assert.ok(await page.locator("h1").evaluate((element) => element.getBoundingClientRect().width > 0), `${width}px h1 has no layout width`);
   assert.equal(await page.getByRole("heading", { name: "Boardy" }).isVisible(), true);
 
   for (const project of ["LTB Buddy", "RyFine", "Code2Motion", "EasyBuddy"]) {
     const heading = page.getByRole("heading", { name: project });
     assert.equal(await heading.count(), 1, `${width}px render is missing ${project}`);
     assert.equal(
-      await heading.evaluate((element) => element.getBoundingClientRect().height > 0),
+      await heading.evaluate((element) => {
+        const box = element.getBoundingClientRect();
+        return box.width > 0 && box.height > 0;
+      }),
       true,
-      `${width}px render has no layout box for ${project}`,
+      `${width}px render has no meaningful visible heading box for ${project}`,
+    );
+  }
+
+  for (const copy of await page.locator(".case-study-copy").all()) {
+    assert.equal(
+      await copy.evaluate((element) => {
+        const box = element.getBoundingClientRect();
+        return box.width > 0 && box.height > 0 && element.textContent.trim().length > 0;
+      }),
+      true,
+      `${width}px render has no meaningful visible project copy`,
     );
   }
 
@@ -118,6 +136,11 @@ async function assertCommonPageChecks(page, width, consoleErrors, pageErrors) {
 
   const figmaImage = page.locator('img[src="assets/ryfine-figma-cover.png"]');
   assert.equal(await figmaImage.count(), 1, `${width}px render is missing the local Figma image`);
+  assert.equal(
+    await page.locator(".artifact-label").evaluate((element) => element.textContent.includes("Cover / RyFine Design System")),
+    true,
+    `${width}px render is missing the Figma frame name`,
+  );
   assert.equal(
     await figmaImage.evaluate((image) => image.complete && image.naturalWidth > 0),
     true,

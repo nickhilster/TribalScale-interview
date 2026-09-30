@@ -8,6 +8,7 @@ import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 
 const siteRoot = resolve(fileURLToPath(new URL("..", import.meta.url)));
+const responsiveWidths = [320, 390, 768, 1440];
 const mimeTypes = {
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
@@ -79,8 +80,8 @@ async function assertNoAxeViolations(page, label) {
   assert.deepEqual(axeResults.violations, [], `${label} has axe violations`);
 }
 
-test("renders manifest-backed projects and verified Figma evidence at both target widths", { concurrency: false, timeout: 20000 }, async () => {
-  for (const width of [390, 1440]) {
+test("renders manifest-backed projects and verified Figma evidence at every responsive target width", { concurrency: false, timeout: 30000 }, async () => {
+  for (const width of responsiveWidths) {
     const { page } = await openPage({ width, height: 900 });
 
     assert.equal(await page.locator(".case-study").count(), 4);
@@ -92,10 +93,47 @@ test("renders manifest-backed projects and verified Figma evidence at both targe
     }
     assert.equal(await page.locator('a[href="https://www.figma.com/design/LSYLrYfT8MjcYO0vltJqP5"]').count(), 1);
     assert.equal(await page.locator('img[src="assets/ryfine-figma-cover.png"]').evaluate((image) => image.complete && image.naturalWidth > 0), true);
+    assert.equal(await page.locator(".artifact-label").evaluate((element) => element.textContent.includes("Cover / RyFine Design System")), true);
+    const layoutMetrics = await page.evaluate(() => {
+      const content = document.querySelector(".page-content")?.getBoundingClientRect();
+      const heading = document.querySelector("h1")?.getBoundingClientRect();
+      const projects = [...document.querySelectorAll(".case-study")].map((project) => {
+        const projectHeading = project.querySelector("h3");
+        const projectCopy = project.querySelector(".case-study-copy");
+        const headingBox = projectHeading?.getBoundingClientRect();
+        const copyBox = projectCopy?.getBoundingClientRect();
+        return {
+          headingWidth: headingBox?.width ?? 0,
+          headingHeight: headingBox?.height ?? 0,
+          copyWidth: copyBox?.width ?? 0,
+          copyHeight: copyBox?.height ?? 0,
+          copyText: projectCopy?.textContent?.trim() ?? "",
+        };
+      });
+      return {
+        contentWidth: content?.width ?? 0,
+        h1Width: heading?.width ?? 0,
+        projects,
+        bodyScrollWidth: document.body.scrollWidth,
+        documentScrollWidth: document.documentElement.scrollWidth,
+        viewportWidth: window.innerWidth,
+      };
+    });
+    const expectedContentWidth = width === 1440 ? width - 112 : width;
+    assert.ok(
+      layoutMetrics.contentWidth >= expectedContentWidth - 1,
+      `${width}px page-content is not meaningfully wide: ${JSON.stringify(layoutMetrics)}`,
+    );
+    assert.ok(layoutMetrics.h1Width > 0, `${width}px h1 has no layout width`);
+    for (const project of layoutMetrics.projects) {
+      assert.ok(project.headingWidth > 0 && project.headingHeight > 0, `${width}px project heading is not visible`);
+      assert.ok(project.copyWidth > 0 && project.copyHeight > 0 && project.copyText.length > 0, `${width}px project copy is not visible`);
+    }
     assert.match(await page.locator("#boardy").innerText(), /A note from Boardy|Boardy Boardman/i);
     assert.match(await page.locator("#boardy").innerText(), /not a claim about Boardy.?s own product/i);
     assert.match(await page.locator("#boardy").innerText(), /Symphony.*Boardy.*no automated integration/i);
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
+    assert.equal(layoutMetrics.documentScrollWidth <= layoutMetrics.viewportWidth, true, `${width}px document overflows horizontally`);
+    assert.equal(layoutMetrics.bodyScrollWidth <= layoutMetrics.viewportWidth, true, `${width}px body overflows horizontally`);
 
     await assertNoAxeViolations(page, `${width}px collapsed disclosures`);
     await page.locator("details.disclosure summary").evaluateAll((summaries) => {

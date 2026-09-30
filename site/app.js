@@ -61,10 +61,13 @@ const renderMedia = (project) => {
     throw new Error(`Missing Figma media record for project "${project.slug}".`);
   }
   validateFigmaAlignment(project);
+  const artifactMeta = project.figma.frameName
+    ? `${project.figma.label} · ${project.figma.frameName}`
+    : project.figma.label;
 
   return `
     <figure class="artifact-frame" data-local-asset="${escapeHtml(project.figma.localAsset)}">
-      <div class="artifact-label"><span>${escapeHtml(project.figma.label)}</span><span>Node ${escapeHtml(project.figma.nodeId)}</span></div>
+      <div class="artifact-label"><span>${escapeHtml(artifactMeta)}</span><span>Node ${escapeHtml(project.figma.nodeId)}</span></div>
       <img src="${escapeHtml(project.figma.localAsset)}" alt="${escapeHtml(project.media.alt)}" />
       <figcaption>${escapeHtml(project.figma.caption).replace("September 30, 2026", '<time datetime="2026-09-30">September 30, 2026</time>')}</figcaption>
     </figure>`;

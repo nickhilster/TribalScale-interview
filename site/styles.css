@@ -990,6 +990,10 @@ h3 {
     --rail-width: 0px;
   }
 
+  .page-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .evidence-rail {
     display: none;
   }
