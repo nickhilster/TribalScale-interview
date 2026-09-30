@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import test from "node:test";
 import { createRequire } from "node:module";
 
@@ -25,8 +26,28 @@ test("every project has authored role, summary, status, and evidence", () => {
     for (const evidence of project.evidence) {
       assert.ok(evidence.label.trim(), `${project.slug} evidence has a label`);
       assert.ok(evidence.kind.trim(), `${project.slug} evidence has a provenance kind`);
-      assert.ok(evidence.state.trim(), `${project.slug} evidence has a state`);
+      assert.ok(Array.isArray(evidence.state), `${project.slug} evidence state is atomic array`);
+      assert.ok(evidence.state.length > 0, `${project.slug} evidence has a state`);
+      for (const state of evidence.state) {
+        assert.ok(
+          evidenceStates.some((knownState) => knownState.name === state),
+          `${project.slug} evidence state ${state} is an approved atomic state`,
+        );
+      }
       assert.ok(evidence.detail.trim(), `${project.slug} evidence has detail`);
+    }
+
+    assert.ok("media" in project, `${project.slug} has a stable media field`);
+    if (project.media) {
+      assert.equal(typeof project.media.src, "string", `${project.slug} media has a stable source`);
+      assert.ok(project.media.src.length > 0, `${project.slug} media source is non-empty`);
+      assert.ok(Array.isArray(project.media.state), `${project.slug} media state is atomic array`);
+      for (const state of project.media.state) {
+        assert.ok(
+          evidenceStates.some((knownState) => knownState.name === state),
+          `${project.slug} media state ${state} is approved`,
+        );
+      }
     }
   }
 });
@@ -49,6 +70,8 @@ test("Boardy keeps the product, surrounding work, and presentation layer distinc
   assert.match(boardy.boundaries[2].text, /presentation and interaction layer/i);
   assert.match(boardy.boundaries[2].text, /not a claim about Boardy/i);
   assert.equal(boardy.symphonyBoundary.status, "Proposed");
+  assert.deepEqual(boardy.status, ["Built around Boardy", "Experimental", "Proposed"]);
+  assert.equal(boardy.media, null);
   assert.match(boardy.symphonyBoundary.text, /no automated integration/i);
   assert.match(boardy.emailNote.attribution, /not a neutral customer reference/i);
 });
@@ -64,9 +87,11 @@ test("RyFine exposes the verified Figma artifact without promoting it to shipped
     localAsset: "assets/ryfine-figma-cover.png",
     label: "Figma artifact",
     caption: "Figma design-system draft — inspected September 30, 2026",
-    state: "Documented",
+    state: ["Documented"],
   });
 
+  assert.deepEqual(ryfine.media.state, ["Documented", "Verified"]);
+  assert.equal(existsSync(new URL("../assets/ryfine-figma-cover.png", import.meta.url)), true);
   assert.match(ryfine.summary, /not proof that every principle or screen is shipped/i);
   assert.ok(ryfine.evidence.some((entry) => entry.label === "Figma cover / node 2:6"));
   assert.ok(ryfine.links.some((link) => link.label === "Inspect in Figma"));
@@ -75,6 +100,15 @@ test("RyFine exposes the verified Figma artifact without promoting it to shipped
 test("the unidentified Node artifact is not represented", () => {
   assert.equal(projectEvidence.some((project) => /node artifact/i.test(JSON.stringify(project))), false);
   assert.equal(projectEvidence.length, 5);
+});
+
+test("EasyBuddy external listing is documented context, not app observability", () => {
+  const easybuddy = projectEvidence.find((project) => project.slug === "easybuddy");
+  const listing = easybuddy.evidence.find((entry) => entry.label === "Product surface");
+
+  assert.equal(listing.kind, "External listing");
+  assert.deepEqual(listing.state, ["Documented"]);
+  assert.doesNotMatch(JSON.stringify(listing.state), /Observable|Verified/);
 });
 
 test("evidence legend contains the approved provenance states", () => {
