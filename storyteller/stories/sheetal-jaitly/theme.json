@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "name": "Sheetal Jaitly (independent study)",
+  "mode": "dark",
+  "colors": {
+    "bg": "#000000",
+    "surface": "#141413",
+    "text": "#ffffff",
+    "muted": "#cccccc",
+    "line": "rgba(255,255,255,0.18)",
+    "accent": "#ffea00"
+  },
+  "clusters": {
+    "path": "#d9b98c",
+    "build": "#ffea00",
+    "reset": "#ff8a5c",
+    "values": "#c5a55a",
+    "ideas": "#3db2ff",
+    "voice": "#b9b9c2"
+  },
+  "font": {
+    "body": "'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "display": "'Bodoni Moda', Georgia, 'Times New Roman', serif",
+    "googleFonts": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,500&family=Work+Sans:wght@400;600&display=swap"
+  },
+  "wordmark": { "text": "Sheetal Jaitly", "letterSpacing": "0", "uppercase": false },
+  "brandSources": [
+    {
+      "what": "Decision: partly match the page the story starts from, not the company's whole brand",
+      "from": "https://www.tribalscale.com/in-focus/sheetal-jaitly (rendered in a browser, 2026-09-30) and node scripts/brand-probe.mjs https://www.tribalscale.com",
+      "note": "Jaitly has no personal site; his profile lives inside tribalscale.com, so the nearest 'own' identity is that profile page (black canvas, yellow button, italic Bodoni Moda name). I borrow that canvas, accent and display face because it is the page the user pointed me at and playbook 4-brand says matching colours is fine for an honest study. I deliberately do NOT use TribalScale's logo or wordmark, the wordmark is his name in the profile's own display style, and the disclaimer says it is independent. Reason for restraint: this is a story about a person, part of it covers the company's 2020 insolvency, and a full company-branded look could read as company-made or company-approved. Cluster colours are muted neighbours of the palette rather than a rainbow."
+    },
+    {
+      "what": "bg #000000, text #ffffff, mode dark",
+      "from": "Computed on the profile page: body background rgb(0,0,0); white text on the dark header/hero (45 elements); probe top colours #000000 x46, #ffffff x35",
+      "note": "Exact site values."
+    },
+    {
+      "what": "accent #ffea00",
+      "from": "Computed button background rgb(255,234,0) on 'Book a call' and chat button; CSS token --token-a888adc2...: #ffea00",
+      "note": "The one signature colour on the page; glows on black (contrast well above 3:1)."
+    },
+    {
+      "what": "muted #cccccc, surface #141413",
+      "from": "Site tokens: --token-d072d1f5...: #cccccc (also computed text colour x9); computed background rgb(20,20,19)",
+      "note": "Exact site values."
+    },
+    {
+      "what": "cluster colours",
+      "from": "#c5a55a and #877857 (gold, probe accent candidates / computed text rgb(135,120,87)); #0099ff (site link colour, --framer-link-text-color)",
+      "note": "values=#c5a55a is the site gold. ideas=#3db2ff is my lightened #0099ff for contrast at dot size. path=#d9b98c and reset=#ff8a5c are warm tints I chose (judgement, no site provenance; reset is a coral so the crisis cluster reads apart from the yellow). voice=#b9b9c2 is a neutral grey near the site's #cccccc. build=#ffea00 is the accent."
+    },
+    {
+      "what": "fonts",
+      "from": "h1 computed font-family: Bodoni Moda (italic in the screenshot); probe lists Inter x44, Work Sans x15+7, Montserrat, Bodoni Moda x4; page body font reported as generic sans-serif",
+      "note": "Bodoni Moda and Work Sans are both on Google Fonts (one optional request; page works without it). Body = Work Sans is my choice among the site's sans faces (closest to the body text in the screenshot); the wordmark uses Bodoni Moda via 'display'. If the renderer does not italicise the wordmark, it will show upright Bodoni Moda, an approximation of the site's italic name."
+    }
+  ]
+}

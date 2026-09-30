@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "name": "Heather Page: editorial slate",
+  "mode": "light",
+  "colors": { "bg": "#f1f3f6", "surface": "#fbfcfd", "text": "#1d2433", "muted": "#566074", "line": "rgba(0,0,0,0.16)", "accent": "#3a4fa3" },
+  "clusters": {
+    "role": "#3a4fa3",
+    "mic": "#a8427e",
+    "fsi": "#167a78",
+    "toronto": "#b4601a",
+    "ai": "#6b46b5",
+    "context": "#5d6b2f"
+  },
+  "font": {
+    "body": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "display": "Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+  },
+  "wordmark": { "text": "Heather Page", "letterSpacing": "0.02em" },
+  "brandSources": [
+    { "what": "decision: not TribalScale's look", "from": "node scripts/brand-probe.mjs https://www.tribalscale.com/in-focus/heather-page, 2026-09-30", "note": "The probe shows TribalScale's identity is black/white with a yellow #ffea00 accent. Heather Page has no personal site or personal brand that I could find; her profile is one page inside her employer's site. Playbook 4-brand.md says to extract from the subject's own site if they have one, and to use a deliberate palette for a person without one. Wearing the company's black-and-yellow would make an independent study look like a company-issued profile and imply endorsement, so I chose a separate palette. She is not a private individual with no face, so this is a judgement call about endorsement and identity, not about privacy. The company's brand is used only in the separate TribalScale study example." },
+    { "what": "palette (bg, surface, text, muted, accent)", "from": "chosen by hand; starting point is the playbook's 'Relationship / personal' and 'Science / ideas' rows, but flipped to a light cool slate", "note": "Editorial and professional: cool grey paper (#f1f3f6), near-black blue ink (#1d2433), indigo accent (#3a4fa3) for a writing-and-operations subject. Deliberately far from TribalScale's yellow/black and from the salary example's parchment. Validator contrast checks apply." },
+    { "what": "cluster colours", "from": "chosen by hand", "note": "Six mid-dark hues (indigo, magenta, teal, amber-brown, violet, olive), each checked >= 3:1 against the background by the build." },
+    { "what": "fonts", "from": "system stacks; no webfont", "note": "Inter is TribalScale's body font (probe: Inter x44) but is only used here as the first entry of a generic sans stack; nothing is fetched. Wordmark uses a system serif so the title reads as a byline, not a corporate logo. No logo embedded." }
+  ]
+}

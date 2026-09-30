@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "title": "Haseeb Danyal",
+  "subject": { "name": "Haseeb Danyal", "kind": "person", "url": "https://haseebdanyal.webflow.io/" },
+  "tagline": "A map of how Haseeb Danyal’s public work makes design more legible: for users, business partners, and the designers doing the work.",
+  "root": "haseeb",
+  "credit": "An independent StoryTellr study by Nikhil Khedkar.",
+  "disclaimer": "Built from Haseeb Danyal’s public professional work and employer profile, read on 2026-09-30. Project outcomes and colleague comments are attributed to their publishers and have not all been independently verified. Not affiliated with or endorsed by Haseeb Danyal, mobileLIVE, or TribalScale.",
+  "generated": { "date": "2026-09-30" },
+  "clusters": [
+    { "id": "direction", "label": "Design direction" },
+    { "id": "design-ops", "label": "Design operations" },
+    { "id": "team-growth", "label": "Career systems" },
+    { "id": "product-design", "label": "Product practice" },
+    { "id": "leadership", "label": "Leadership in practice" }
+  ],
+  "sources": [
+    { "id": "home", "title": "Haseeb Danyal: Design Leader", "url": "https://haseebdanyal.webflow.io/", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "about", "title": "About Haseeb Danyal", "url": "https://haseebdanyal.webflow.io/about", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "achievements", "title": "Haseeb’s Achievements", "url": "https://haseebdanyal.webflow.io/wall-of-achievements", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "careers", "title": "Shaping better careers for designers aimed at growth", "url": "https://haseebdanyal.webflow.io/work/design-ops/shaping-better-careers-for-designers-at-mobilelive", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "playbook", "title": "How we got buy-in on our design practices with a UX Playbook", "url": "https://haseebdanyal.webflow.io/work/design-ops/designops-how-we-got-buy-in-on-our-design-practices-with-a-ux-playbook", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "jazzcash", "title": "JazzCash Mobile Wallet Redesign (Home)", "url": "https://haseebdanyal.webflow.io/work/product-design/jazzcash-mobile-wallet-redesign-home", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "journal", "title": "Not a Journal: Mobile App", "url": "https://haseebdanyal.webflow.io/work/product-design/not-a-journal", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "figma-post", "title": "Designers should not share Figma links with their business stakeholders", "url": "https://haseebdanyal.webflow.io/blog/designers-should-not-share-figma-links", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "leadership-post", "title": "A leader’s role goes beyond assigning work and taking updates", "url": "https://haseebdanyal.webflow.io/blog/leaders-role-goes-beyond-assigning-work-and-taking-updates", "accessed": "2026-09-30", "publisher": "Haseeb Danyal" },
+    { "id": "mobilelive-collab", "title": "Design Ops Series: Improved Designer and Stakeholder Collaboration", "url": "https://www.mobilelive.ai/blog/improving-collaboration-between-designers-and-stakeholders", "accessed": "2026-09-30", "publisher": "mobileLIVE" },
+    { "id": "tribalscale", "title": "Haseeb Danyal, Design Leadership @ TribalScale", "url": "https://www.tribalscale.com/in-focus/haseeb-danyal", "accessed": "2026-09-30", "publisher": "TribalScale" },
+    { "id": "nng", "title": "DesignOps 101", "url": "https://www.nngroup.com/articles/design-operations-101/", "accessed": "2026-09-30", "publisher": "Nielsen Norman Group" },
+    { "id": "metrics", "title": "Framework for Measuring Design Team’s Success", "url": "https://medium.com/design-bootcamp/framework-for-measuring-design-teams-success-ab255828d60f", "accessed": "2026-09-30", "publisher": "Haseeb Danyal in Bootcamp" },
+    { "id": "patari", "title": "PATARI Re-Imagined", "url": "https://www.behance.net/gallery/54089699/PATARI-Re-Imagined", "accessed": "2026-09-30", "publisher": "Haseeb Danyal on Behance" }
+  ],
+  "nodes": [
+    {
+      "id": "haseeb", "title": "Haseeb Danyal", "type": "person", "cluster": "direction", "featured": true,
+      "summary": "A product designer and design leader whose public work spans product experiences, design operations, and the growth of design teams.",
+      "evidence": "Design Leadership @ TribalScale",
+      "sources": ["home", "about", "tribalscale"], "themes": ["leadership", "design"]
+    },
+    {
+      "id": "career-pivot", "title": "Software to product design", "type": "career", "cluster": "direction", "featured": true,
+      "summary": "Haseeb’s bio describes a move from software engineering into product design, connecting technical practice with user experience.",
+      "evidence": "he decided to switch careers from software engineering to product design",
+      "sources": ["about"], "themes": ["career", "product design"]
+    },
+    {
+      "id": "design-maturity", "title": "Design maturity", "type": "practice", "cluster": "direction",
+      "summary": "His bio frames the work as helping organizations build design maturity through team coaching, processes, and frameworks.",
+      "details": "The bio describes this as seven years of work but provides no start date; that duration is presented as Haseeb’s own claim.",
+      "evidence": "enabling organizations to embrace design centricity and lead design maturity",
+      "sources": ["about"], "themes": ["design operations", "teams"]
+    },
+    {
+      "id": "current-role", "title": "Design leadership at TribalScale", "type": "role", "cluster": "direction",
+      "summary": "TribalScale’s profile places him in its design leadership function and describes work across product design, research, and leadership.",
+      "details": "The experience and reach claims on the employer profile are not independently verified here.",
+      "evidence": "15+ years of experience in product design, user research, and design leadership",
+      "sources": ["tribalscale"], "themes": ["role", "design"]
+    },
+    {
+      "id": "patari", "title": "PATARI redesign", "type": "project", "cluster": "direction",
+      "summary": "An older portfolio project shows product and visual-design work predating the later DesignOps case studies.",
+      "when": "2017-06-24",
+      "evidence": "Published June 24th 2017",
+      "sources": ["patari"], "themes": ["portfolio", "product design"]
+    },
+    {
+      "id": "designops", "title": "DesignOps practice", "type": "practice", "cluster": "design-ops", "featured": true,
+      "summary": "Across his case studies, DesignOps appears as the connective work around design: organizing files, clarifying processes, and helping people collaborate.",
+      "details": "This is a synthesis across the cited projects, rather than a formal job title attached to every initiative.",
+      "evidence": "DesignOps is a collective term for addressing challenges such as growing teams and creating efficient workflows",
+      "sources": ["nng", "playbook", "mobilelive-collab"], "themes": ["design operations", "collaboration"]
+    },
+    {
+      "id": "designops-frame", "title": "People, process, craft", "type": "framework", "cluster": "design-ops",
+      "summary": "NN/g’s framework gives useful context for the portfolio: DesignOps combines team support, workable processes, and consistent design craft.",
+      "evidence": "the orchestration and optimization of people, processes, and craft",
+      "sources": ["nng"], "themes": ["design operations", "framework"]
+    },
+    {
+      "id": "stakeholder-friction", "title": "Repeated handovers", "type": "problem", "cluster": "design-ops",
+      "summary": "The mobileLIVE article describes repeated walkthroughs and duplicate presentation work as a drain on designers’ time.",
+      "evidence": "repeated walkthroughs and presentation tasks reduced time for solving user and product problems",
+      "sources": ["mobilelive-collab"], "themes": ["collaboration", "workflow"]
+    },
+    {
+      "id": "shared-language", "title": "A shared design language", "type": "practice", "cluster": "design-ops", "featured": true,
+      "summary": "The proposed response is to make design files and decisions understandable to people outside the design team.",
+      "evidence": "the shared language will help stakeholders understand how design files are organized and documented",
+      "sources": ["mobilelive-collab"], "themes": ["stakeholders", "communication"]
+    },
+    {
+      "id": "file-status", "title": "Design-file statuses", "type": "tool", "cluster": "design-ops",
+      "summary": "A shared set of status labels lets collaborators see whether a screen or flow is underway, ready for review, approved, or archived.",
+      "evidence": "the key allows anyone coming into the design file to understand its status",
+      "sources": ["mobilelive-collab"], "themes": ["workflow", "Figma"]
+    },
+    {
+      "id": "decision-notes", "title": "Comment keys", "type": "tool", "cluster": "design-ops",
+      "summary": "Comment keys document design decisions, questions, and concerns in the files where the work is discussed.",
+      "evidence": "comment keys document design decisions, clarifications, ideas, and concerns",
+      "sources": ["mobilelive-collab"], "themes": ["documentation", "collaboration"]
+    },
+    {
+      "id": "ux-playbook", "title": "The UX playbook", "type": "artifact", "cluster": "design-ops", "featured": true,
+      "summary": "An interactive Figma prototype translated the team’s design activities into an explanation business stakeholders could use.",
+      "evidence": "the UXD playbook was an interactive Figma prototype",
+      "sources": ["playbook"], "themes": ["communication", "design process"]
+    },
+    {
+      "id": "five-stages", "title": "Five stages of design", "type": "process", "cluster": "design-ops",
+      "summary": "The playbook grouped work into Discover, Research, Sketch, Design, and Measure, making the parts around interface production visible too.",
+      "evidence": "Discover, Research, Sketch, Design, and Measure",
+      "sources": ["playbook"], "themes": ["design process", "research"]
+    },
+    {
+      "id": "living-playbook", "title": "A living team document", "type": "practice", "cluster": "design-ops",
+      "summary": "The playbook was described as an evolving document owned by the design team rather than a one-time presentation.",
+      "evidence": "a live document that is owned by every designer in our team",
+      "sources": ["playbook"], "themes": ["team ownership", "process"]
+    },
+    {
+      "id": "career-ladder", "title": "Designer career ladder", "type": "framework", "cluster": "team-growth", "featured": true,
+      "summary": "At mobileLIVE, Haseeb’s case study describes a career framework intended to make growth paths and expectations clearer as the design team expanded.",
+      "evidence": "we started by building a career ladder for all design roles within the organization",
+      "sources": ["careers"], "themes": ["career", "team development"]
+    },
+    {
+      "id": "dual-track", "title": "Two growth tracks", "type": "framework", "cluster": "team-growth",
+      "summary": "After senior level, designers could choose an individual-contributor or leadership track, and the case study says switching remained possible.",
+      "evidence": "designers can decide to pursue either the individual contributor path or the leadership path",
+      "sources": ["careers"], "themes": ["career", "leadership"]
+    },
+    {
+      "id": "role-expectations", "title": "Clear role expectations", "type": "framework", "cluster": "team-growth",
+      "summary": "The framework set expectations for each design role, mixing craft skills with communication and other people skills.",
+      "evidence": "a good mix of hard and soft skills",
+      "sources": ["careers"], "themes": ["career", "skills"]
+    },
+    {
+      "id": "annual-assessments", "title": "Annual skill assessments", "type": "practice", "cluster": "team-growth",
+      "summary": "A yearly assessment compared role expectations with input from designers, client-side stakeholders, and design leads.",
+      "evidence": "we run skill assessments once a year",
+      "sources": ["careers"], "themes": ["feedback", "growth"]
+    },
+    {
+      "id": "skill-scale", "title": "A word-based skill scale", "type": "tool", "cluster": "team-growth",
+      "summary": "The example uses plain-language ratings from improving to excelling; the displayed radar chart is hypothetical.",
+      "details": "The source says the scale was learned from Salesforce. That provenance is reported by the author and not separately investigated.",
+      "evidence": "0 non-scoring; 1 improving; 2 achieving; 3 excelling",
+      "sources": ["careers"], "themes": ["assessment", "communication"]
+    },
+    {
+      "id": "growth-conversations", "title": "Goals and weekly check-ins", "type": "practice", "cluster": "team-growth",
+      "summary": "The article links assessment results to achievable development goals and weekly one-on-ones between designers and leads.",
+      "evidence": "the conversation is carried over to weekly one-on-ones",
+      "sources": ["careers"], "themes": ["mentoring", "growth"]
+    },
+    {
+      "id": "jazzcash", "title": "JazzCash home redesign", "type": "project", "cluster": "product-design", "featured": true,
+      "summary": "Haseeb describes leading the redesign while also working hands-on on selected experiences, bringing team alignment and product UX into one case.",
+      "evidence": "I led the redesign for one of the largest and most actively used mobile wallets in South Asia",
+      "sources": ["jazzcash"], "themes": ["product design", "leadership"]
+    },
+    {
+      "id": "user-research", "title": "Research shapes direction", "type": "method", "cluster": "product-design",
+      "summary": "Interviews with users and business stakeholders informed the pain points and priorities described in the redesign case study.",
+      "evidence": "interviews with users and our business stakeholders",
+      "sources": ["jazzcash"], "themes": ["research", "product strategy"]
+    },
+    {
+      "id": "product-goals", "title": "Access, discovery, control", "type": "goal", "cluster": "product-design",
+      "summary": "The design goals focused on making actions easier to find, improving service discovery, and giving users more control.",
+      "evidence": "improve service discoverability; allow users to have more control over their experience",
+      "sources": ["jazzcash"], "themes": ["usability", "product goals"]
+    },
+    {
+      "id": "my-jazzcash", "title": "Personalized home services", "type": "feature", "cluster": "product-design",
+      "summary": "A central section let people place their four most-used services on the home screen; business-promoted services sat separately below it.",
+      "evidence": "customize their top four most used services",
+      "sources": ["jazzcash"], "themes": ["personalization", "navigation"]
+    },
+    {
+      "id": "feature-usage", "title": "Reported feature uptake", "type": "metric", "cluster": "product-design",
+      "summary": "The portfolio reports that more than 85% of users used and customized the feature within two months.",
+      "details": "This is a project outcome as reported in Haseeb’s portfolio; the underlying analytics or an independent source was not available in the material reviewed.",
+      "evidence": "over 85% of users using it and customizing their most used services within the first two months",
+      "when": "first two months after redesign",
+      "sources": ["jazzcash"], "themes": ["adoption", "measurement"]
+    },
+    {
+      "id": "design-system", "title": "Design system as work grew", "type": "system", "cluster": "product-design",
+      "summary": "Reusable components were added alongside new screens, with team huddles used to review and accept additions.",
+      "evidence": "we built our design system along the way with every new screen",
+      "sources": ["jazzcash"], "themes": ["design system", "teamwork"]
+    },
+    {
+      "id": "usability-tests", "title": "Usability measures", "type": "metric", "cluster": "product-design",
+      "summary": "The portfolio reports SEQ and SUPR-Q scores for the redesigned experience, as well as a SUS result for account information.",
+      "details": "The page describes these results but does not provide sample sizes, test dates, or study materials; read them as portfolio-reported figures.",
+      "evidence": "SEQ scores between 6 and 7; SUPR-Q scores of 4 and above",
+      "sources": ["jazzcash"], "themes": ["research", "measurement"]
+    },
+    {
+      "id": "not-a-journal", "title": "Not a Journal challenge", "type": "project", "cluster": "product-design",
+      "summary": "A short self-initiated challenge shows another version of the same research-to-interface process, from interviews through personas, journey, prototypes, and reflection.",
+      "evidence": "I talked to three friends",
+      "details": "Haseeb says the project took roughly 12 hours and notes that a broader interview sample could have surfaced more insights.",
+      "sources": ["journal"], "themes": ["research", "prototyping"]
+    },
+    {
+      "id": "leadership-mandate", "title": "Leadership as enablement", "type": "principle", "cluster": "leadership", "featured": true,
+      "summary": "Haseeb’s leadership essay defines the job through creating safety, guidance, and room for people to grow, rather than only assigning work.",
+      "evidence": "leadership roles entail a lot of responsibility",
+      "sources": ["leadership-post"], "themes": ["leadership", "people"]
+    },
+    {
+      "id": "one-on-ones", "title": "Meaningful one-on-ones", "type": "practice", "cluster": "leadership",
+      "summary": "He recommends tailoring check-ins to people’s concerns, motivations, roles, and goals.",
+      "evidence": "tailor every new conversation around them, not you",
+      "sources": ["leadership-post"], "themes": ["mentoring", "communication"]
+    },
+    {
+      "id": "empowerment", "title": "Empower, don’t micromanage", "type": "principle", "cluster": "leadership",
+      "summary": "The essay argues that leaders succeed when their teams can deliver without constant intervention.",
+      "evidence": "you succeed when your people can deliver without you stepping in at every turn",
+      "sources": ["leadership-post"], "themes": ["trust", "leadership"]
+    },
+    {
+      "id": "colleague-views", "title": "Colleagues describe the practice", "type": "testimony", "cluster": "leadership",
+      "summary": "Hosted testimonials from a design-operations leader and designers praise Haseeb’s team-building, coaching, and collaborative style.",
+      "details": "These are first-person recommendations published on Haseeb’s site. They show how named colleagues describe working with him, not an independently sampled assessment.",
+      "evidence": "Mark Lannutti says Haseeb set up a DesignOps practice and standardized design roles, career paths, and work processes",
+      "sources": ["home", "achievements"], "themes": ["testimony", "team culture"]
+    },
+    {
+      "id": "measurement-framework", "title": "Measure the whole system", "type": "framework", "cluster": "leadership",
+      "summary": "In a 2024 essay, Haseeb groups design-team measurement around who is on the team, how work happens, and the outcomes it creates.",
+      "evidence": "who is on the team, how the work gets done, and how the work creates business impact",
+      "when": "2024-11-15",
+      "sources": ["metrics"], "themes": ["measurement", "design operations"]
+    }
+  ],
+  "edges": [
+    { "source": "haseeb", "target": "career-pivot", "label": "describes a move from", "kind": "explicit", "sources": ["about"] },
+    { "source": "career-pivot", "target": "design-maturity", "label": "later extends into", "kind": "inferred" },
+    { "source": "haseeb", "target": "current-role", "label": "is profiled in", "kind": "explicit", "sources": ["tribalscale"] },
+    { "source": "haseeb", "target": "patari", "label": "published a project in", "kind": "explicit", "sources": ["patari"] },
+    { "source": "designops", "target": "designops-frame", "label": "fits the frame of", "kind": "inferred" },
+    { "source": "designops", "target": "stakeholder-friction", "label": "responds to", "kind": "explicit", "sources": ["mobilelive-collab"] },
+    { "source": "stakeholder-friction", "target": "shared-language", "label": "is addressed with", "kind": "explicit", "sources": ["mobilelive-collab"] },
+    { "source": "shared-language", "target": "file-status", "label": "is made concrete by", "kind": "explicit", "sources": ["mobilelive-collab"] },
+    { "source": "shared-language", "target": "decision-notes", "label": "is made concrete by", "kind": "explicit", "sources": ["mobilelive-collab"] },
+    { "source": "designops", "target": "ux-playbook", "label": "includes", "kind": "explicit", "sources": ["playbook"] },
+    { "source": "ux-playbook", "target": "five-stages", "label": "organizes work into", "kind": "explicit", "sources": ["playbook"] },
+    { "source": "five-stages", "target": "living-playbook", "label": "is kept current as", "kind": "explicit", "sources": ["playbook"] },
+    { "source": "ux-playbook", "target": "shared-language", "label": "aims to create", "kind": "inferred" },
+    { "source": "designops", "target": "career-ladder", "label": "also supports", "kind": "explicit", "sources": ["careers"] },
+    { "source": "career-ladder", "target": "dual-track", "label": "offers", "kind": "explicit", "sources": ["careers"] },
+    { "source": "career-ladder", "target": "role-expectations", "label": "clarifies", "kind": "explicit", "sources": ["careers"] },
+    { "source": "role-expectations", "target": "annual-assessments", "label": "are reviewed through", "kind": "explicit", "sources": ["careers"] },
+    { "source": "annual-assessments", "target": "skill-scale", "label": "use", "kind": "explicit", "sources": ["careers"] },
+    { "source": "annual-assessments", "target": "growth-conversations", "label": "inform", "kind": "explicit", "sources": ["careers"] },
+    { "source": "haseeb", "target": "jazzcash", "label": "led work on", "kind": "explicit", "sources": ["jazzcash"] },
+    { "source": "jazzcash", "target": "user-research", "label": "begins with", "kind": "explicit", "sources": ["jazzcash"] },
+    { "source": "user-research", "target": "product-goals", "label": "informs", "kind": "explicit", "sources": ["jazzcash"] },
+    { "source": "product-goals", "target": "my-jazzcash", "label": "shows up in", "kind": "explicit", "sources": ["jazzcash"] },
+    { "source": "my-jazzcash", "target": "feature-usage", "label": "has a reported uptake of", "kind": "explicit", "sources": ["jazzcash"] },
+    { "source": "jazzcash", "target": "design-system", "label": "developed alongside", "kind": "explicit", "sources": ["jazzcash"] },
+    { "source": "jazzcash", "target": "usability-tests", "label": "reports results from", "kind": "explicit", "sources": ["jazzcash"] },
+    { "source": "user-research", "target": "not-a-journal", "label": "has a smaller parallel in", "kind": "inferred" },
+    { "source": "leadership-mandate", "target": "one-on-ones", "label": "includes", "kind": "explicit", "sources": ["leadership-post"] },
+    { "source": "leadership-mandate", "target": "empowerment", "label": "argues for", "kind": "explicit", "sources": ["leadership-post"] },
+    { "source": "one-on-ones", "target": "growth-conversations", "label": "connect with", "kind": "inferred" },
+    { "source": "leadership-mandate", "target": "colleague-views", "label": "echoes themes in", "kind": "inferred" },
+    { "source": "designops", "target": "measurement-framework", "label": "is considered alongside measurement in", "kind": "explicit", "sources": ["metrics"] },
+    { "source": "measurement-framework", "target": "design-system", "label": "includes reuse as a measure of", "kind": "explicit", "sources": ["metrics"] },
+    { "source": "haseeb", "target": "leadership-mandate", "label": "publishes principles on", "kind": "explicit", "sources": ["leadership-post"] },
+    { "source": "haseeb", "target": "colleague-views", "label": "is described by colleagues in", "kind": "explicit", "sources": ["home", "achievements"] }
+  ],
+  "stories": [
+    {
+      "id": "make-design-legible",
+      "title": "Making design legible",
+      "summary": "One strand of the work starts with repeated handovers and ends with a shared language: status labels, documented decisions, and a playbook that gives stakeholders context before the pitch.",
+      "steps": ["haseeb", "designops", "stakeholder-friction", "shared-language", "file-status", "decision-notes"]
+    },
+    {
+      "id": "from-process-to-growth",
+      "title": "From process to growth",
+      "summary": "The career framework turns team operations into individual development: clear roles, two paths after senior level, yearly input, then recurring conversations and goals.",
+      "steps": ["designops", "career-ladder", "dual-track", "role-expectations", "annual-assessments", "growth-conversations"]
+    },
+    {
+      "id": "research-to-interface",
+      "title": "Research to interface",
+      "summary": "The JazzCash case moves from interviews to product goals, a personalized home, and a design system. Adoption and usability results are reported by the portfolio, not independently verified here.",
+      "steps": ["haseeb", "jazzcash", "user-research", "product-goals", "my-jazzcash", "feature-usage", "usability-tests"]
+    },
+    {
+      "id": "leading-through-enablement",
+      "title": "Leading through enablement",
+      "summary": "Haseeb’s published leadership principles emphasize tailored one-on-ones, growth, and autonomy. Colleague testimonials hosted on his site describe related experiences, with the source and perspective kept visible.",
+      "steps": ["haseeb", "leadership-mandate", "one-on-ones", "empowerment", "colleague-views"]
+    }
+  ]
+}

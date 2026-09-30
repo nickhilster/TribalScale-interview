@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Haseeb Danyal · Story Graph</title>
+<meta name="description" content="A map of how Haseeb Danyal’s public work makes design more legible: for users, business partners, and the designers doing the work. Built from Haseeb Danyal’s public professional work and employer profile, read on 2026-09-30. Project outcomes and colleague comments are attributed to their publishers and have not all been independently verified. Not affiliated with or endorsed by Haseeb Danyal, mobileLIVE, or TribalScale.">
+<meta name="theme-color" content="#1c190f">
+<meta property="og:title" content="Haseeb Danyal · Story Graph">
+<meta property="og:description" content="A map of how Haseeb Danyal’s public work makes design more legible: for users, business partners, and the designers doing the work. Built from Haseeb Danyal’s public professional work and employer profile, read on 2026-09-30. Project outcomes and colleague comments are attributed to their publishers and have not all been independently verified. Not affiliated with or endorsed by Haseeb Danyal, mobileLIVE, or TribalScale.">
+
+<style>:root{--bg:#1c190f;--surface:#292518;--text:#f6f3e8;--muted:#d2cbb7;--line:rgba(255,255,255,0.16);--accent:#ffd235;color-scheme:dark}</style>
+<style>
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:14px;line-height:1.45;display:flex;flex-direction:column;height:100dvh;overflow:hidden;-webkit-font-smoothing:antialiased}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:18px 24px 14px;border-bottom:1px solid var(--line);flex:none}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand img{max-height:30px;max-width:120px;display:block}
+.wordmark{margin:0;font-size:19px;font-weight:600;line-height:1.2;overflow-wrap:anywhere}
+.dek{margin:6px 0 0;max-width:640px;color:var(--muted);font-size:13px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.btn{min-height:36px;padding:0 12px;border:1px solid color-mix(in srgb,var(--text) 22%,transparent);background:color-mix(in srgb,var(--bg) 88%,var(--text));text-transform:uppercase;letter-spacing:.1em;font-size:10px;transition:border-color .15s,color .15s,background .15s}
+.btn:hover,.btn[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:10px 24px;border-bottom:1px solid var(--line);flex:none}
+.search{display:flex;align-items:center;gap:8px;min-width:220px;height:34px;padding:0 10px;border:1px solid color-mix(in srgb,var(--text) 22%,transparent);background:color-mix(in srgb,var(--bg) 88%,var(--text));color:var(--muted)}
+.search:focus-within{border-color:var(--accent)}
+.search input{flex:1;min-width:0;border:0;outline:0;background:none;color:var(--text);font-size:12px}
+.search input::placeholder{color:var(--muted);opacity:.8}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{min-height:28px;padding:0 10px;border:1px solid color-mix(in srgb,var(--text) 22%,transparent);background:none;color:var(--muted);font-size:11px;display:inline-flex;align-items:center;gap:6px}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--c,var(--accent));display:inline-block}
+.chip:hover{color:var(--text)}
+.chip[aria-pressed=true]{background:color-mix(in srgb,var(--accent) 14%,transparent);border-color:var(--accent);color:var(--accent)}
+.stories{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-left:auto}
+.stories>span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+main{position:relative;flex:1;min-height:0}
+#graph{display:block;width:100%;height:100%;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+#graph.dragging{cursor:grabbing}
+.edge{stroke:var(--text);stroke-opacity:.34;stroke-width:1.2;vector-effect:non-scaling-stroke;transition:stroke-opacity .18s,stroke .18s}
+.edge.inferred{stroke-dasharray:3 5;stroke-opacity:.42}
+.edge.hl{stroke:var(--accent);stroke-opacity:1;stroke-width:2.2;stroke-dasharray:none}
+.edge.inferred.hl{stroke-dasharray:6 5}
+.edge.dim{stroke-opacity:.05}
+.edge-label{font-size:10px;fill:var(--accent);text-anchor:middle;opacity:0;pointer-events:none;paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
+.edge-label.hl{opacity:1}
+.node{cursor:pointer;transition:opacity .18s}
+.node .core{fill:var(--bg);stroke-width:2;transition:stroke-width .15s}
+.node.root .core{stroke-width:0}
+.node .dot{opacity:.9}
+.node .label{font-size:calc(11px * var(--ls,1));fill:var(--text);text-anchor:middle;paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
+.node.root .label{font-weight:700;letter-spacing:.2em;font-size:12px}
+.node .kind{font-size:7.5px;fill:var(--muted);text-anchor:middle;letter-spacing:.14em;text-transform:uppercase;paint-order:stroke;stroke:var(--bg);stroke-width:3px;pointer-events:none;opacity:0;transition:opacity .15s}
+#graph.zoomed .node .kind{opacity:1}
+.node:hover .core,.node:focus-visible .core{stroke-width:3.5}
+.node:focus-visible{outline:none}
+.node:focus-visible .ring{opacity:1}
+.ring{fill:none;stroke:var(--accent);stroke-width:2;opacity:0}
+.node.sel .ring{opacity:1}
+.node.dim{opacity:.16}
+.badge circle{fill:var(--accent)}
+.badge text{fill:var(--bg);font-size:9px;font-weight:700;text-anchor:middle;dominant-baseline:central}
+.story-path{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 7;vector-effect:non-scaling-stroke;opacity:.85}
+
+.zoom{position:absolute;left:20px;bottom:92px;display:flex;flex-direction:column;gap:6px}
+.zoom .btn{width:36px;padding:0;font-size:16px;letter-spacing:0}
+.foot{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding:10px 24px;font-size:11px;color:var(--muted);pointer-events:none;background:linear-gradient(to top,var(--bg) 40%,transparent)}
+.foot p{margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:flex-end}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.legend svg{width:22px;height:8px}
+.empty{position:absolute;inset:0;display:none;place-items:center;color:var(--muted);pointer-events:none}
+.empty.on{display:grid}
+
+#list{position:absolute;inset:0;overflow:auto;padding:20px 24px 80px;display:none}
+#list.on{display:block}
+#list section{max-width:860px;margin:0 auto 26px}
+#list h2{margin:0 0 10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
+#list h2 i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+#list ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.item{display:block;width:100%;text-align:left;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--c)}
+.item:hover,.item:focus-visible{border-color:var(--c)}
+.item b{display:block;font-weight:600}
+.item small{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:10px}
+.item span{display:block;color:var(--muted);margin-top:4px;font-size:13px}
+
+#panel{position:absolute;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--surface);border-left:1px solid var(--line);overflow:auto;padding:22px 22px 40px;transform:translateX(102%);transition:transform .25s ease;z-index:6;box-shadow:-12px 0 40px rgba(0,0,0,.25)}
+#panel.open{transform:none}
+#panel .close{position:absolute;top:10px;right:10px;width:32px;height:32px;border:0;background:none;color:var(--muted);font-size:20px}
+#panel .close:hover{color:var(--accent)}
+#panel .kicker{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+#panel .kicker i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+#panel h2{margin:8px 28px 10px 0;font-size:22px;line-height:1.2;overflow-wrap:anywhere}
+#panel p{margin:0 0 12px}
+#panel .details{color:var(--muted)}
+#panel h3{margin:20px 0 8px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+#panel blockquote{margin:0 0 12px;padding:8px 12px;border-left:2px solid var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{padding:2px 8px;border:1px solid var(--line);font-size:11px;color:var(--muted)}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.links button{width:100%;text-align:left;background:none;border:1px solid var(--line);padding:8px 10px;display:grid;gap:2px}
+.links button:hover{border-color:var(--accent)}
+.links .rel{font-size:11px;color:var(--muted)}
+.links .rel em{font-style:normal;color:var(--accent)}
+.src{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.src a{color:var(--accent);text-decoration:none;overflow-wrap:anywhere}
+.src a:hover{text-decoration:underline}
+.src small{display:block;color:var(--muted)}
+
+#storybar{position:absolute;left:50%;bottom:54px;transform:translateX(-50%);width:min(560px,calc(100% - 32px));background:var(--surface);border:1px solid var(--accent);padding:10px 14px;display:none;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;z-index:5;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+#storybar.on{display:grid}
+#storybar .t{min-width:0}
+#storybar b{display:block;font-size:13px}
+#storybar span{display:block;color:var(--muted);font-size:12px}
+#storybar .step{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+#storybar .nav{display:flex;gap:6px}
+#storybar .btn{padding:0 10px}
+
+noscript{display:block;padding:24px;max-width:760px}
+
+@media (max-width:760px){
+  header{padding:14px 16px 10px;flex-direction:column}
+  .actions{justify-content:flex-start}
+  .toolbar{padding:8px 16px}
+  .stories{margin-left:0;width:100%}
+  .search{flex:1 1 100%}
+  .chips,.stories{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none;padding-bottom:2px}
+  .chips::-webkit-scrollbar,.stories::-webkit-scrollbar{display:none}
+  .chip,.stories>span{flex:none;white-space:nowrap}
+  .dek{font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  header{flex-direction:row;flex-wrap:wrap}
+  .legend,#status{display:none}
+  .wordmark{font-size:16px}
+  .actions .btn{min-height:30px;padding:0 9px}
+  .zoom{bottom:70px}
+  .toolbar{gap:6px}
+  .foot{font-size:10px}
+  .foot{padding:8px 16px}
+  .legend{justify-content:flex-start}
+  .zoom{left:12px}
+  #panel{top:auto;width:100%;height:58%;border-left:0;border-top:1px solid var(--line);transform:translateY(102%)}
+  #panel.open{transform:none}
+  #storybar{bottom:68px;grid-template-columns:1fr;}
+  #list{padding:14px 16px 90px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div id="logo"></div><div><h1 class="wordmark" id="wordmark"></h1><p class="dek" id="dek"></p></div></div>
+  <div class="actions">
+    <button class="btn" id="btn-view" aria-pressed="false">Explore as list</button>
+    <button class="btn" id="btn-fit">Fit</button>
+    <button class="btn" id="btn-reset">Reset</button>
+  </div>
+</header>
+<div class="toolbar" role="region" aria-label="Filters">
+  <label class="search"><span class="sr-only">Search nodes</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search nodes  ( / )" autocomplete="off"></label>
+  <div class="chips" id="chips"></div>
+  <div class="stories" id="stories"></div>
+</div>
+<main>
+  <svg id="graph" role="group" aria-label="Story graph. Use the list view for a linear alternative."><g id="vp"><g id="edges"></g><g id="edge-labels"></g><path id="story-path" class="story-path" d=""/><g id="nodes"></g><g id="badges"></g></g></svg>
+  <div id="list" aria-label="Story list"></div>
+  <div class="empty" id="empty">No nodes match.</div>
+  <div class="zoom" id="zoom"><button class="btn" id="zin" aria-label="Zoom in">+</button><button class="btn" id="zout" aria-label="Zoom out">&minus;</button></div>
+  <div id="storybar" role="region" aria-label="Guided story">
+    <div class="t"><div class="step" id="sb-step"></div><b id="sb-title"></b><span id="sb-sum"></span></div>
+    <div class="nav"><button class="btn" id="sb-prev" aria-label="Previous step">&lsaquo;</button><button class="btn" id="sb-next" aria-label="Next step">&rsaquo;</button><button class="btn" id="sb-exit" aria-label="Exit story">&times;</button></div>
+  </div>
+  <aside id="panel" aria-label="Node details" aria-live="polite"></aside>
+  <div class="foot"><div><p id="status"></p><p id="credit"></p></div><div class="legend" id="legend"></div></div>
+</main>
+<noscript><h1>Haseeb Danyal</h1><p>A map of how Haseeb Danyal’s public work makes design more legible: for users, business partners, and the designers doing the work.</p><p>This interactive story graph needs JavaScript. The full content follows.</p><ul><li><strong>Haseeb Danyal</strong>: A product designer and design leader whose public work spans product experiences, design operations, and the growth of design teams.</li><li><strong>Software to product design</strong>: Haseeb’s bio describes a move from software engineering into product design, connecting technical practice with user experience.</li><li><strong>Design maturity</strong>: His bio frames the work as helping organizations build design maturity through team coaching, processes, and frameworks.</li><li><strong>Design leadership at TribalScale</strong>: TribalScale’s profile places him in its design leadership function and describes work across product design, research, and leadership.</li><li><strong>PATARI redesign</strong>: An older portfolio project shows product and visual-design work predating the later DesignOps case studies.</li><li><strong>DesignOps practice</strong>: Across his case studies, DesignOps appears as the connective work around design: organizing files, clarifying processes, and helping people collaborate.</li><li><strong>People, process, craft</strong>: NN/g’s framework gives useful context for the portfolio: DesignOps combines team support, workable processes, and consistent design craft.</li><li><strong>Repeated handovers</strong>: The mobileLIVE article describes repeated walkthroughs and duplicate presentation work as a drain on designers’ time.</li><li><strong>A shared design language</strong>: The proposed response is to make design files and decisions understandable to people outside the design team.</li><li><strong>Design-file statuses</strong>: A shared set of status labels lets collaborators see whether a screen or flow is underway, ready for review, approved, or archived.</li><li><strong>Comment keys</strong>: Comment keys document design decisions, questions, and concerns in the files where the work is discussed.</li><li><strong>The UX playbook</strong>: An interactive Figma prototype translated the team’s design activities into an explanation business stakeholders could use.</li><li><strong>Five stages of design</strong>: The playbook grouped work into Discover, Research, Sketch, Design, and Measure, making the parts around interface production visible too.</li><li><strong>A living team document</strong>: The playbook was described as an evolving document owned by the design team rather than a one-time presentation.</li><li><strong>Designer career ladder</strong>: At mobileLIVE, Haseeb’s case study describes a career framework intended to make growth paths and expectations clearer as the design team expanded.</li><li><strong>Two growth tracks</strong>: After senior level, designers could choose an individual-contributor or leadership track, and the case study says switching remained possible.</li><li><strong>Clear role expectations</strong>: The framework set expectations for each design role, mixing craft skills with communication and other people skills.</li><li><strong>Annual skill assessments</strong>: A yearly assessment compared role expectations with input from designers, client-side stakeholders, and design leads.</li><li><strong>A word-based skill scale</strong>: The example uses plain-language ratings from improving to excelling; the displayed radar chart is hypothetical.</li><li><strong>Goals and weekly check-ins</strong>: The article links assessment results to achievable development goals and weekly one-on-ones between designers and leads.</li><li><strong>JazzCash home redesign</strong>: Haseeb describes leading the redesign while also working hands-on on selected experiences, bringing team alignment and product UX into one case.</li><li><strong>Research shapes direction</strong>: Interviews with users and business stakeholders informed the pain points and priorities described in the redesign case study.</li><li><strong>Access, discovery, control</strong>: The design goals focused on making actions easier to find, improving service discovery, and giving users more control.</li><li><strong>Personalized home services</strong>: A central section let people place their four most-used services on the home screen; business-promoted services sat separately below it.</li><li><strong>Reported feature uptake</strong>: The portfolio reports that more than 85% of users used and customized the feature within two months.</li><li><strong>Design system as work grew</strong>: Reusable components were added alongside new screens, with team huddles used to review and accept additions.</li><li><strong>Usability measures</strong>: The portfolio reports SEQ and SUPR-Q scores for the redesigned experience, as well as a SUS result for account information.</li><li><strong>Not a Journal challenge</strong>: A short self-initiated challenge shows another version of the same research-to-interface process, from interviews through personas, journey, prototypes, and reflection.</li><li><strong>Leadership as enablement</strong>: Haseeb’s leadership essay defines the job through creating safety, guidance, and room for people to grow, rather than only assigning work.</li><li><strong>Meaningful one-on-ones</strong>: He recommends tailoring check-ins to people’s concerns, motivations, roles, and goals.</li><li><strong>Empower, don’t micromanage</strong>: The essay argues that leaders succeed when their teams can deliver without constant intervention.</li><li><strong>Colleagues describe the practice</strong>: Hosted testimonials from a design-operations leader and designers praise Haseeb’s team-building, coaching, and collaborative style.</li><li><strong>Measure the whole system</strong>: In a 2024 essay, Haseeb groups design-team measurement around who is on the team, how work happens, and the outcomes it creates.</li></ul></noscript>
+
+<script type="application/json" id="theme-data">{"schemaVersion":1,"name":"Haseeb Danyal: gold and ink","mode":"dark","colors":{"bg":"#1c190f","surface":"#292518","text":"#f6f3e8","muted":"#d2cbb7","line":"rgba(255,255,255,0.16)","accent":"#ffd235"},"clusters":{"direction":"#ffd235","design-ops":"#84b8dc","team-growth":"#70c5a9","product-design":"#c4a0e8","leadership":"#f39b7e"},"font":{"body":"Arial, 'Segoe UI', system-ui, sans-serif","display":"'Trebuchet MS', Arial, sans-serif"},"wordmark":{"text":"Haseeb Danyal","letterSpacing":"0.02em"},"brandSources":[{"what":"accent","from":"https://haseebdanyal.webflow.io/ · CSS custom property --gold · probed 2026-09-30","note":"Used the portfolio's exact #ffd235 gold as the signature accent. The site's text is #333333 and its canvas is predominantly white."},{"what":"background and contrast decision","from":"https://haseebdanyal.webflow.io/ · brand probe and homepage · 2026-09-30","note":"The portfolio uses a light canvas, but its exact gold does not meet the graph's accent contrast requirement on white. The dark warm ink background keeps the gold recognizable and legible; this is an intentional contrast adaptation, not a claim that the source site is dark."},{"what":"cluster colours","from":"Chosen from compatible cool and warm tones around the portfolio gold; checked by the StoryTeller build","note":"The five clusters use distinct restrained hues to separate career direction, operations, team growth, product design, and leadership."},{"what":"fonts","from":"System font stacks; the portfolio's Atkinson Hyperlegible face is proprietary to its Webflow assets","note":"Used Arial, Segoe UI, and system fallbacks without a remote font request. No logo is embedded."}]}</script>
+<script type="application/json" id="story-data">{"schemaVersion":1,"title":"Haseeb Danyal","subject":{"name":"Haseeb Danyal","kind":"person","url":"https://haseebdanyal.webflow.io/"},"tagline":"A map of how Haseeb Danyal’s public work makes design more legible: for users, business partners, and the designers doing the work.","root":"haseeb","credit":"An independent StoryTellr study by Nikhil Khedkar.","disclaimer":"Built from Haseeb Danyal’s public professional work and employer profile, read on 2026-09-30. Project outcomes and colleague comments are attributed to their publishers and have not all been independently verified. Not affiliated with or endorsed by Haseeb Danyal, mobileLIVE, or TribalScale.","generated":{"date":"2026-09-30"},"clusters":[{"id":"direction","label":"Design direction"},{"id":"design-ops","label":"Design operations"},{"id":"team-growth","label":"Career systems"},{"id":"product-design","label":"Product practice"},{"id":"leadership","label":"Leadership in practice"}],"sources":[{"id":"home","title":"Haseeb Danyal: Design Leader","url":"https://haseebdanyal.webflow.io/","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"about","title":"About Haseeb Danyal","url":"https://haseebdanyal.webflow.io/about","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"achievements","title":"Haseeb’s Achievements","url":"https://haseebdanyal.webflow.io/wall-of-achievements","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"careers","title":"Shaping better careers for designers aimed at growth","url":"https://haseebdanyal.webflow.io/work/design-ops/shaping-better-careers-for-designers-at-mobilelive","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"playbook","title":"How we got buy-in on our design practices with a UX Playbook","url":"https://haseebdanyal.webflow.io/work/design-ops/designops-how-we-got-buy-in-on-our-design-practices-with-a-ux-playbook","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"jazzcash","title":"JazzCash Mobile Wallet Redesign (Home)","url":"https://haseebdanyal.webflow.io/work/product-design/jazzcash-mobile-wallet-redesign-home","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"journal","title":"Not a Journal: Mobile App","url":"https://haseebdanyal.webflow.io/work/product-design/not-a-journal","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"figma-post","title":"Designers should not share Figma links with their business stakeholders","url":"https://haseebdanyal.webflow.io/blog/designers-should-not-share-figma-links","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"leadership-post","title":"A leader’s role goes beyond assigning work and taking updates","url":"https://haseebdanyal.webflow.io/blog/leaders-role-goes-beyond-assigning-work-and-taking-updates","accessed":"2026-09-30","publisher":"Haseeb Danyal"},{"id":"mobilelive-collab","title":"Design Ops Series: Improved Designer and Stakeholder Collaboration","url":"https://www.mobilelive.ai/blog/improving-collaboration-between-designers-and-stakeholders","accessed":"2026-09-30","publisher":"mobileLIVE"},{"id":"tribalscale","title":"Haseeb Danyal, Design Leadership @ TribalScale","url":"https://www.tribalscale.com/in-focus/haseeb-danyal","accessed":"2026-09-30","publisher":"TribalScale"},{"id":"nng","title":"DesignOps 101","url":"https://www.nngroup.com/articles/design-operations-101/","accessed":"2026-09-30","publisher":"Nielsen Norman Group"},{"id":"metrics","title":"Framework for Measuring Design Team’s Success","url":"https://medium.com/design-bootcamp/framework-for-measuring-design-teams-success-ab255828d60f","accessed":"2026-09-30","publisher":"Haseeb Danyal in Bootcamp"},{"id":"patari","title":"PATARI Re-Imagined","url":"https://www.behance.net/gallery/54089699/PATARI-Re-Imagined","accessed":"2026-09-30","publisher":"Haseeb Danyal on Behance"}],"nodes":[{"id":"haseeb","title":"Haseeb Danyal","type":"person","cluster":"direction","featured":true,"summary":"A product designer and design leader whose public work spans product experiences, design operations, and the growth of design teams.","evidence":"Design Leadership @ TribalScale","sources":["home","about","tribalscale"],"themes":["leadership","design"]},{"id":"career-pivot","title":"Software to product design","type":"career","cluster":"direction","featured":true,"summary":"Haseeb’s bio describes a move from software engineering into product design, connecting technical practice with user experience.","evidence":"he decided to switch careers from software engineering to product design","sources":["about"],"themes":["career","product design"]},{"id":"design-maturity","title":"Design maturity","type":"practice","cluster":"direction","summary":"His bio frames the work as helping organizations build design maturity through team coaching, processes, and frameworks.","details":"The bio describes this as seven years of work but provides no start date; that duration is presented as Haseeb’s own claim.","evidence":"enabling organizations to embrace design centricity and lead design maturity","sources":["about"],"themes":["design operations","teams"]},{"id":"current-role","title":"Design leadership at TribalScale","type":"role","cluster":"direction","summary":"TribalScale’s profile places him in its design leadership function and describes work across product design, research, and leadership.","details":"The experience and reach claims on the employer profile are not independently verified here.","evidence":"15+ years of experience in product design, user research, and design leadership","sources":["tribalscale"],"themes":["role","design"]},{"id":"patari","title":"PATARI redesign","type":"project","cluster":"direction","summary":"An older portfolio project shows product and visual-design work predating the later DesignOps case studies.","when":"2017-06-24","evidence":"Published June 24th 2017","sources":["patari"],"themes":["portfolio","product design"]},{"id":"designops","title":"DesignOps practice","type":"practice","cluster":"design-ops","featured":true,"summary":"Across his case studies, DesignOps appears as the connective work around design: organizing files, clarifying processes, and helping people collaborate.","details":"This is a synthesis across the cited projects, rather than a formal job title attached to every initiative.","evidence":"DesignOps is a collective term for addressing challenges such as growing teams and creating efficient workflows","sources":["nng","playbook","mobilelive-collab"],"themes":["design operations","collaboration"]},{"id":"designops-frame","title":"People, process, craft","type":"framework","cluster":"design-ops","summary":"NN/g’s framework gives useful context for the portfolio: DesignOps combines team support, workable processes, and consistent design craft.","evidence":"the orchestration and optimization of people, processes, and craft","sources":["nng"],"themes":["design operations","framework"]},{"id":"stakeholder-friction","title":"Repeated handovers","type":"problem","cluster":"design-ops","summary":"The mobileLIVE article describes repeated walkthroughs and duplicate presentation work as a drain on designers’ time.","evidence":"repeated walkthroughs and presentation tasks reduced time for solving user and product problems","sources":["mobilelive-collab"],"themes":["collaboration","workflow"]},{"id":"shared-language","title":"A shared design language","type":"practice","cluster":"design-ops","featured":true,"summary":"The proposed response is to make design files and decisions understandable to people outside the design team.","evidence":"the shared language will help stakeholders understand how design files are organized and documented","sources":["mobilelive-collab"],"themes":["stakeholders","communication"]},{"id":"file-status","title":"Design-file statuses","type":"tool","cluster":"design-ops","summary":"A shared set of status labels lets collaborators see whether a screen or flow is underway, ready for review, approved, or archived.","evidence":"the key allows anyone coming into the design file to understand its status","sources":["mobilelive-collab"],"themes":["workflow","Figma"]},{"id":"decision-notes","title":"Comment keys","type":"tool","cluster":"design-ops","summary":"Comment keys document design decisions, questions, and concerns in the files where the work is discussed.","evidence":"comment keys document design decisions, clarifications, ideas, and concerns","sources":["mobilelive-collab"],"themes":["documentation","collaboration"]},{"id":"ux-playbook","title":"The UX playbook","type":"artifact","cluster":"design-ops","featured":true,"summary":"An interactive Figma prototype translated the team’s design activities into an explanation business stakeholders could use.","evidence":"the UXD playbook was an interactive Figma prototype","sources":["playbook"],"themes":["communication","design process"]},{"id":"five-stages","title":"Five stages of design","type":"process","cluster":"design-ops","summary":"The playbook grouped work into Discover, Research, Sketch, Design, and Measure, making the parts around interface production visible too.","evidence":"Discover, Research, Sketch, Design, and Measure","sources":["playbook"],"themes":["design process","research"]},{"id":"living-playbook","title":"A living team document","type":"practice","cluster":"design-ops","summary":"The playbook was described as an evolving document owned by the design team rather than a one-time presentation.","evidence":"a live document that is owned by every designer in our team","sources":["playbook"],"themes":["team ownership","process"]},{"id":"career-ladder","title":"Designer career ladder","type":"framework","cluster":"team-growth","featured":true,"summary":"At mobileLIVE, Haseeb’s case study describes a career framework intended to make growth paths and expectations clearer as the design team expanded.","evidence":"we started by building a career ladder for all design roles within the organization","sources":["careers"],"themes":["career","team development"]},{"id":"dual-track","title":"Two growth tracks","type":"framework","cluster":"team-growth","summary":"After senior level, designers could choose an individual-contributor or leadership track, and the case study says switching remained possible.","evidence":"designers can decide to pursue either the individual contributor path or the leadership path","sources":["careers"],"themes":["career","leadership"]},{"id":"role-expectations","title":"Clear role expectations","type":"framework","cluster":"team-growth","summary":"The framework set expectations for each design role, mixing craft skills with communication and other people skills.","evidence":"a good mix of hard and soft skills","sources":["careers"],"themes":["career","skills"]},{"id":"annual-assessments","title":"Annual skill assessments","type":"practice","cluster":"team-growth","summary":"A yearly assessment compared role expectations with input from designers, client-side stakeholders, and design leads.","evidence":"we run skill assessments once a year","sources":["careers"],"themes":["feedback","growth"]},{"id":"skill-scale","title":"A word-based skill scale","type":"tool","cluster":"team-growth","summary":"The example uses plain-language ratings from improving to excelling; the displayed radar chart is hypothetical.","details":"The source says the scale was learned from Salesforce. That provenance is reported by the author and not separately investigated.","evidence":"0 non-scoring; 1 improving; 2 achieving; 3 excelling","sources":["careers"],"themes":["assessment","communication"]},{"id":"growth-conversations","title":"Goals and weekly check-ins","type":"practice","cluster":"team-growth","summary":"The article links assessment results to achievable development goals and weekly one-on-ones between designers and leads.","evidence":"the conversation is carried over to weekly one-on-ones","sources":["careers"],"themes":["mentoring","growth"]},{"id":"jazzcash","title":"JazzCash home redesign","type":"project","cluster":"product-design","featured":true,"summary":"Haseeb describes leading the redesign while also working hands-on on selected experiences, bringing team alignment and product UX into one case.","evidence":"I led the redesign for one of the largest and most actively used mobile wallets in South Asia","sources":["jazzcash"],"themes":["product design","leadership"]},{"id":"user-research","title":"Research shapes direction","type":"method","cluster":"product-design","summary":"Interviews with users and business stakeholders informed the pain points and priorities described in the redesign case study.","evidence":"interviews with users and our business stakeholders","sources":["jazzcash"],"themes":["research","product strategy"]},{"id":"product-goals","title":"Access, discovery, control","type":"goal","cluster":"product-design","summary":"The design goals focused on making actions easier to find, improving service discovery, and giving users more control.","evidence":"improve service discoverability; allow users to have more control over their experience","sources":["jazzcash"],"themes":["usability","product goals"]},{"id":"my-jazzcash","title":"Personalized home services","type":"feature","cluster":"product-design","summary":"A central section let people place their four most-used services on the home screen; business-promoted services sat separately below it.","evidence":"customize their top four most used services","sources":["jazzcash"],"themes":["personalization","navigation"]},{"id":"feature-usage","title":"Reported feature uptake","type":"metric","cluster":"product-design","summary":"The portfolio reports that more than 85% of users used and customized the feature within two months.","details":"This is a project outcome as reported in Haseeb’s portfolio; the underlying analytics or an independent source was not available in the material reviewed.","evidence":"over 85% of users using it and customizing their most used services within the first two months","when":"first two months after redesign","sources":["jazzcash"],"themes":["adoption","measurement"]},{"id":"design-system","title":"Design system as work grew","type":"system","cluster":"product-design","summary":"Reusable components were added alongside new screens, with team huddles used to review and accept additions.","evidence":"we built our design system along the way with every new screen","sources":["jazzcash"],"themes":["design system","teamwork"]},{"id":"usability-tests","title":"Usability measures","type":"metric","cluster":"product-design","summary":"The portfolio reports SEQ and SUPR-Q scores for the redesigned experience, as well as a SUS result for account information.","details":"The page describes these results but does not provide sample sizes, test dates, or study materials; read them as portfolio-reported figures.","evidence":"SEQ scores between 6 and 7; SUPR-Q scores of 4 and above","sources":["jazzcash"],"themes":["research","measurement"]},{"id":"not-a-journal","title":"Not a Journal challenge","type":"project","cluster":"product-design","summary":"A short self-initiated challenge shows another version of the same research-to-interface process, from interviews through personas, journey, prototypes, and reflection.","evidence":"I talked to three friends","details":"Haseeb says the project took roughly 12 hours and notes that a broader interview sample could have surfaced more insights.","sources":["journal"],"themes":["research","prototyping"]},{"id":"leadership-mandate","title":"Leadership as enablement","type":"principle","cluster":"leadership","featured":true,"summary":"Haseeb’s leadership essay defines the job through creating safety, guidance, and room for people to grow, rather than only assigning work.","evidence":"leadership roles entail a lot of responsibility","sources":["leadership-post"],"themes":["leadership","people"]},{"id":"one-on-ones","title":"Meaningful one-on-ones","type":"practice","cluster":"leadership","summary":"He recommends tailoring check-ins to people’s concerns, motivations, roles, and goals.","evidence":"tailor every new conversation around them, not you","sources":["leadership-post"],"themes":["mentoring","communication"]},{"id":"empowerment","title":"Empower, don’t micromanage","type":"principle","cluster":"leadership","summary":"The essay argues that leaders succeed when their teams can deliver without constant intervention.","evidence":"you succeed when your people can deliver without you stepping in at every turn","sources":["leadership-post"],"themes":["trust","leadership"]},{"id":"colleague-views","title":"Colleagues describe the practice","type":"testimony","cluster":"leadership","summary":"Hosted testimonials from a design-operations leader and designers praise Haseeb’s team-building, coaching, and collaborative style.","details":"These are first-person recommendations published on Haseeb’s site. They show how named colleagues describe working with him, not an independently sampled assessment.","evidence":"Mark Lannutti says Haseeb set up a DesignOps practice and standardized design roles, career paths, and work processes","sources":["home","achievements"],"themes":["testimony","team culture"]},{"id":"measurement-framework","title":"Measure the whole system","type":"framework","cluster":"leadership","summary":"In a 2024 essay, Haseeb groups design-team measurement around who is on the team, how work happens, and the outcomes it creates.","evidence":"who is on the team, how the work gets done, and how the work creates business impact","when":"2024-11-15","sources":["metrics"],"themes":["measurement","design operations"]}],"edges":[{"source":"haseeb","target":"career-pivot","label":"describes a move from","kind":"explicit","sources":["about"]},{"source":"career-pivot","target":"design-maturity","label":"later extends into","kind":"inferred"},{"source":"haseeb","target":"current-role","label":"is profiled in","kind":"explicit","sources":["tribalscale"]},{"source":"haseeb","target":"patari","label":"published a project in","kind":"explicit","sources":["patari"]},{"source":"designops","target":"designops-frame","label":"fits the frame of","kind":"inferred"},{"source":"designops","target":"stakeholder-friction","label":"responds to","kind":"explicit","sources":["mobilelive-collab"]},{"source":"stakeholder-friction","target":"shared-language","label":"is addressed with","kind":"explicit","sources":["mobilelive-collab"]},{"source":"shared-language","target":"file-status","label":"is made concrete by","kind":"explicit","sources":["mobilelive-collab"]},{"source":"shared-language","target":"decision-notes","label":"is made concrete by","kind":"explicit","sources":["mobilelive-collab"]},{"source":"designops","target":"ux-playbook","label":"includes","kind":"explicit","sources":["playbook"]},{"source":"ux-playbook","target":"five-stages","label":"organizes work into","kind":"explicit","sources":["playbook"]},{"source":"five-stages","target":"living-playbook","label":"is kept current as","kind":"explicit","sources":["playbook"]},{"source":"ux-playbook","target":"shared-language","label":"aims to create","kind":"inferred"},{"source":"designops","target":"career-ladder","label":"also supports","kind":"explicit","sources":["careers"]},{"source":"career-ladder","target":"dual-track","label":"offers","kind":"explicit","sources":["careers"]},{"source":"career-ladder","target":"role-expectations","label":"clarifies","kind":"explicit","sources":["careers"]},{"source":"role-expectations","target":"annual-assessments","label":"are reviewed through","kind":"explicit","sources":["careers"]},{"source":"annual-assessments","target":"skill-scale","label":"use","kind":"explicit","sources":["careers"]},{"source":"annual-assessments","target":"growth-conversations","label":"inform","kind":"explicit","sources":["careers"]},{"source":"haseeb","target":"jazzcash","label":"led work on","kind":"explicit","sources":["jazzcash"]},{"source":"jazzcash","target":"user-research","label":"begins with","kind":"explicit","sources":["jazzcash"]},{"source":"user-research","target":"product-goals","label":"informs","kind":"explicit","sources":["jazzcash"]},{"source":"product-goals","target":"my-jazzcash","label":"shows up in","kind":"explicit","sources":["jazzcash"]},{"source":"my-jazzcash","target":"feature-usage","label":"has a reported uptake of","kind":"explicit","sources":["jazzcash"]},{"source":"jazzcash","target":"design-system","label":"developed alongside","kind":"explicit","sources":["jazzcash"]},{"source":"jazzcash","target":"usability-tests","label":"reports results from","kind":"explicit","sources":["jazzcash"]},{"source":"user-research","target":"not-a-journal","label":"has a smaller parallel in","kind":"inferred"},{"source":"leadership-mandate","target":"one-on-ones","label":"includes","kind":"explicit","sources":["leadership-post"]},{"source":"leadership-mandate","target":"empowerment","label":"argues for","kind":"explicit","sources":["leadership-post"]},{"source":"one-on-ones","target":"growth-conversations","label":"connect with","kind":"inferred"},{"source":"leadership-mandate","target":"colleague-views","label":"echoes themes in","kind":"inferred"},{"source":"designops","target":"measurement-framework","label":"is considered alongside measurement in","kind":"explicit","sources":["metrics"]},{"source":"measurement-framework","target":"design-system","label":"includes reuse as a measure of","kind":"explicit","sources":["metrics"]},{"source":"haseeb","target":"leadership-mandate","label":"publishes principles on","kind":"explicit","sources":["leadership-post"]},{"source":"haseeb","target":"colleague-views","label":"is described by colleagues in","kind":"explicit","sources":["home","achievements"]}],"stories":[{"id":"make-design-legible","title":"Making design legible","summary":"One strand of the work starts with repeated handovers and ends with a shared language: status labels, documented decisions, and a playbook that gives stakeholders context before the pitch.","steps":["haseeb","designops","stakeholder-friction","shared-language","file-status","decision-notes"]},{"id":"from-process-to-growth","title":"From process to growth","summary":"The career framework turns team operations into individual development: clear roles, two paths after senior level, yearly input, then recurring conversations and goals.","steps":["designops","career-ladder","dual-track","role-expectations","annual-assessments","growth-conversations"]},{"id":"research-to-interface","title":"Research to interface","summary":"The JazzCash case moves from interviews to product goals, a personalized home, and a design system. Adoption and usability results are reported by the portfolio, not independently verified here.","steps":["haseeb","jazzcash","user-research","product-goals","my-jazzcash","feature-usage","usability-tests"]},{"id":"leading-through-enablement","title":"Leading through enablement","summary":"Haseeb’s published leadership principles emphasize tailored one-on-ones, growth, and autonomy. Colleague testimonials hosted on his site describe related experiences, with the source and perspective kept visible.","steps":["haseeb","leadership-mandate","one-on-ones","empowerment","colleague-views"]}]}</script>
+<script>
+(() => {
+"use strict";
+const story = JSON.parse(document.getElementById("story-data").textContent);
+const theme = JSON.parse(document.getElementById("theme-data").textContent);
+const NS = "http://www.w3.org/2000/svg";
+const $ = (id) => document.getElementById(id);
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isNarrow = () => innerWidth <= 760;
+
+/* ---------- tiny DOM helpers (all text goes through textContent: no HTML injection) ---------- */
+function el(tag, props, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(props || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v;
+    else if (k === "text") e.textContent = v;
+    else if (k.startsWith("on")) e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of kids.flat()) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
+  return e;
+}
+function sv(tag, props) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(props || {})) if (v != null) e.setAttribute(k, v);
+  return e;
+}
+const safeUrl = (u) => { try { return /^https?:$/.test(new URL(u).protocol) ? u : null; } catch { return null; } };
+const cap = (s) => String(s || "").replace(/[-_]/g, " ").replace(/^./, (c) => c.toUpperCase());
+
+/* ---------- theme ---------- */
+const hex2rgb = (h) => { h = h.replace("#", ""); if (h.length === 3) h = [...h].map((x) => x + x).join(""); return [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16)); };
+function rgb2hsl([r, g, b]) {
+  r /= 255; g /= 255; b /= 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn; let h = 0, s = 0; const l = (mx + mn) / 2;
+  if (d) { s = l > .5 ? d / (2 - mx - mn) : d / (mx + mn); h = mx === r ? (g - b) / d + (g < b ? 6 : 0) : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h *= 60; }
+  return [h, s, l];
+}
+const nClusters = story.clusters.length;
+const cIndex = new Map(story.clusters.map((c, i) => [c.id, i]));
+function clusterColor(id) {
+  if (theme.clusters && theme.clusters[id]) return theme.clusters[id];
+  const [h, s] = rgb2hsl(hex2rgb(theme.colors.accent));
+  const hue = (h + cIndex.get(id) * (360 / nClusters)) % 360;
+  return `hsl(${hue.toFixed(0)} ${Math.max(45, Math.min(75, s * 100)).toFixed(0)}% ${theme.mode === "dark" ? 66 : 40}%)`;
+}
+const colors = Object.fromEntries(story.clusters.map((c) => [c.id, clusterColor(c.id)]));
+if (theme.font) {
+  if (theme.font.body) document.body.style.fontFamily = theme.font.body;
+  if (theme.font.display) $("wordmark").style.fontFamily = theme.font.display;
+}
+const wm = theme.wordmark || {};
+$("wordmark").textContent = wm.text || story.title;
+if (wm.letterSpacing) $("wordmark").style.letterSpacing = wm.letterSpacing;
+if (wm.uppercase) $("wordmark").style.textTransform = "uppercase";
+if (theme.logo && theme.logo.src) $("logo").append(el("img", { src: theme.logo.src, alt: theme.logo.alt || "" }));
+$("dek").textContent = story.tagline;
+$("credit").textContent = [story.disclaimer, story.credit].filter(Boolean).join(" ");
+
+/* ---------- model ---------- */
+const nodes = story.nodes.map((n) => ({ ...n, x: 0, y: 0, vx: 0, vy: 0, deg: 0, color: colors[n.cluster], isRoot: n.id === story.root }));
+const byId = new Map(nodes.map((n) => [n.id, n]));
+const edges = story.edges.map((e, i) => ({ ...e, i, a: byId.get(e.source), b: byId.get(e.target) }));
+const adj = new Map(nodes.map((n) => [n.id, new Set()]));
+for (const e of edges) { e.a.deg++; e.b.deg++; adj.get(e.source).add(e.target); adj.get(e.target).add(e.source); }
+for (const n of nodes) n.r = n.isRoot ? 30 : (n.featured ? 13 : 8) + Math.min(n.deg, 8) * 0.45;
+const srcById = new Map(story.sources.map((s) => [s.id, s]));
+const storyById = new Map((story.stories || []).map((s) => [s.id, s]));
+
+/* ---------- force layout (deterministic, no dependencies) ---------- */
+function rng(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function layout() {
+  const rnd = rng(7), N = nodes.length;
+  const sector = (id) => 2 * Math.PI * (cIndex.get(id) + 0.5) / nClusters;
+  const R = 330 + Math.sqrt(N) * 40;
+  const asp = Math.max(0.75, Math.min(2.2, svgEl.clientWidth / Math.max(1, svgEl.clientHeight))), ax = Math.sqrt(asp), ay = 1 / ax; // fill the stage shape
+  for (const n of nodes) {
+    n.vx = n.vy = 0;
+    if (n.isRoot) { n.x = n.y = 0; continue; }
+    const ang = sector(n.cluster) + (rnd() - 0.5) * 0.9, rad = R * (0.45 + rnd() * 0.7);
+    n.x = Math.cos(ang) * rad * ax; n.y = Math.sin(ang) * rad * ay;
+  }
+  const iters = N > 140 ? 220 : 480, XS = 0.55; // XS<1 makes horizontal crowding count more: labels are wider than tall
+  for (let it = 0; it < iters; it++) {
+    const alpha = Math.pow(1 - it / iters, 1.4);
+    for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
+      const a = nodes[i], b = nodes[j];
+      let dx = b.x - a.x, dy = b.y - a.y;
+      if (dx * dx + dy * dy < 1) { dx = rnd() - .5; dy = rnd() - .5; }
+      const wd = Math.sqrt(dx * dx * XS * XS + dy * dy) || 1, d = Math.sqrt(dx * dx + dy * dy) || 1;
+      const min = a.r + b.r + 95;
+      let f = 26000 / (wd * wd); if (wd < min) f += (min - wd) * 0.9;
+      f *= alpha + 0.04;
+      const fx = dx / d * f, fy = dy / d * f;
+      a.vx -= fx; a.vy -= fy; b.vx += fx; b.vy += fy;
+    }
+    for (const e of edges) {
+      const a = e.a, b = e.b, dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy) || 1;
+      const L = a.cluster === b.cluster ? 150 : 250, f = (d - L) * 0.03 * (alpha + 0.1);
+      const fx = dx / d * f, fy = dy / d * f; a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+    }
+    for (const n of nodes) {
+      if (n.isRoot) continue;
+      const s = sector(n.cluster), tx = Math.cos(s) * R * ax, ty = Math.sin(s) * R * ay;
+      n.vx += (tx - n.x) * 0.014 * alpha; n.vy += (ty - n.y) * 0.014 * alpha;
+      n.x += n.vx * 0.6; n.y += n.vy * 0.6; n.vx *= 0.55; n.vy *= 0.55;
+    }
+  }
+}
+
+/* ---------- SVG build ---------- */
+const svgEl = $("graph"), vp = $("vp");
+for (const e of edges) {
+  e.line = sv("line", { class: "edge" + (e.kind === "inferred" ? " inferred" : "") });
+  e.line.append(Object.assign(sv("title"), { textContent: `${e.a.title} → ${e.b.title}: ${e.label} (${e.kind})` }));
+  e.text = sv("text", { class: "edge-label" }); e.text.textContent = e.label;
+  $("edges").append(e.line); $("edge-labels").append(e.text);
+}
+for (const n of nodes) {
+  const g = sv("g", { class: "node" + (n.isRoot ? " root" : ""), tabindex: 0, role: "button", "aria-label": `${n.title}, ${cap(n.type)}, ${story.clusters[cIndex.get(n.cluster)].label}`, "data-id": n.id });
+  g.append(sv("circle", { r: n.r + 11, fill: "transparent" }));
+  g.append(sv("circle", { class: "ring", r: n.r + 6 }));
+  g.append(sv("circle", { class: "core", r: n.r, stroke: n.color, style: n.isRoot ? "fill:" + n.color : null }));
+  if (!n.isRoot) g.append(sv("circle", { class: "dot", r: Math.max(2, n.r * 0.22), fill: n.color }));
+  const lab = sv("text", { class: "label", y: n.r + 15 }); lab.textContent = n.title; g.append(lab);
+  if (!n.isRoot) { const k = sv("text", { class: "kind", y: n.r + 26 }); k.textContent = cap(n.type); g.append(k); }
+  g.addEventListener("keydown", (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); select(n.id, { center: true }); } });
+  n.g = g; $("nodes").append(g);
+}
+function place() {
+  for (const e of edges) {
+    e.line.setAttribute("x1", e.a.x); e.line.setAttribute("y1", e.a.y); e.line.setAttribute("x2", e.b.x); e.line.setAttribute("y2", e.b.y);
+    e.text.setAttribute("x", (e.a.x + e.b.x) / 2); e.text.setAttribute("y", (e.a.y + e.b.y) / 2 - 4);
+  }
+  for (const n of nodes) n.g.setAttribute("transform", `translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})`);
+  drawStoryPath();
+}
+
+/* ---------- view (pan / zoom) ---------- */
+const view = { x: 0, y: 0, k: 1 };
+function applyView() { svgEl.style.setProperty("--ls", Math.min(2.2, Math.max(1, 0.95 / view.k)).toFixed(2)); vp.setAttribute("transform", `translate(${view.x} ${view.y}) scale(${view.k})`); svgEl.classList.toggle("zoomed", view.k >= 1.15); }
+let tweenId = 0;
+function tween(to, ms = 480) {
+  cancelAnimationFrame(tweenId);
+  if (reduceMotion) { Object.assign(view, to); applyView(); return; }
+  const from = { ...view }, t0 = performance.now();
+  const step = (t) => {
+    const p = Math.min(1, (t - t0) / ms), q = 1 - Math.pow(1 - p, 3);
+    view.x = from.x + (to.x - from.x) * q; view.y = from.y + (to.y - from.y) * q; view.k = from.k + (to.k - from.k) * q; applyView();
+    if (p < 1) tweenId = requestAnimationFrame(step);
+  };
+  tweenId = requestAnimationFrame(step);
+}
+const stageBox = () => {
+  const W = svgEl.clientWidth, H = svgEl.clientHeight;
+  const panelOpen = $("panel").classList.contains("open");
+  return { W, H, left: 0, right: panelOpen && !isNarrow() ? Math.min(400, W) : 0, bottom: panelOpen && isNarrow() ? H * 0.58 : 0 };
+};
+function fit(animate = true, list = nodes) {
+  const { W, H, right, bottom } = stageBox();
+  let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+  for (const n of list) { x0 = Math.min(x0, n.x - n.r - 60); x1 = Math.max(x1, n.x + n.r + 60); y0 = Math.min(y0, n.y - n.r - 30); y1 = Math.max(y1, n.y + n.r + 50); }
+  const aw = W - right, ah = H - bottom - 40;
+  const k = Math.max(0.2, Math.min(1.6, Math.min(aw / (x1 - x0), ah / (y1 - y0))));
+  const to = { k, x: aw / 2 - (x0 + x1) / 2 * k, y: (ah + 0) / 2 - (y0 + y1) / 2 * k + 6 };
+  animate ? tween(to) : (Object.assign(view, to), applyView());
+}
+function center(n) {
+  const { W, H, right, bottom } = stageBox(), k = Math.max(view.k, 1);
+  tween({ k, x: (W - right) / 2 - n.x * k, y: (H - bottom) / 2 - n.y * k - 10 }, 420);
+}
+function zoomAt(f, cx, cy) {
+  const k = Math.max(0.2, Math.min(4, view.k * f)), r = k / view.k;
+  view.x = cx - (cx - view.x) * r; view.y = cy - (cy - view.y) * r; view.k = k; applyView();
+}
+
+/* ---------- state + render ---------- */
+const S = { selected: null, filter: "all", q: "", list: false, story: null, step: 0 };
+const matches = (n) => {
+  if (S.filter !== "all" && n.cluster !== S.filter) return false;
+  if (!S.q) return true;
+  return [n.title, n.summary, n.details, n.type, (n.themes || []).join(" ")].join(" ").toLowerCase().includes(S.q);
+};
+function render() {
+  const sel = S.selected && byId.get(S.selected), nb = sel ? adj.get(sel.id) : null;
+  const inStory = S.story ? new Set(S.story.steps) : null;
+  let shown = 0;
+  for (const n of nodes) {
+    const m = matches(n); if (m) shown++;
+    let dim = !m;
+    if (inStory) dim = dim || !inStory.has(n.id);
+    else if (sel && n !== sel && !nb.has(n.id)) dim = true;
+    n.g.classList.toggle("dim", dim);
+    n.g.classList.toggle("sel", n === sel);
+    n.g.setAttribute("aria-pressed", String(n === sel));
+  }
+  for (const e of edges) {
+    const hl = !inStory && sel && (e.a === sel || e.b === sel);
+    e.line.classList.toggle("hl", !!hl); e.text.classList.toggle("hl", !!hl);
+    let dim = !(matches(e.a) && matches(e.b));
+    if (inStory) dim = true; else if (sel && !hl) dim = true;
+    e.line.classList.toggle("dim", dim);
+  }
+  $("empty").classList.toggle("on", shown === 0 && !S.list);
+  $("status").textContent = `${nodes.length} nodes · ${edges.length} edges · ${S.q || S.filter !== "all" ? `${shown} match · ` : ""}Click a node to explore the story.`;
+  for (const b of $("chips").children) b.setAttribute("aria-pressed", String(b.dataset.c === S.filter));
+  for (const b of $("stories").querySelectorAll("button")) b.setAttribute("aria-pressed", String(!!S.story && b.dataset.s === S.story.id));
+  if (S.list) renderList();
+  drawStoryPath();
+}
+
+/* ---------- story mode ---------- */
+function drawStoryPath() {
+  const p = $("story-path"), bg = $("badges"); bg.textContent = "";
+  if (!S.story) { p.setAttribute("d", ""); return; }
+  const pts = S.story.steps.map((id) => byId.get(id));
+  p.setAttribute("d", pts.map((n, i) => `${i ? "L" : "M"}${n.x.toFixed(1)} ${n.y.toFixed(1)}`).join(" "));
+  pts.forEach((n, i) => {
+    const g = sv("g", { class: "badge", transform: `translate(${(n.x + n.r * 0.8).toFixed(1)} ${(n.y - n.r * 0.8).toFixed(1)})`, opacity: i === S.step ? 1 : 0.75 });
+    g.append(sv("circle", { r: i === S.step ? 10 : 8 })); const t = sv("text"); t.textContent = i + 1; g.append(t); bg.append(g);
+  });
+}
+function startStory(id) {
+  const st = storyById.get(id); if (!st) return;
+  S.story = st; S.step = 0; S.list = false; syncView();
+  $("storybar").classList.add("on"); goStep(0);
+}
+function goStep(i) {
+  const st = S.story; if (!st) return;
+  S.step = Math.max(0, Math.min(st.steps.length - 1, i));
+  $("sb-step").textContent = `Story · step ${S.step + 1} of ${st.steps.length}`;
+  $("sb-title").textContent = st.title; $("sb-sum").textContent = st.summary || "";
+  $("sb-prev").disabled = S.step === 0; $("sb-next").disabled = S.step === st.steps.length - 1;
+  select(st.steps[S.step], { center: true, keepStory: true });
+}
+function endStory() { S.story = null; $("storybar").classList.remove("on"); render(); }
+
+/* ---------- detail panel ---------- */
+function relRow(e, n) {
+  const other = e.a === n ? e.b : e.a, out = e.a === n;
+  return el("li", null, el("button", { onclick: () => select(other.id, { center: true }) },
+    el("b", { text: other.title }),
+    el("span", { class: "rel" }, out ? "→ " : "← ", el("em", { text: e.label }), ` · ${e.kind}`)));
+}
+function openPanel(n) {
+  const p = $("panel"); p.textContent = "";
+  const cl = story.clusters[cIndex.get(n.cluster)];
+  p.append(el("button", { class: "close", "aria-label": "Close details", text: "×", onclick: () => select(null) }));
+  p.append(el("div", { class: "kicker", style: `--c:${n.color}` }, el("i"), el("span", { text: cl.label }), el("span", { text: "·", "aria-hidden": "true" }), el("span", { text: cap(n.type) })));
+  p.append(el("h2", { text: n.title }), el("p", { text: n.summary }));
+  if (n.details) p.append(el("p", { class: "details", text: n.details }));
+  if (n.evidence) p.append(el("h3", { text: "Evidence" }), el("blockquote", { text: n.evidence }));
+  if (n.when) p.append(el("h3", { text: "When" }), el("p", { text: n.when }));
+  if (n.themes && n.themes.length) p.append(el("h3", { text: "Themes" }), el("div", { class: "tags" }, n.themes.map((t) => el("span", { class: "tag", text: t }))));
+  const rel = edges.filter((e) => e.a === n || e.b === n);
+  if (rel.length) p.append(el("h3", { text: `Connections (${rel.length})` }), el("ul", { class: "links" }, rel.map((e) => relRow(e, n))));
+  const srcs = (n.sources || []).map((id) => srcById.get(id)).filter(Boolean);
+  if (srcs.length) p.append(el("h3", { text: "Sources" }), el("ul", { class: "src" }, srcs.map((s) => {
+    const u = safeUrl(s.url);
+    return el("li", null, u ? el("a", { href: u, target: "_blank", rel: "noopener noreferrer", text: s.title }) : s.title, s.accessed ? el("small", { text: `Accessed ${s.accessed}` }) : null);
+  })));
+  const inStories = (story.stories || []).filter((s) => s.steps.includes(n.id));
+  if (inStories.length && !S.story) p.append(el("h3", { text: "Appears in" }), el("div", { class: "tags" }, inStories.map((s) => el("button", { class: "chip", text: s.title, onclick: () => startStory(s.id) }))));
+  p.classList.add("open"); p.scrollTop = 0;
+}
+function select(id, opts = {}) {
+  if (!opts.keepStory && S.story && id) endStoryQuiet();
+  S.selected = id;
+  const p = $("panel");
+  if (id) { openPanel(byId.get(id)); try { history.replaceState(null, "", "#node=" + encodeURIComponent(id)); } catch {} }
+  else { p.classList.remove("open"); try { history.replaceState(null, "", location.pathname + location.search); } catch {} }
+  render();
+  if (id && opts.center && !S.list) center(byId.get(id));
+}
+function endStoryQuiet() { S.story = null; $("storybar").classList.remove("on"); }
+
+/* ---------- list view ---------- */
+function renderList() {
+  const box = $("list"); box.textContent = "";
+  let any = false;
+  for (const c of story.clusters) {
+    const items = nodes.filter((n) => n.cluster === c.id && matches(n));
+    if (!items.length) continue; any = true;
+    box.append(el("section", null,
+      el("h2", { style: `--c:${colors[c.id]}` }, el("i"), c.label),
+      el("ul", null, items.map((n) => el("li", null, el("button", { class: "item", style: `--c:${n.color}`, onclick: () => select(n.id) },
+        el("small", { text: cap(n.type) }), el("b", { text: n.title }), el("span", { text: n.summary })))))));
+  }
+  if (!any) box.append(el("p", { text: "No nodes match.", style: "color:var(--muted);text-align:center" }));
+}
+function syncView() {
+  $("list").classList.toggle("on", S.list); svgEl.style.visibility = S.list ? "hidden" : "visible";
+  $("zoom").style.display = S.list ? "none" : "";
+  $("btn-view").textContent = S.list ? "Explore as graph" : "Explore as list"; $("btn-view").setAttribute("aria-pressed", String(S.list));
+  $("btn-fit").style.display = S.list ? "none" : "";
+  render();
+}
+
+/* ---------- toolbar ---------- */
+const usedClusters = new Set(nodes.map((n) => n.cluster));
+$("chips").append(el("button", { class: "chip", "data-c": "all", text: "All", onclick: () => { S.filter = "all"; render(); } }));
+for (const c of story.clusters) if (usedClusters.has(c.id)) $("chips").append(el("button", { class: "chip", "data-c": c.id, style: `--c:${colors[c.id]}`, onclick: () => { S.filter = S.filter === c.id ? "all" : c.id; render(); } }, el("i"), c.label));
+if ((story.stories || []).length) {
+  $("stories").append(el("span", { text: "Follow a story" }));
+  for (const s of story.stories) $("stories").append(el("button", { class: "chip", "data-s": s.id, title: s.summary || "", text: s.title, onclick: () => (S.story && S.story.id === s.id ? endStory() : startStory(s.id)) }));
+}
+for (const c of story.clusters) if (usedClusters.has(c.id)) $("legend").append(el("span", { style: `--c:${colors[c.id]}` }, el("i"), c.label));
+$("legend").append(el("span", { title: "Relationship directly supported by a cited source" }, (() => { const s = sv("svg", { viewBox: "0 0 22 8" }); s.append(sv("line", { x1: 0, y1: 4, x2: 22, y2: 4, stroke: "currentColor", "stroke-width": 1.5 })); return s; })(), "sourced"));
+$("legend").append(el("span", { title: "Editorial bridge: an interpretation, not a direct claim" }, (() => { const s = sv("svg", { viewBox: "0 0 22 8" }); s.append(sv("line", { x1: 0, y1: 4, x2: 22, y2: 4, stroke: "currentColor", "stroke-width": 1.5, "stroke-dasharray": "3 4" })); return s; })(), "inferred"));
+
+$("q").addEventListener("input", (e) => { S.q = e.target.value.trim().toLowerCase(); render(); });
+$("btn-view").onclick = () => { S.list = !S.list; syncView(); if (!S.list) requestAnimationFrame(() => fit(false)); };
+$("btn-fit").onclick = () => fit();
+$("btn-reset").onclick = () => { S.filter = "all"; S.q = ""; $("q").value = ""; endStoryQuiet(); layout(); place(); select(null); fit(); };
+$("zin").onclick = () => zoomAt(1.3, svgEl.clientWidth / 2, svgEl.clientHeight / 2);
+$("zout").onclick = () => zoomAt(1 / 1.3, svgEl.clientWidth / 2, svgEl.clientHeight / 2);
+$("sb-prev").onclick = () => goStep(S.step - 1); $("sb-next").onclick = () => goStep(S.step + 1); $("sb-exit").onclick = endStory;
+addEventListener("keydown", (e) => {
+  const typing = e.target.tagName === "INPUT";
+  if (e.key === "/" && !typing) { e.preventDefault(); $("q").focus(); }
+  else if (e.key === "Escape") { if (typing) e.target.blur(); else if (S.selected) select(null); else if (S.story) endStory(); }
+  else if (S.story && !typing && e.key === "ArrowRight") goStep(S.step + 1);
+  else if (S.story && !typing && e.key === "ArrowLeft") goStep(S.step - 1);
+});
+
+/* ---------- pointer interaction: pan, zoom, pinch, drag nodes ---------- */
+const ptrs = new Map(); let drag = null;
+const toWorld = (cx, cy) => { const r = svgEl.getBoundingClientRect(); return [(cx - r.left - view.x) / view.k, (cy - r.top - view.y) / view.k]; };
+const pinchInfo = () => { const [a, b] = [...ptrs.values()]; return { d: Math.hypot(a.x - b.x, a.y - b.y), mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 }; };
+svgEl.addEventListener("pointerdown", (e) => {
+  cancelAnimationFrame(tweenId);
+  svgEl.setPointerCapture(e.pointerId); ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (ptrs.size === 2) { drag = { type: "pinch", ...pinchInfo() }; return; }
+  const g = e.target.closest && e.target.closest(".node");
+  drag = g ? { type: "node", n: byId.get(g.dataset.id), sx: e.clientX, sy: e.clientY, moved: false }
+           : { type: "pan", sx: e.clientX, sy: e.clientY, vx: view.x, vy: view.y, moved: false };
+});
+svgEl.addEventListener("pointermove", (e) => {
+  if (!ptrs.has(e.pointerId)) return; ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (!drag) return;
+  if (drag.type === "pinch" && ptrs.size === 2) {
+    const p = pinchInfo(), r = svgEl.getBoundingClientRect();
+    zoomAt(p.d / drag.d, p.mx - r.left, p.my - r.top); view.x += p.mx - drag.mx; view.y += p.my - drag.my; applyView(); drag = { type: "pinch", ...p }; return;
+  }
+  const dx = e.clientX - drag.sx, dy = e.clientY - drag.sy;
+  if (!drag.moved && Math.hypot(dx, dy) > 4) { drag.moved = true; svgEl.classList.add("dragging"); }
+  if (!drag.moved) return;
+  if (drag.type === "pan") { view.x = drag.vx + dx; view.y = drag.vy + dy; applyView(); }
+  else if (drag.type === "node") { const [wx, wy] = toWorld(e.clientX, e.clientY); drag.n.x = wx; drag.n.y = wy; place(); }
+});
+const endPtr = (e) => {
+  ptrs.delete(e.pointerId); svgEl.classList.remove("dragging");
+  if (drag && drag.type !== "pinch" && !drag.moved) { if (drag.type === "node") select(drag.n.id, { center: false }); else if (S.selected && !S.story) select(null); }
+  if (ptrs.size < 2) drag = null;
+};
+svgEl.addEventListener("pointerup", endPtr); svgEl.addEventListener("pointercancel", endPtr);
+svgEl.addEventListener("wheel", (e) => { e.preventDefault(); const r = svgEl.getBoundingClientRect(); zoomAt(Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0015)), e.clientX - r.left, e.clientY - r.top); }, { passive: false });
+let sized = svgEl.clientWidth > 0 && svgEl.clientHeight > 0, touched = false;
+svgEl.addEventListener("pointerdown", () => { touched = true; }); svgEl.addEventListener("wheel", () => { touched = true; }, { passive: true });
+const onSize = () => {
+  if (S.list || !svgEl.clientWidth || !svgEl.clientHeight) return;
+  if (!sized) { sized = true; layout(); place(); fit(false); return; } // first real size (page was loaded hidden / zero-sized)
+  if (!touched && !S.selected && !S.story) fit(false);
+};
+if (window.ResizeObserver) new ResizeObserver(onSize).observe(svgEl); else addEventListener("resize", onSize);
+
+/* ---------- boot ---------- */
+layout(); place(); render(); syncView(); fit(false);
+function fromHash() {
+  const m = /#(node|story)=([^&]+)/.exec(location.hash); if (!m) return;
+  const id = decodeURIComponent(m[2]);
+  if (m[1] === "node" && byId.has(id) && S.selected !== id) select(id, { center: true });
+  else if (m[1] === "story" && storyById.has(id) && !(S.story && S.story.id === id)) startStory(id);
+}
+addEventListener("hashchange", fromHash);
+fromHash();
+})();
+</script>
+</body>
+</html>
