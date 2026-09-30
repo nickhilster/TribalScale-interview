@@ -147,22 +147,19 @@ const pageContent = {
           label: "Project overview",
           kind: "Repo-backed",
           state: ["Documented"],
-          detail: "Tenant-first product framing, workflow scope, and the self-help legal-software boundary.",
-          source: "https://github.com/nickhilster/ltb-buddy/blob/main/docs/pm-design/00_Project_Overview.md",
+          detail: "Local/repo-backed inspection: tenant-first product framing, workflow scope, and the self-help legal-software boundary.",
         },
         {
           label: "Decisions and risks",
           kind: "Repo-backed",
           state: ["Documented"],
-          detail: "Human authority, escalation, and product-risk decisions are kept visible in the design record.",
-          source: "https://github.com/nickhilster/ltb-buddy/blob/main/docs/pm-design/04_Decisions_and_Risks.md",
+          detail: "Local/repo-backed inspection: human authority, escalation, and product-risk decisions are kept visible in the design record.",
         },
         {
           label: "RAG evaluation",
           kind: "Repo-backed",
           state: ["Verified"],
-          detail: "Retrieval metrics and failure analysis; not a measure of legal correctness.",
-          source: "https://github.com/nickhilster/ltb-buddy/blob/main/evals/rag/README.md",
+          detail: "Local/repo-backed inspection: retrieval metrics and failure analysis; not a measure of legal correctness.",
         },
         {
           label: "Current product surface",
@@ -174,7 +171,6 @@ const pageContent = {
       ],
       links: [
         { label: "Open LTBBuddy", href: "https://ltbbuddy.ca/" },
-        { label: "View source", href: "https://github.com/nickhilster/ltb-buddy" },
       ],
     },
     {
@@ -207,15 +203,13 @@ const pageContent = {
           label: "Product README",
           kind: "Repo-backed",
           state: ["Built", "Documented"],
-          detail: "Prompt refinement, repo context, multiple providers, pipeline trace, project memory, and local-first privacy paths.",
-          source: "https://github.com/nickhilster/ryfine/blob/main/README.md",
+          detail: "Local/repo-backed inspection: prompt refinement, repo context, multiple providers, pipeline trace, project memory, and local-first privacy paths.",
         },
         {
           label: "Design system docs",
           kind: "Repo-backed",
           state: ["Documented"],
-          detail: "Design-system guidance and product surface documentation kept alongside the implementation.",
-          source: "https://github.com/nickhilster/ryfine/tree/main/docs/design-system",
+          detail: "Local/repo-backed inspection: design-system guidance and product surface documentation kept alongside the implementation.",
         },
         {
           label: "Figma cover / node 2:6",
@@ -235,7 +229,6 @@ const pageContent = {
       links: [
         { label: "Open RyFine", href: "https://ryfine.app/" },
         { label: "Inspect in Figma", href: "https://www.figma.com/design/LSYLrYfT8MjcYO0vltJqP5" },
-        { label: "View source", href: "https://github.com/nickhilster/ryfine" },
       ],
     },
     {
@@ -252,15 +245,13 @@ const pageContent = {
           label: "Product thesis",
           kind: "Repo-backed",
           state: ["Documented"],
-          detail: "PlayRoom, ToyMaker, c2merses, and the product's interactive-art model.",
-          source: "https://github.com/nickhilster/Code2Motion/blob/main/wiki/product.md",
+          detail: "Local/repo-backed inspection: PlayRoom, ToyMaker, c2merses, and the product's interactive-art model.",
         },
         {
           label: "Current handoff",
           kind: "Repo-backed",
           state: ["Documented"],
-          detail: "The product path is described as proven and mostly green, with formal closeout still dependent on remote-only operational proofs.",
-          source: "https://github.com/nickhilster/Code2Motion/blob/main/wiki/current-state.md",
+          detail: "Local/repo-backed inspection: the product path is described as proven and mostly green, with formal closeout still dependent on remote-only operational proofs.",
         },
         {
           label: "Live feed / showroom",
@@ -272,7 +263,6 @@ const pageContent = {
       ],
       links: [
         { label: "Open Code2Motion", href: "https://code2motion.app/feed" },
-        { label: "View source", href: "https://github.com/nickhilster/Code2Motion" },
       ],
     },
     {
@@ -289,15 +279,13 @@ const pageContent = {
           label: "Quick reference",
           kind: "Repo-backed",
           state: ["Documented"],
-          detail: "Five main screens, mobile navigation, voice and retrieval features, training, jobs, and offline-first storage are described in the repository reference.",
-          source: "https://github.com/Teambotics-BackBurner/EasyBuddy-AutoEdition/blob/main/TLDR.md",
+          detail: "Local/repo-backed inspection: five main screens, mobile navigation, voice and retrieval features, training, jobs, and offline-first storage are described in the repository reference.",
         },
         {
           label: "App source and scripts",
           kind: "Repo-backed",
           state: ["Built"],
-          detail: "React 18, TypeScript, Vite, Tailwind, shadcn/ui, Supabase, and local development/build paths.",
-          source: "https://github.com/Teambotics-BackBurner/EasyBuddy-AutoEdition",
+          detail: "Local/repo-backed inspection: React 18, TypeScript, Vite, Tailwind, shadcn/ui, Supabase, and local development/build paths.",
         },
         {
           label: "Product surface",
@@ -309,7 +297,6 @@ const pageContent = {
       ],
       links: [
         { label: "Read about EasyBuddy", href: "https://www.teambotics.app/products/easybuddy" },
-        { label: "View source", href: "https://github.com/Teambotics-BackBurner/EasyBuddy-AutoEdition" },
       ],
     },
   ],

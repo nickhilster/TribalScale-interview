@@ -7,12 +7,51 @@ const require = createRequire(import.meta.url);
 const { evidenceStates, pageContent, projectEvidence } = require("../content.js");
 
 const pageCopy = JSON.stringify({ evidenceStates, pageContent, projectEvidence });
+const approvedSupportingProjectLinks = new Set([
+  "https://ltbbuddy.ca/",
+  "https://ryfine.app/",
+  "https://www.figma.com/design/LSYLrYfT8MjcYO0vltJqP5",
+  "https://code2motion.app/feed",
+  "https://www.teambotics.app/products/easybuddy",
+]);
 
 test("manifest contains the five ordered projects", () => {
   assert.deepEqual(
     projectEvidence.map((project) => project.slug),
     ["boardy", "ltb-buddy", "ryfine", "code2motion", "easybuddy"],
   );
+});
+
+test("all rendered supporting project links use the approved verified URL set", () => {
+  const renderedLinks = pageContent.projects.flatMap((project) => project.links.map((link) => link.href));
+
+  assert.deepEqual(renderedLinks, [
+    "https://ltbbuddy.ca/",
+    "https://ryfine.app/",
+    "https://www.figma.com/design/LSYLrYfT8MjcYO0vltJqP5",
+    "https://code2motion.app/feed",
+    "https://www.teambotics.app/products/easybuddy",
+  ]);
+  for (const href of renderedLinks) {
+    assert.equal(approvedSupportingProjectLinks.has(href), true, `unapproved supporting project link: ${href}`);
+  }
+});
+
+test("Boardy links remain unchanged while affected project evidence stays local/repo-backed", () => {
+  assert.deepEqual(pageContent.boardy.links, [
+    { label: "Boardy product", href: "https://boardy.ai" },
+    { label: "BoardyAnimated", href: "https://github.com/nickhilster/BoardyAnimated" },
+    { label: "Boardy4Age", href: "https://github.com/nickhilster/boardy4age" },
+    { label: "Symphony × Boardy", href: "https://github.com/nickhilster/symphony-x-boardy" },
+  ]);
+
+  assert.doesNotMatch(JSON.stringify(pageContent.projects), /github\.com/i);
+  for (const project of pageContent.projects) {
+    for (const evidence of project.evidence.filter((entry) => entry.kind === "Repo-backed")) {
+      assert.match(evidence.detail, /local\/repo-backed inspection/i, `${project.slug} evidence is missing local/repo-backed labeling`);
+      assert.equal("source" in evidence, false, `${project.slug} evidence must not publish a repository URL`);
+    }
+  }
 });
 
 test("every project has authored role, summary, status, and evidence", () => {
