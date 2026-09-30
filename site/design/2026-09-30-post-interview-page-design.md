@@ -136,6 +136,10 @@ Story role: product and interface craft—turning AI capability into a clear, us
 
 Safe description: built product and documented design system. Figma evidence and live product behaviors must remain separate; a QA/spec page is not itself proof that every behavior is shipped.
 
+The RyFine case must feature a real Figma artifact rather than only linking to it. The inspected Figma file contains the `Cover / RyFine Design System` frame (`2:6`, 1440×900) with a dark 64px grid, Inter typography, a lime accent, and principles including `Precision before decoration`, `Operator-first, not toy-first`, `Privacy posture must be visible`, `Progressive disclosure`, and `One primary action per surface`. Show the exported cover as a local image with a caption such as `Figma design-system draft — inspected September 30, 2026`, and link to the Figma source for optional depth.
+
+The Figma frame is evidence of design-system thinking and documentation. It is not proof that every visible principle or screen is shipped in the live product. The page should make this distinction visible with `Figma artifact`, `Documented`, and `Observable` labels where appropriate.
+
 Primary evidence: `C:\dev\ryfine\README.md`, `docs/design-system/*`, canonical Figma file if accessible, and the current web product.
 
 Status: `Built`, `Documented`, `Observable` only for checks completed during this pass.
@@ -195,6 +199,7 @@ site/
   index.html
   styles.css
   app.js
+  content.js
   design/
     overview.png
     boardy-detail.png
@@ -202,6 +207,8 @@ site/
     2026-09-30-post-interview-page-design.md
   assets/              # only checked, project-relevant media
 ```
+
+The first implementation must include `site/assets/ryfine-figma-cover.png`, exported from the inspected Figma frame. Do not reference the temporary Figma MCP asset URL in the page.
 
 The existing `package.json` is an accessibility-audit workspace, so the page should remain plain HTML/CSS/JS rather than introduce React/Vite solely for this editorial surface. Existing audit scripts and prior HTML files remain untouched. If a local server is useful for browser verification, use a non-mutating static server command rather than changing the project's dependency graph unless a test script is genuinely needed.
 
