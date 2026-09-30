@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
-import { mkdtemp, readFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { extname, join, resolve, sep } from "node:path";
 import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
@@ -16,6 +16,7 @@ const mimeTypes = {
   ".png": "image/png",
 };
 const widths = [390, 1440];
+const cleanupTimeoutMs = 2000;
 const screenshotRoot = await mkdtemp(join(tmpdir(), "tribalscale-post-interview-qa-"));
 const contexts = new Set();
 
@@ -212,36 +213,93 @@ async function verifyReducedMotion() {
   }
 }
 
-async function closeServer() {
-  if (!server) return;
-  server.closeAllConnections?.();
-  await new Promise((resolveServer) => {
-    const timeout = setTimeout(resolveServer, 2000);
-    server.close(() => {
-      clearTimeout(timeout);
-      resolveServer();
-    });
-  });
-  assert.equal(server.listening, false, "static server did not close cleanly");
+async function boundedCleanup(operation, label) {
+  let timeoutId;
+  try {
+    await Promise.race([
+      Promise.resolve().then(operation),
+      new Promise((_, reject) => {
+        timeoutId = setTimeout(() => reject(new Error(`${label} timed out`)), cleanupTimeoutMs);
+      }),
+    ]);
+    return null;
+  } catch (error) {
+    return `${label}: ${error instanceof Error ? error.message : String(error)}`;
+  } finally {
+    clearTimeout(timeoutId);
+  }
 }
 
-async function closeBrowser() {
-  for (const context of contexts) await context.close();
+async function closeBrowserResources() {
+  const warnings = [];
+  const pendingContexts = [...contexts];
   contexts.clear();
-  assert.equal(contexts.size, 0, "browser contexts did not close cleanly");
-  if (!browser) return;
-  await browser.close();
-  assert.equal(browser.isConnected(), false, "Playwright browser did not close cleanly");
+  warnings.push(...(await Promise.all(
+    pendingContexts.map((context) => boundedCleanup(() => context.close(), "Playwright context.close")),
+  )).filter(Boolean));
+
+  const activeBrowser = browser;
+  browser = null;
+  if (activeBrowser) {
+    const warning = await boundedCleanup(() => activeBrowser.close(), "Playwright browser.close");
+    if (warning) warnings.push(warning);
+  }
+  return warnings;
 }
 
+async function closeServer() {
+  if (!server) return [];
+  const activeServer = server;
+  server = null;
+  activeServer.closeAllConnections?.();
+  activeServer.closeIdleConnections?.();
+  const warnings = [];
+  const warning = await boundedCleanup(
+    () => new Promise((resolveServer) => activeServer.close(resolveServer)),
+    "static server.close",
+  );
+  if (warning) warnings.push(warning);
+  if (activeServer.listening) warnings.push("static server.close: server is still listening");
+  return warnings;
+}
+
+async function cleanup() {
+  const warnings = [];
+  try {
+    warnings.push(...await closeBrowserResources());
+  } catch (error) {
+    warnings.push(`Playwright cleanup: ${error instanceof Error ? error.message : String(error)}`);
+  }
+  try {
+    warnings.push(...await closeServer());
+  } catch (error) {
+    warnings.push(`static server cleanup: ${error instanceof Error ? error.message : String(error)}`);
+  }
+  try {
+    const screenshotWarning = await boundedCleanup(
+      () => rm(screenshotRoot, { recursive: true, force: true }),
+      "temporary screenshot cleanup",
+    );
+    if (screenshotWarning) warnings.push(screenshotWarning);
+  } catch (error) {
+    warnings.push(`temporary screenshot cleanup: ${error instanceof Error ? error.message : String(error)}`);
+  }
+  return warnings;
+}
+
+let cleanupWarnings = [];
 try {
   await startStaticServer();
   browser = await chromium.launch({ headless: true });
   await verifyStandardWidths();
   await verifyReducedMotion();
-  console.log("PASS: local static server, Playwright, axe, responsive, content, image, and reduced-motion checks");
-  console.log(`Screenshots: ${screenshotRoot}`);
 } finally {
-  await closeBrowser();
-  await closeServer();
+  cleanupWarnings = await cleanup();
 }
+
+if (cleanupWarnings.length > 0) {
+  throw new Error(`Verification cleanup failed: ${cleanupWarnings.join("; ")}`);
+}
+
+console.log("PASS: local static server, Playwright, axe, responsive, content, image, and reduced-motion checks");
+console.log(`Temporary screenshots removed: ${screenshotRoot}`);
