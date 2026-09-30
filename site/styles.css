@@ -435,6 +435,19 @@ h3 {
   border-top: 1px solid #52575b;
 }
 
+.boardy-attribution {
+  max-width: 38rem;
+  margin: 0 0 1.5rem;
+  color: #aeb5ba;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.boardy-attribution strong {
+  color: #f6f7f7;
+}
+
 .status-mark {
   display: inline-flex;
   align-items: center;
@@ -944,7 +957,11 @@ h3 {
   }
 
   .top-nav {
-    display: none;
+    display: flex;
+  }
+
+  .header-context {
+    grid-column: 1 / -1;
   }
 
   .boardy-inner {
@@ -964,6 +981,19 @@ h3 {
 
   .evidence-rail {
     display: none;
+  }
+
+  .top-nav {
+    display: flex;
+    max-width: 100%;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+  }
+
+  .top-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .section-grid {
@@ -1061,6 +1091,10 @@ h3 {
 
   .header-context {
     font-size: 0.62rem;
+  }
+
+  .top-nav {
+    grid-column: 1;
   }
 
   .section-grid,

@@ -5,6 +5,7 @@ import test from "node:test";
 const siteRoot = new URL("../", import.meta.url);
 const html = await readFile(new URL("index.html", siteRoot), "utf8");
 const css = await readFile(new URL("styles.css", siteRoot), "utf8");
+const manifest = await readFile(new URL("content.js", siteRoot), "utf8");
 
 test("the page exposes the six editorial regions", () => {
   for (const id of ["intro", "boardy", "method", "supporting-work", "evidence", "close"]) {
@@ -16,7 +17,7 @@ test("the page has one primary heading and the intended project story", () => {
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
   assert.match(html, /<h2[^>]*>\s*Boardy\s*<\/h2>/i);
   for (const title of ["LTB Buddy", "RyFine", "Code2Motion", "EasyBuddy"]) {
-    assert.match(html, new RegExp(title, "i"), `missing ${title}`);
+    assert.match(manifest, new RegExp(title, "i"), `missing ${title} from manifest`);
   }
 });
 
@@ -27,9 +28,37 @@ test("the semantic shell includes evidence and interaction hooks", () => {
   assert.match(css, /prefers-reduced-motion/i);
 });
 
+test("the visible project rows have a manifest-backed render mount", () => {
+  assert.match(html, /data-project-mount/);
+  assert.match(html, /import ["']\.\/content\.js["']/);
+  assert.match(html, /globalThis\.TribalScaleContent/);
+  assert.match(html, /pageContent/);
+  assert.match(html, /projectEvidence/);
+  assert.match(html, /projectMount\.innerHTML/);
+  assert.match(manifest, /const pageContent\s*=/);
+  assert.match(manifest, /const projectEvidence\s*=/);
+});
+
+test("the skip link targets the actual keyboard-focusable main element", () => {
+  assert.match(html, /href=["']#main-content["']/);
+  assert.match(html, /<main[^>]*id=["']main-content["'][^>]*tabindex=["']-1["']/i);
+  assert.doesNotMatch(html, /<div[^>]*id=["']main-content["']/i);
+});
+
+test("mobile keeps compact section navigation visible", () => {
+  assert.match(css, /@media \(max-width: 820px\)[\s\S]*?\.top-nav\s*\{[^}]*display:\s*flex;/i);
+  assert.doesNotMatch(
+    css,
+    /@media \(max-width: 820px\)[\s\S]*?\.top-nav\s*\{[^}]*display:\s*none;/i,
+  );
+});
+
 test("RyFine keeps the local Figma artifact and exact source visible", () => {
-  assert.match(html, /assets\/ryfine-figma-cover\.png/);
-  assert.match(html, /Figma artifact/);
-  assert.match(html, /datetime=["']2026-09-30["']/);
-  assert.match(html, /https:\/\/www\.figma\.com\/design\/LSYLrYfT8MjcYO0vltJqP5/);
+  assert.match(manifest, /assets\/ryfine-figma-cover\.png/);
+  assert.match(html, /project\.media\.src/);
+  assert.match(html, /project\.figma\.localAsset/);
+  assert.match(html, /renderMedia\s*=|renderMedia\s*\(/);
+  assert.match(manifest, /label:\s*"Figma artifact"/);
+  assert.match(manifest, /inspectedOn:\s*"2026-09-30"/);
+  assert.match(manifest, /https:\/\/www\.figma\.com\/design\/LSYLrYfT8MjcYO0vltJqP5/);
 });

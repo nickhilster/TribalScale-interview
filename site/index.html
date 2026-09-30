@@ -9,9 +9,6 @@
     />
     <title>I design the system around the outcome. — Nikhil Khedkar</title>
     <link rel="stylesheet" href="styles.css" />
-    <script type="module">
-      import "./content.js";
-    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -30,7 +27,7 @@
         </nav>
       </aside>
 
-      <div class="page-content" id="main-content">
+      <div class="page-content">
         <header class="site-header">
           <p class="eyebrow">NIKHIL KHEDKAR / POST-INTERVIEW NOTE</p>
           <nav class="top-nav" aria-label="Primary">
@@ -41,7 +38,7 @@
           <p class="header-context"><span class="yellow-dot" aria-hidden="true"></span>For Heather Page</p>
         </header>
 
-        <main>
+        <main id="main-content" tabindex="-1">
           <section class="intro section-grid reveal" id="intro" aria-labelledby="intro-title">
             <div class="section-index" aria-hidden="true">01</div>
             <div class="intro-copy">
@@ -92,8 +89,13 @@
                   <span class="status-mark">Proposed</span>
                 </div>
 
+                <p class="boardy-attribution">
+                  <strong>A note from Boardy</strong> · Boardy Boardman &lt;boardy@boardy.ai&gt; · September 30, 2026
+                  · attributed product/participant context, not a neutral customer reference.
+                </p>
+
                 <details class="disclosure disclosure-dark">
-                  <summary>A note from Boardy</summary>
+                  <summary>Read the attributed note</summary>
                   <div class="disclosure-body">
                     <p class="meta-label">BOARDY BOARDMAN &lt;BOARDY@BOARDY.AI&gt; · SEPTEMBER 30, 2026</p>
                     <p class="attribution">
@@ -189,114 +191,7 @@
               <p>Different problems, same approach. Turn complexity into clarity, design for real use, and make the thinking observable.</p>
             </div>
 
-            <article class="case-study case-study-ltb" aria-labelledby="ltb-title">
-              <div class="case-study-index">01 <span>AI WORKFLOW &amp; TRUST</span></div>
-              <div class="case-study-copy">
-                <p class="kicker">Built workflow</p>
-                <h3 id="ltb-title">LTB Buddy</h3>
-                <p class="case-role">AI workflow design where trust, evidence, escalation, and human authority are part of the UX.</p>
-                <p>
-                  A built/public-beta workflow for tenant evidence and guided self-help, designed with
-                  human review boundaries. Its retrieval evaluation measures retrieval quality, not legal correctness.
-                </p>
-                <div class="case-meta"><span class="status-mark status-mark-yellow">Built</span><span class="status-mark">Documented</span><span class="status-mark">Observable</span><span class="status-mark">Verified</span></div>
-                <details class="disclosure">
-                  <summary>Evidence trail</summary>
-                  <div class="disclosure-body">
-                    <p>Project overview, decisions and risks, RAG evaluation documentation, and the current product surface.</p>
-                    <div class="source-links">
-                      <a class="source-link" href="https://ltbbuddy.ca/" target="_blank" rel="noreferrer">Open LTB Buddy <span aria-hidden="true">↗</span></a>
-                      <a class="source-link" href="https://github.com/nickhilster/ltb-buddy" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                    </div>
-                  </div>
-                </details>
-              </div>
-              <div class="case-study-note" aria-hidden="true">REAL WORKFLOWS<br />REAL GUARDRAILS.</div>
-            </article>
-
-            <article class="case-study case-study-ryfine" aria-labelledby="ryfine-title">
-              <div class="case-study-index">02 <span>AI PRODUCT EXPERIENCE</span></div>
-              <figure class="artifact-frame">
-                <div class="artifact-label"><span>Figma artifact</span><span>Node 2:6</span></div>
-                <img src="assets/ryfine-figma-cover.png" alt="RyFine design-system Figma cover with a dark grid, lime accent, and interface principles." />
-                <figcaption>Figma design-system draft — inspected <time datetime="2026-09-30">September 30, 2026</time></figcaption>
-              </figure>
-              <div class="case-study-copy">
-                <p class="kicker">Product and interface craft</p>
-                <h3 id="ryfine-title">RyFine</h3>
-                <p class="case-role">Turning AI capability into a clear, usable experience with a coherent design system.</p>
-                <p>
-                  A built browser product for prompt refinement with repo context, provider choice, and
-                  local-first/BYOK paths. The Figma cover is a real design artifact; it is not proof that every
-                  principle or screen is shipped in the live product.
-                </p>
-                <div class="case-meta"><span class="status-mark status-mark-blue">Built</span><span class="status-mark">Documented</span><span class="status-mark">Observable</span><span class="status-mark">Verified</span></div>
-                <details class="disclosure">
-                  <summary>Evidence trail</summary>
-                  <div class="disclosure-body">
-                    <p>Design-system documentation, the inspected local export, and the current web product remain separate sources of evidence.</p>
-                    <div class="source-links">
-                      <a class="source-link" href="https://www.figma.com/design/LSYLrYfT8MjcYO0vltJqP5" target="_blank" rel="noreferrer">Inspect in Figma <span aria-hidden="true">↗</span></a>
-                      <a class="source-link" href="https://ryfine.app/" target="_blank" rel="noreferrer">Open RyFine <span aria-hidden="true">↗</span></a>
-                      <a class="source-link" href="https://github.com/nickhilster/ryfine" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-
-            <article class="case-study case-study-code2motion" aria-labelledby="code2motion-title">
-              <div class="case-study-index">03 <span>TECHNICAL CONCEPT &amp; INTERACTION</span></div>
-              <div class="case-study-copy">
-                <p class="kicker">Observable experiment</p>
-                <h3 id="code2motion-title">Code2Motion</h3>
-                <p class="case-role">Making a difficult technical idea tangible and testable through interaction.</p>
-                <p>
-                  A repo-backed interactive-art product thesis with substantial implementation: PlayRoom is
-                  the audience surface, ToyMaker is the creator surface, and a c2merse moves between creation
-                  and distribution. Current runtime and operational caveats keep this work observable and experimental,
-                  not a clean production release.
-                </p>
-                <div class="case-meta"><span class="status-mark status-mark-yellow">Documented</span><span class="status-mark">Observable</span><span class="status-mark">Experimental</span><span class="status-mark">Verified</span></div>
-                <details class="disclosure">
-                  <summary>Evidence trail</summary>
-                  <div class="disclosure-body">
-                    <p>Product thesis, current handoff, and the public feed/showroom surface.</p>
-                    <div class="source-links">
-                      <a class="source-link" href="https://code2motion.app/feed" target="_blank" rel="noreferrer">Open Code2Motion <span aria-hidden="true">↗</span></a>
-                      <a class="source-link" href="https://github.com/nickhilster/Code2Motion" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                    </div>
-                  </div>
-                </details>
-              </div>
-              <div class="case-study-note" aria-hidden="true">A TECHNICAL IDEA<br />YOU CAN EXPLORE.</div>
-            </article>
-
-            <article class="case-study case-study-easybuddy" aria-labelledby="easybuddy-title">
-              <div class="case-study-index">04 <span>MOBILE OPERATIONS SUPPORT</span></div>
-              <div class="case-study-copy">
-                <p class="kicker">Development-ready product</p>
-                <h3 id="easybuddy-title">EasyBuddy</h3>
-                <p class="case-role">Mobile-first operational assistance for jobs, training, voice, retrieval, and technician support.</p>
-                <p>
-                  A development-ready React/Vite workflow for automotive technicians: jobs, training, a
-                  voice-capable AI assistant, and knowledge-base operations in one mobile-first app. The
-                  documented local posture has authentication disabled by default, so this is not presented as a verified production deployment.
-                </p>
-                <div class="case-meta"><span class="status-mark status-mark-blue">Built</span><span class="status-mark">Documented</span><span class="status-mark">Experimental</span></div>
-                <details class="disclosure">
-                  <summary>Evidence trail</summary>
-                  <div class="disclosure-body">
-                    <p>Quick reference, app source and scripts, and a Teambotics product listing as documented context rather than app observability.</p>
-                    <div class="source-links">
-                      <a class="source-link" href="https://www.teambotics.app/products/easybuddy" target="_blank" rel="noreferrer">Read about EasyBuddy <span aria-hidden="true">↗</span></a>
-                      <a class="source-link" href="https://github.com/Teambotics-BackBurner/EasyBuddy-AutoEdition" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
-                    </div>
-                  </div>
-                </details>
-              </div>
-              <div class="case-study-note" aria-hidden="true">MOBILE HELP<br />FOR REAL WORK.</div>
-            </article>
+            <div class="project-mount" data-project-mount aria-live="off"></div>
           </section>
 
           <section class="evidence section-grid reveal" id="evidence" aria-labelledby="evidence-title">
@@ -331,5 +226,74 @@
         </footer>
       </div>
     </div>
+    <script type="module">
+      import "./content.js";
+
+      const { pageContent, projectEvidence } = globalThis.TribalScaleContent;
+      const projectMount = document.querySelector("[data-project-mount]");
+      const escapeHtml = (value) => String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+      const notes = {
+        "ltb-buddy": "REAL WORKFLOWS<br />REAL GUARDRAILS.",
+        code2motion: "A TECHNICAL IDEA<br />YOU CAN EXPLORE.",
+        easybuddy: "MOBILE HELP<br />FOR REAL WORK.",
+      };
+
+      const supportingProjects = pageContent.projects
+        .map(({ slug }) => projectEvidence.find((project) => project.slug === slug))
+        .filter(Boolean);
+
+      document.querySelector("#supporting-title").textContent =
+        `${supportingProjects.length} ways I apply the same thinking.`;
+
+      const renderLinks = (links) => links.map((link) => `
+        <a class="source-link" href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">
+          ${escapeHtml(link.label)} <span aria-hidden="true">↗</span>
+        </a>`).join("");
+
+      const renderMedia = (project) => {
+        if (!project.media || !project.figma) return "";
+        return `
+          <figure class="artifact-frame" data-local-asset="${escapeHtml(project.figma.localAsset)}">
+            <div class="artifact-label"><span>${escapeHtml(project.figma.label)}</span><span>Node ${escapeHtml(project.figma.nodeId)}</span></div>
+            <img src="${escapeHtml(project.media.src)}" alt="${escapeHtml(project.media.alt)}" />
+            <figcaption>${escapeHtml(project.figma.caption).replace("September 30, 2026", '<time datetime="2026-09-30">September 30, 2026</time>')}</figcaption>
+          </figure>`;
+      };
+
+      const renderProject = (project, index) => {
+        const hasMedia = Boolean(project.media && project.figma);
+        const statusClass = project.slug === "ryfine" || project.slug === "easybuddy"
+          ? "status-mark-blue"
+          : "status-mark-yellow";
+        const evidenceLabels = project.evidence.map((entry) => `${entry.kind}: ${entry.label}`).join(" · ");
+        return `
+          <article class="case-study case-study-${escapeHtml(project.slug)}" data-project-slug="${escapeHtml(project.slug)}" aria-labelledby="${escapeHtml(project.slug)}-title">
+            <div class="case-study-index">${String(index + 1).padStart(2, "0")} <span>${escapeHtml(project.role.split(" where ")[0].split(" — ")[0])}</span></div>
+            ${renderMedia(project)}
+            <div class="case-study-copy">
+              <p class="kicker">${escapeHtml(project.status[0])}</p>
+              <h3 id="${escapeHtml(project.slug)}-title">${escapeHtml(project.title)}</h3>
+              <p class="case-role">${escapeHtml(project.role)}</p>
+              <p>${escapeHtml(project.summary)}</p>
+              <div class="case-meta">${project.status.map((state, stateIndex) => `<span class="status-mark ${stateIndex === 0 ? statusClass : ""}">${escapeHtml(state)}</span>`).join("")}</div>
+              <details class="disclosure">
+                <summary>Evidence trail</summary>
+                <div class="disclosure-body">
+                  <p>${escapeHtml(evidenceLabels)}</p>
+                  <div class="source-links">${renderLinks(project.links)}</div>
+                </div>
+              </details>
+            </div>
+            ${hasMedia ? "" : `<div class="case-study-note" aria-hidden="true">${notes[project.slug] ?? "EVIDENCE, IN CONTEXT."}</div>`}
+          </article>`;
+      };
+
+      projectMount.innerHTML = supportingProjects.map(renderProject).join("");
+    </script>
   </body>
 </html>
