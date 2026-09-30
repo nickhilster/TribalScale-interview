@@ -16,6 +16,8 @@ const mimeTypes = {
   ".png": "image/png",
 };
 const widths = [320, 390, 768, 1440];
+const supportingProjectSlugs = ["ltb-buddy", "ryfine", "code2motion", "easybuddy"];
+const revealTimeoutMs = 3000;
 const cleanupTimeoutMs = 2000;
 const screenshotRoot = await mkdtemp(join(tmpdir(), "tribalscale-post-interview-qa-"));
 const contexts = new Set();
@@ -90,12 +92,34 @@ async function assertVisibleWithStyles(locator, label) {
   assert.equal(await locator.isVisible(), true, `${label} is not visible`);
   assert.equal(
     await locator.evaluate((element) => {
-      const style = getComputedStyle(element);
-      return style.display !== "none" && style.visibility !== "hidden" && Number.parseFloat(style.opacity) > 0;
+      const visibleElements = [element];
+      const reveal = element.closest(".reveal");
+      if (reveal && reveal !== element) visibleElements.push(reveal);
+      return visibleElements.every((candidate) => {
+        const style = getComputedStyle(candidate);
+        return style.display !== "none" && style.visibility !== "hidden" && Number.parseFloat(style.opacity) > 0;
+      });
     }),
     true,
     `${label} has hidden computed styles`,
   );
+}
+
+async function waitForSettledReveal(page, locator, label) {
+  const projectSlug = await locator.getAttribute("data-project-slug");
+  assert.ok(projectSlug, `${label} is missing its project slug`);
+  await locator.scrollIntoViewIfNeeded();
+  await page.waitForFunction(({ slug }) => {
+    const caseStudy = [...document.querySelectorAll(".case-study")].find((element) => element.dataset.projectSlug === slug);
+    const reveal = caseStudy?.closest(".reveal");
+    if (!reveal) return false;
+    const style = getComputedStyle(reveal);
+    const transformSettled = style.transform === "none" || style.transform === "matrix(1, 0, 0, 1, 0, 0)";
+    return style.display !== "none"
+      && style.visibility !== "hidden"
+      && Number.parseFloat(style.opacity) > 0
+      && transformSettled;
+  }, { slug: projectSlug }, { polling: "raf", timeout: revealTimeoutMs });
 }
 
 async function assertBoundsWithin(locator, ancestorSelector, label) {
@@ -230,6 +254,33 @@ async function verifyStandardWidths() {
   }
 }
 
+async function verifyNormalMotionReveals() {
+  for (const width of widths) {
+    const { page } = await openPage(width);
+    assert.equal(await page.evaluate(() => matchMedia("(prefers-reduced-motion: reduce)").matches), false);
+
+    for (const projectSlug of supportingProjectSlugs) {
+      const caseStudy = page.locator(`[data-project-slug="${projectSlug}"]`);
+      assert.equal(await caseStudy.count(), 1, `${width}px render is missing ${projectSlug}`);
+      await waitForSettledReveal(page, caseStudy, `${width}px ${projectSlug}`);
+      const heading = caseStudy.locator("h3");
+      const copy = caseStudy.locator(".case-study-copy");
+      await assertVisibleWithStyles(heading, `${width}px ${projectSlug} heading after scroll`);
+      await assertVisibleWithStyles(copy, `${width}px ${projectSlug} copy after scroll`);
+      await assertBoundsWithin(heading, ".case-study", `${width}px ${projectSlug} heading after scroll`);
+      await assertBoundsWithin(copy, ".case-study", `${width}px ${projectSlug} copy after scroll`);
+    }
+
+    const scrollMetrics = await page.evaluate(() => ({
+      bodyScrollWidth: document.body.scrollWidth,
+      documentScrollWidth: document.documentElement.scrollWidth,
+      viewportWidth: window.innerWidth,
+    }));
+    assert.equal(scrollMetrics.documentScrollWidth <= scrollMetrics.viewportWidth, true, `${width}px normal-motion document overflows horizontally`);
+    assert.equal(scrollMetrics.bodyScrollWidth <= scrollMetrics.viewportWidth, true, `${width}px normal-motion body overflows horizontally`);
+  }
+}
+
 async function verifyReducedMotion() {
   for (const width of widths) {
     const { page } = await openPage(width, true);
@@ -350,6 +401,7 @@ try {
   await startStaticServer();
   browser = await chromium.launch({ headless: true });
   await verifyStandardWidths();
+  await verifyNormalMotionReveals();
   await verifyReducedMotion();
 } finally {
   cleanupWarnings = await cleanup();
