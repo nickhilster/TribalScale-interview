@@ -86,18 +86,56 @@ async function assertAxeClean(page, label) {
   assert.deepEqual(results.violations, [], `${label} has axe violations`);
 }
 
+async function assertVisibleWithStyles(locator, label) {
+  assert.equal(await locator.isVisible(), true, `${label} is not visible`);
+  assert.equal(
+    await locator.evaluate((element) => {
+      const style = getComputedStyle(element);
+      return style.display !== "none" && style.visibility !== "hidden" && Number.parseFloat(style.opacity) > 0;
+    }),
+    true,
+    `${label} has hidden computed styles`,
+  );
+}
+
+async function assertBoundsWithin(locator, ancestorSelector, label) {
+  assert.equal(
+    await locator.evaluate((element, selector) => {
+      const inner = element.getBoundingClientRect();
+      const ancestor = element.closest(selector)?.getBoundingClientRect();
+      if (!ancestor) return false;
+      const epsilon = 0.5;
+      return inner.left >= ancestor.left - epsilon
+        && inner.right <= ancestor.right + epsilon
+        && inner.top >= ancestor.top - epsilon
+        && inner.bottom <= ancestor.bottom + epsilon;
+    }, ancestorSelector),
+    true,
+    `${label} is clipped by ${ancestorSelector}`,
+  );
+}
+
 async function assertCommonPageChecks(page, width, consoleErrors, pageErrors) {
   assert.equal(await page.title(), "I design the system around the outcome. — Nikhil Khedkar");
   assert.equal(await page.locator("h1").count(), 1);
+  const h1 = page.locator("h1");
+  await assertVisibleWithStyles(h1, `${width}px h1`);
+  await assertBoundsWithin(h1, ".page-content", `${width}px h1`);
   const contentWidth = await page.locator(".page-content").evaluate((element) => element.getBoundingClientRect().width);
   const expectedContentWidth = width === 1440 ? width - 112 : width;
   assert.ok(contentWidth >= expectedContentWidth - 1, `${width}px page-content is not meaningfully wide: ${contentWidth}px`);
-  assert.ok(await page.locator("h1").evaluate((element) => element.getBoundingClientRect().width > 0), `${width}px h1 has no layout width`);
+  assert.ok(await h1.evaluate((element) => element.getBoundingClientRect().width > 0), `${width}px h1 has no layout width`);
   assert.equal(await page.getByRole("heading", { name: "Boardy" }).isVisible(), true);
 
   for (const project of ["LTB Buddy", "RyFine", "Code2Motion", "EasyBuddy"]) {
     const heading = page.getByRole("heading", { name: project });
     assert.equal(await heading.count(), 1, `${width}px render is missing ${project}`);
+    const article = heading.locator("xpath=ancestor::article");
+    const copy = article.locator(".case-study-copy");
+    await assertVisibleWithStyles(heading, `${width}px ${project} heading`);
+    await assertBoundsWithin(heading, ".case-study", `${width}px ${project} heading`);
+    await assertVisibleWithStyles(copy, `${width}px ${project} copy`);
+    await assertBoundsWithin(copy, ".case-study", `${width}px ${project} copy`);
     assert.equal(
       await heading.evaluate((element) => {
         const box = element.getBoundingClientRect();
@@ -106,16 +144,13 @@ async function assertCommonPageChecks(page, width, consoleErrors, pageErrors) {
       true,
       `${width}px render has no meaningful visible heading box for ${project}`,
     );
-  }
-
-  for (const copy of await page.locator(".case-study-copy").all()) {
     assert.equal(
       await copy.evaluate((element) => {
         const box = element.getBoundingClientRect();
         return box.width > 0 && box.height > 0 && element.textContent.trim().length > 0;
       }),
       true,
-      `${width}px render has no meaningful visible project copy`,
+      `${width}px render has no meaningful visible project copy for ${project}`,
     );
   }
 
@@ -175,7 +210,7 @@ async function assertCommonPageChecks(page, width, consoleErrors, pageErrors) {
 
 async function verifyStandardWidths() {
   for (const width of widths) {
-    const { page, consoleErrors, pageErrors } = await openPage(width);
+    const { page, consoleErrors, pageErrors } = await openPage(width, true);
     await assertCommonPageChecks(page, width, consoleErrors, pageErrors);
     const capture = await openPage(width, true);
     await capture.page.waitForTimeout(100);

@@ -1,7 +1,7 @@
 # Fidelity ledger — TribalScale post-interview page
 
 **Review date:** 2026-09-30
-**Local source:** `site/index.html`, `site/styles.css`, `site/app.js`, and the approved render at the final `HEAD` after the responsive correction
+**Local source:** `site/index.html`, `site/styles.css`, `site/app.js`, and the approved render at commit `bb430109679670bef1d5ad24eb8368aac0e2febd`
 **Verification command:** `node site/verify-page.mjs`
 **Concept references:** `overview.png`, `boardy-detail.png`, `supporting-work-detail.png`
 **Render sizes checked:** 320 × 900, 390 × 900, 768 × 900, and 1440 × 900 Playwright viewports

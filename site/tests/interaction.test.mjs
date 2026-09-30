@@ -80,13 +80,52 @@ async function assertNoAxeViolations(page, label) {
   assert.deepEqual(axeResults.violations, [], `${label} has axe violations`);
 }
 
+async function assertVisibleWithStyles(locator, label) {
+  assert.equal(await locator.isVisible(), true, `${label} is not visible`);
+  assert.equal(
+    await locator.evaluate((element) => {
+      const style = getComputedStyle(element);
+      return style.display !== "none" && style.visibility !== "hidden" && Number.parseFloat(style.opacity) > 0;
+    }),
+    true,
+    `${label} has hidden computed styles`,
+  );
+}
+
+async function assertBoundsWithin(locator, ancestorSelector, label) {
+  assert.equal(
+    await locator.evaluate((element, selector) => {
+      const inner = element.getBoundingClientRect();
+      const ancestor = element.closest(selector)?.getBoundingClientRect();
+      if (!ancestor) return false;
+      const epsilon = 0.5;
+      return inner.left >= ancestor.left - epsilon
+        && inner.right <= ancestor.right + epsilon
+        && inner.top >= ancestor.top - epsilon
+        && inner.bottom <= ancestor.bottom + epsilon;
+    }, ancestorSelector),
+    true,
+    `${label} is clipped by ${ancestorSelector}`,
+  );
+}
+
 test("renders manifest-backed projects and verified Figma evidence at every responsive target width", { concurrency: false, timeout: 30000 }, async () => {
   for (const width of responsiveWidths) {
-    const { page } = await openPage({ width, height: 900 });
+    const { page } = await openPage({ width, height: 900 }, true);
 
     assert.equal(await page.locator(".case-study").count(), 4);
+    const h1 = page.locator("h1");
+    await assertVisibleWithStyles(h1, `${width}px h1`);
+    await assertBoundsWithin(h1, ".page-content", `${width}px h1`);
     for (const project of ["LTB Buddy", "RyFine", "Code2Motion", "EasyBuddy"]) {
-      assert.ok((await page.getByRole("heading", { name: project }).count()) > 0, `missing ${project}`);
+      const heading = page.getByRole("heading", { name: project });
+      assert.ok((await heading.count()) > 0, `missing ${project}`);
+      const article = heading.locator("xpath=ancestor::article");
+      const copy = article.locator(".case-study-copy");
+      await assertVisibleWithStyles(heading, `${width}px ${project} heading`);
+      await assertBoundsWithin(heading, ".case-study", `${width}px ${project} heading`);
+      await assertVisibleWithStyles(copy, `${width}px ${project} copy`);
+      await assertBoundsWithin(copy, ".case-study", `${width}px ${project} copy`);
     }
     for (const status of ["Built", "Documented", "Observable", "Experimental", "Verified"]) {
       assert.ok((await page.getByText(status, { exact: true }).count()) > 0, `missing ${status}`);
