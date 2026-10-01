@@ -43,3 +43,26 @@ test("all showcase route entry files exist", async () => {
     await assert.doesNotReject(access(new URL(path, siteRoot)), path);
   }
 });
+
+test("client-facing pages do not carry internal interview framing", async () => {
+  const paths = [
+    "index.html",
+    "product-design/index.html",
+    "media-pipeline/index.html",
+    "boardy/index.html",
+  ];
+  const forbidden = [
+    /Heather showed particular interest/i,
+    /POST-INTERVIEW/i,
+    /A direct follow-up/i,
+    /conversation with Heather/i,
+    /You asked Nikhil/i,
+    /Thank you for the conversation/i,
+  ];
+  for (const path of paths) {
+    const page = await readFile(new URL(path, siteRoot), "utf8");
+    for (const phrase of forbidden) {
+      assert.doesNotMatch(page, phrase, `${path} contains internal framing ${phrase}`);
+    }
+  }
+});

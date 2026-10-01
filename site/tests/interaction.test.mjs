@@ -196,9 +196,6 @@ test("renders manifest-backed projects and verified Figma evidence at every resp
       assert.ok(project.headingWidth > 0 && project.headingHeight > 0, `${width}px project heading is not visible`);
       assert.ok(project.copyWidth > 0 && project.copyHeight > 0 && project.copyText.length > 0, `${width}px project copy is not visible`);
     }
-    assert.match(await page.locator("#boardy").innerText(), /A note from Boardy|Boardy Boardman/i);
-    assert.match(await page.locator("#boardy").innerText(), /not a claim about Boardy.?s own product/i);
-    assert.match(await page.locator("#boardy").innerText(), /Symphony.*Boardy.*no automated integration/i);
     assert.equal(layoutMetrics.documentScrollWidth <= layoutMetrics.viewportWidth, true, `${width}px document overflows horizontally`);
     assert.equal(layoutMetrics.bodyScrollWidth <= layoutMetrics.viewportWidth, true, `${width}px body overflows horizontally`);
 
@@ -247,17 +244,6 @@ test("supports skip-link focus, anchor navigation, disclosures, and keyboard-foc
   await page.getByRole("link", { name: "Selected work" }).evaluate((link) => link.click());
   assert.equal(await page.evaluate(() => location.hash), "#supporting-work");
   assert.equal(await page.evaluate(() => document.activeElement?.id), "supporting-work");
-
-  const boardyDisclosure = page.locator("#boardy details.disclosure");
-  const boardySummary = boardyDisclosure.locator("summary");
-  const boardyPanelId = await boardySummary.getAttribute("aria-controls");
-  assert.ok(boardyPanelId);
-  assert.equal(await boardySummary.getAttribute("aria-expanded"), "false");
-  await boardySummary.evaluate((element) => element.click());
-  assert.equal(await boardySummary.getAttribute("aria-expanded"), "true");
-  assert.equal(await page.locator(`#${boardyPanelId}`).isVisible(), true);
-  await boardySummary.evaluate((element) => element.click());
-  assert.equal(await boardySummary.getAttribute("aria-expanded"), "false");
 
   const disclosure = page.locator(".case-study-ltb-buddy details.disclosure");
   const summary = disclosure.locator("summary");

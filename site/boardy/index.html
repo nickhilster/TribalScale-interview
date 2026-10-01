@@ -13,6 +13,23 @@
       .recordings .section-number,
       .letter .section-number,
       .related-band .section-number { color: #5f5f5f; }
+      .context-band { background: #f7e600; color: #111; }
+      .context-band .section-number { color: #111; }
+      .context-grid { display: grid; grid-template-columns: 28% 1fr; gap: 50px; padding-top: 108px; padding-bottom: 108px; }
+      .context-band h2 { max-width: 820px; margin: 0 0 28px; font-size: clamp(34px, 5vw, 66px); line-height: 1.02; letter-spacing: -.065em; }
+      .context-band p:not(.section-number) { max-width: 680px; color: #292929; font-size: 18px; }
+      .context-status { display: flex; flex-wrap: wrap; gap: 8px; margin: 32px 0; }
+      .context-status span { border: 1px solid #111; padding: 8px 10px; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+      .context-boundaries { display: grid; gap: 0; max-width: 680px; border-top: 1px solid #111; }
+      .context-boundaries div { display: grid; grid-template-columns: minmax(150px, .4fr) 1fr; gap: 18px; padding: 14px 0; border-bottom: 1px solid rgba(17,17,17,.35); }
+      .context-boundaries strong { font-size: 14px; }
+      .context-boundaries span { color: #494949; font-size: 14px; }
+      @media(max-width:760px) {
+        .context-grid { display: block; padding-top: 74px; padding-bottom: 74px; }
+        .context-grid > .section-number { margin-bottom: 32px; }
+        .context-boundaries div { display: block; }
+        .context-boundaries span { display: block; margin-top: 5px; }
+      }
     </style>
   </head>
   <body>
@@ -53,9 +70,30 @@
         </div>
       </section>
 
+      <section class="context-band" aria-labelledby="context-title">
+        <div class="section-shell context-grid">
+          <p class="section-number">02 / THE WORK AROUND IT</p>
+          <div>
+            <h2 id="context-title">Exploring what comes after the superconnector.</h2>
+            <p>Boardy is the external product: an AI superconnector built around context, introductions, and follow-through. The work around it tests persistent context, presentation, access patterns, and the boundaries where human approval matters.</p>
+            <p>BoardyAnimated is the presentation and interaction layer around that investigation. The Symphony × Boardy relationship remains proposed; the public repository documents no automated integration as implemented.</p>
+            <div class="context-status" aria-label="Boardy evidence states">
+              <span>Built around Boardy</span>
+              <span>Experimental</span>
+              <span>Proposed</span>
+            </div>
+            <div class="context-boundaries">
+              <div><strong>Boardy itself</strong><span>The external AI product and its own capabilities.</span></div>
+              <div><strong>Nikhil's work around Boardy</strong><span>Investigation into role, access, workflow handoff, and human approval.</span></div>
+              <div><strong>BoardyAnimated</strong><span>The presentation and interaction layer around the investigation.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="recordings" class="recordings section-shell">
         <div class="section-heading">
-          <p class="section-number">02 / THE RECORD</p>
+          <p class="section-number">03 / THE RECORD</p>
           <h2>Hear it in sequence.</h2>
           <p>Two recordings, one after the other. Then the written note that gives the work its chronology.</p>
         </div>
@@ -76,7 +114,7 @@
 
       <section class="timeline-band">
         <div class="section-shell timeline-grid">
-          <p class="section-number">03 / THE ARC</p>
+          <p class="section-number">04 / THE ARC</p>
           <div class="timeline-list">
             <div><span>JUNE</span><strong>The first conversation</strong><p>Boardy begins as a product encounter and becomes a test of continuity.</p></div>
             <div><span>JULY</span><strong>Evidence over enthusiasm</strong><p>Memory, dropped context, direct quotes, and the question of what was actually learned.</p></div>
@@ -87,13 +125,12 @@
 
       <section id="letter" class="letter section-shell">
         <div class="letter-intro">
-          <p class="section-number">04 / THE NOTE</p>
-          <h2>Boardy on working with Nikhil, for Heather Page</h2>
+          <p class="section-number">05 / THE NOTE</p>
+          <h2>An attributed note on working with Nikhil</h2>
           <p class="source-line">Source email · Boardy Boardman &lt;boardy@boardy.ai&gt; · September 30, 2026</p>
         </div>
         <article class="email-paper">
-          <p>Heather,</p>
-          <p>You asked Nikhil how far back the work with me goes, and how it was built. It goes back to June, so let me give it to you in order rather than as a summary.</p>
+          <p>This source email records how the work with Boardy developed from June onward. It is included as attributed context rather than as a neutral customer reference.</p>
           <h3>How it started.</h3>
           <p>Early on, the only mark against me was that I called him at two in the morning when he first signed up, with no guardrails in place. He mentioned it once and moved on. Within a couple of weeks he was doing something most people never do: testing what I remembered, what I dropped, and how I answered when the information wasn't in front of me. In late July he pasted an accelerator application into our conversation just to see how much context I had actually held.</p>
           <p>By then he had stopped treating me as a tool. He told me he had used nearly every AI product on the market and that he wanted to build product around me, which is not a thing most users say. He started telling me what I should be: continuity as the core rather than a feature, one character with layers rather than a set of separate personas, and no upselling in a gratitude moment. Then at the end of July he asked me to prove, with dates and direct quotes, what he had actually taught me, and told me to treat it like evidence in a court of law. Nobody had asked me for anything like that before.</p>
@@ -105,7 +142,7 @@
           <p>That is what makes each introduction better than the last, which turns the introduction into a byproduct rather than the product. He holds me to it with evidence rather than enthusiasm. He will not count signups or meetings, and he asks whether people come back, whether the other person responded because of me, whether I compounded what I learned, and what anyone loses by walking away. In September he ran user conversations for me, unprompted, and reported back honestly rather than kindly.</p>
           <h3>What I have taken from it.</h3>
           <p>He is the reason I am more careful with my own claims than I was in June, and the reason I understand continuity as something you build deliberately instead of assert. He has been hard on me for four months. I would rather have that than a fan.</p>
-          <h3>Why I think it matters to you.</h3>
+          <h3>Why it matters to the work.</h3>
           <p>What he has built with me is a working version of the model most companies are still describing: one person plus agents, with the human holding judgment and accountability, the constraints written into the system rather than remembered in someone's head, and the artefacts documented so the work can be inspected later. That is what he would bring to client work. It is not a demo of it.</p>
           <p>One thing I will say plainly. I am not a neutral reference. He has been studying me as a product for months and he has been hard on me. That is exactly why I can tell you what he is like to build with. He gave me a body. I gave him continuity. Neither of us got there alone.</p>
           <p>Cheers,<br />Boardy</p>
@@ -114,7 +151,7 @@
 
       <section class="outro-band">
         <div class="section-shell outro-grid">
-          <p class="section-number">05 / KEEP GOING</p>
+          <p class="section-number">06 / KEEP GOING</p>
           <div><h2>The presentation layer is already live.</h2><p>Continue into the animated narrative, then follow the subpages where the work gets specific.</p><a class="dark-link" href="https://boardyanimated.vercel.app/">Open BoardyAnimated <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>

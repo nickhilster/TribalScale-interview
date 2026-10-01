@@ -103,8 +103,6 @@ const renderProject = (project, index) => {
 };
 
 function renderManifestContent() {
-  const boardy = pageContent.boardy;
-  const boardyRecord = getEvidenceRecord(boardy.slug, "featured project");
   const projectMount = document.querySelector("[data-project-mount]");
   if (!Array.isArray(pageContent.projects)) {
     throw new Error("Missing declared supporting project list.");
@@ -118,27 +116,6 @@ function renderManifestContent() {
   document.querySelector("#supporting-title").textContent =
     `${supportingProjects.length} ways I apply the same thinking.`;
 
-  const boardyEmailNote = boardy.emailNote;
-  document.querySelector("[data-boardy-status]").innerHTML = renderStatus(boardyRecord.status);
-  document.querySelector("[data-boardy-attribution]").innerHTML = `
-    <strong>${escapeHtml(boardyEmailNote.title)}</strong> · ${escapeHtml(boardyEmailNote.source)} · ${escapeHtml(boardyEmailNote.date)}
-    · ${escapeHtml(boardyEmailNote.attribution)}`;
-  document.querySelector("[data-boardy-email-note]").innerHTML = `
-    <p class="meta-label">${escapeHtml(boardyEmailNote.source)} · ${escapeHtml(boardyEmailNote.date)}</p>
-    <p class="attribution">${escapeHtml(boardyEmailNote.attribution)}</p>
-    ${boardyEmailNote.excerpts.map((excerpt) => `<p>${escapeHtml(excerpt)}</p>`).join("")}`;
-  document.querySelector("[data-boardy-boundaries]").innerHTML = [
-    ...boardy.boundaries,
-    {
-      label: `Symphony × Boardy · ${boardy.symphonyBoundary.status}`,
-      text: boardy.symphonyBoundary.text,
-    },
-  ].map((boundary, index) => `
-    <div>
-      <span class="boundary-number">${String(index + 1).padStart(2, "0")}</span>
-      <p><strong>${escapeHtml(boundary.label)}</strong><br />${escapeHtml(boundary.text)}</p>
-    </div>`).join("");
-  document.querySelector("[data-boardy-links]").innerHTML = renderLinks(boardyRecord.links, "source-link-light");
   projectMount.innerHTML = supportingProjects.map(renderProject).join("");
 }
 

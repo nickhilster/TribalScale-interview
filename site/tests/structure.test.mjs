@@ -8,22 +8,23 @@ const css = await readFile(new URL("styles.css", siteRoot), "utf8");
 const manifest = await readFile(new URL("content.js", siteRoot), "utf8");
 const app = await readFile(new URL("app.js", siteRoot), "utf8");
 
-test("the page exposes the six editorial regions", () => {
-  for (const id of ["intro", "boardy", "method", "supporting-work", "evidence", "close"]) {
+test("the page exposes the five product/design editorial regions", () => {
+  for (const id of ["intro", "method", "supporting-work", "evidence", "close"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`), `missing #${id}`);
   }
+  assert.doesNotMatch(html, /id=["']boardy["']/i);
 });
 
 test("the page has one primary heading and the intended project story", () => {
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
-  assert.match(html, /<h2[^>]*>\s*Boardy\s*<\/h2>/i);
+  assert.doesNotMatch(html, /<h2[^>]*>\s*Boardy\s*<\/h2>/i);
   for (const title of ["LTB Buddy", "RyFine", "Code2Motion", "EasyBuddy"]) {
     assert.match(manifest, new RegExp(title, "i"), `missing ${title} from manifest`);
   }
 });
 
 test("the semantic shell includes evidence and interaction hooks", () => {
-  for (const hook of ["evidence-rail", "disclosure", "reveal"]) {
+  for (const hook of ["evidence-rail", "reveal", "project-mount"]) {
     assert.match(html, new RegExp(`class=["'][^"']*\\b${hook}\\b`), `missing .${hook}`);
   }
   for (const hook of ["case-study", "status-mark", "source-link"]) {
@@ -34,18 +35,11 @@ test("the semantic shell includes evidence and interaction hooks", () => {
 
 test("the visible project rows have a manifest-backed render mount", () => {
   assert.match(html, /data-project-mount/);
-  assert.match(html, /data-boardy-status/);
-  assert.match(html, /data-boardy-boundaries/);
-  assert.match(html, /data-boardy-email-note/);
-  assert.match(html, /data-boardy-links/);
+  assert.doesNotMatch(html, /data-boardy-/);
   assert.match(app, /import ["']\.\/content\.js["']/);
   assert.match(app, /globalThis\.TribalScaleContent/);
   assert.match(app, /pageContent/);
   assert.match(app, /projectEvidence/);
-  assert.match(app, /const boardy = pageContent\.boardy/);
-  assert.match(app, /boardy\.boundaries/);
-  assert.match(app, /boardy\.emailNote/);
-  assert.match(app, /boardyRecord\.links/);
   assert.match(app, /project\.indexLabel/);
   assert.match(app, /projectMount\.innerHTML/);
   assert.match(manifest, /const pageContent\s*=/);

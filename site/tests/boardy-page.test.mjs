@@ -11,6 +11,10 @@ test('Boardy page keeps the working record self-contained', () => {
   assert.match(page, /I did not just use Boardy\.<br \/><em>I built around it\.<\/em>/);
   assert.match(page, /This page is my record/);
   assert.match(page, /Boardy Boardman/);
+  assert.match(page, /Exploring what comes after the superconnector/);
+  assert.match(page, /Built around Boardy/);
+  assert.match(page, /no automated integration as implemented/);
+  assert.doesNotMatch(page, /You asked Nikhil/);
   assert.match(page, /Boardy-to-Heather-1\.ogg/);
   assert.match(page, /Boardy-to-Heather-2\.ogg/);
   assert.match(page, /boardyanimated\.vercel\.app/);

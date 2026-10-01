@@ -154,8 +154,6 @@ async function assertCommonPageChecks(page, width, consoleErrors, pageErrors) {
   const expectedContentWidth = width === 1440 ? width - 112 : width;
   assert.ok(contentWidth >= expectedContentWidth - 1, `${width}px page-content is not meaningfully wide: ${contentWidth}px`);
   assert.ok(await h1.evaluate((element) => element.getBoundingClientRect().width > 0), `${width}px h1 has no layout width`);
-  assert.equal(await page.getByRole("heading", { name: "Boardy" }).isVisible(), true);
-
   for (const project of ["LTB Buddy", "RyFine", "Code2Motion", "EasyBuddy"]) {
     const heading = page.getByRole("heading", { name: project });
     assert.equal(await heading.count(), 1, `${width}px render is missing ${project}`);
@@ -181,21 +179,6 @@ async function assertCommonPageChecks(page, width, consoleErrors, pageErrors) {
       true,
       `${width}px render has no meaningful visible project copy for ${project}`,
     );
-  }
-
-  const boardyText = await page.locator("#boardy").innerText();
-  for (const text of [
-    "Boardy itself",
-    "Nik's work around Boardy",
-    "BoardyAnimated",
-    "Built around Boardy",
-    "Experimental",
-    "Proposed",
-    "Symphony × Boardy",
-    "no automated integration",
-    "not a claim about Boardy’s own product",
-  ]) {
-    assert.match(boardyText, new RegExp(text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"), `${width}px Boardy copy is missing ${text}`);
   }
 
   const figmaImage = page.locator('img[src="assets/ryfine-figma-cover.png"]');

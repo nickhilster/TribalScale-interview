@@ -26,17 +26,17 @@ const evidenceStates = Object.freeze([
 ]);
 
 const pageContent = {
-  identity: "NIKHIL KHEDKAR / POST-INTERVIEW NOTE",
+  identity: "NIKHIL KHEDKAR / PRODUCT & DESIGN",
   title: "I design the system around the outcome.",
-  subtitle: "A post-interview note for Heather Page",
+  subtitle: "Product design, interfaces, and implementation",
   opening:
     "Across these projects, I move between people, workflows, interfaces, AI behaviour, handoffs, and the points where a person needs to review or stop the system.",
   interviewContext: {
-    label: "INTERVIEW RECOLLECTION",
+    label: "PROJECT CONTEXT",
     date: "September 30, 2026",
     text:
-      "Heather showed particular interest in the Boardy work during our live conversation. This page adds the context that a time-limited interview could not hold; it is a recollection, not written follow-up evidence.",
-    provenance: "Interview recollection",
+      "This route brings together product, interface, visual-system, prototype, and implementation evidence from the selected projects.",
+    provenance: "Repository-backed and documented context",
   },
   method: {
     title: "Outcome → workflow → evidence → human control",
@@ -301,7 +301,7 @@ const pageContent = {
     },
   ],
   close: {
-    thankYou: "Thank you for the conversation.",
+    thankYou: "Keep the reasoning visible.",
     text:
       "This page is a snapshot of how I work: shipped work, documentation, proposals, and experiments stay visibly distinct.",
   },
