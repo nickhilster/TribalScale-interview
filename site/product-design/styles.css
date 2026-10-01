@@ -937,12 +937,16 @@ h3 {
 }
 
 .close-copy {
+  grid-column: 2;
+  grid-row: 2;
   max-width: 31rem;
   margin: 2.4rem 0 0;
   color: var(--slate);
 }
 
 .close-marker {
+  grid-column: 2;
+  grid-row: 2;
   justify-self: end;
   margin-top: 2.4rem;
 }
@@ -1088,6 +1092,7 @@ h3 {
   .close-copy,
   .close-marker {
     grid-column: 2;
+    grid-row: auto;
     margin-top: 1.25rem;
   }
 

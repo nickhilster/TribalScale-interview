@@ -164,6 +164,7 @@ test("renders manifest-backed projects and verified Figma evidence at every resp
     const layoutMetrics = await page.evaluate(() => {
       const content = document.querySelector(".page-content")?.getBoundingClientRect();
       const heading = document.querySelector("h1")?.getBoundingClientRect();
+      const closeCopy = document.querySelector(".close-copy")?.getBoundingClientRect();
       const projects = [...document.querySelectorAll(".case-study")].map((project) => {
         const projectHeading = project.querySelector("h3");
         const projectCopy = project.querySelector(".case-study-copy");
@@ -180,6 +181,7 @@ test("renders manifest-backed projects and verified Figma evidence at every resp
       return {
         contentWidth: content?.width ?? 0,
         h1Width: heading?.width ?? 0,
+        closeCopyWidth: closeCopy?.width ?? 0,
         projects,
         bodyScrollWidth: document.body.scrollWidth,
         documentScrollWidth: document.documentElement.scrollWidth,
@@ -192,6 +194,10 @@ test("renders manifest-backed projects and verified Figma evidence at every resp
       `${width}px page-content is not meaningfully wide: ${JSON.stringify(layoutMetrics)}`,
     );
     assert.ok(layoutMetrics.h1Width > 0, `${width}px h1 has no layout width`);
+    assert.ok(
+      layoutMetrics.closeCopyWidth > (width <= 560 ? 170 : 250),
+      `${width}px closing copy is too narrow: ${JSON.stringify(layoutMetrics)}`,
+    );
     for (const project of layoutMetrics.projects) {
       assert.ok(project.headingWidth > 0 && project.headingHeight > 0, `${width}px project heading is not visible`);
       assert.ok(project.copyWidth > 0 && project.copyHeight > 0 && project.copyText.length > 0, `${width}px project copy is not visible`);
