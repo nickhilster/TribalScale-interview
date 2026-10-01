@@ -137,6 +137,15 @@ test("RyFine exposes the verified Figma artifact without promoting it to shipped
   assert.ok(ryfine.links.some((link) => link.label === "Inspect in Figma"));
 });
 
+test("Code2Motion is represented as built implementation with explicit caveats", () => {
+  const code2motion = projectEvidence.find((project) => project.slug === "code2motion");
+
+  assert.deepEqual(code2motion.status, ["Built", "Observable", "Experimental", "Verified"]);
+  assert.match(code2motion.summary, /substantial implementation/i);
+  assert.ok(code2motion.evidence.some((entry) => entry.label === "Product implementation" && entry.state.includes("Built")));
+  assert.match(code2motion.summary, /not as a clean production release/i);
+});
+
 test("the unidentified Node artifact is not represented", () => {
   assert.equal(projectEvidence.some((project) => /node artifact/i.test(JSON.stringify(project))), false);
   assert.equal(projectEvidence.length, 5);

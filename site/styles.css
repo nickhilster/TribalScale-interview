@@ -353,6 +353,56 @@ a:focus-visible {
   text-underline-offset: .25em;
 }
 
+.production-signal {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.production-signal-label {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--mono);
+  font-size: .65rem;
+  letter-spacing: .1em;
+}
+
+.production-signal-copy {
+  max-width: 42rem;
+}
+
+.production-signal-copy h3 {
+  margin: 0 0 .6rem;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  letter-spacing: -.04em;
+}
+
+.production-signal-copy p {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--slate);
+}
+
+.production-signal-link {
+  display: inline-flex;
+  gap: .4rem;
+  margin-top: 1rem;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-underline-offset: .3em;
+}
+
+.production-signal-link:hover,
+.production-signal-link:focus-visible {
+  color: var(--blue);
+}
+
 .depth {
   border-top: 1px solid var(--rule);
 }
@@ -431,6 +481,7 @@ a:focus-visible {
   .hero-marker { display: none; }
   .thesis-copy,
   .depth-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .production-signal { grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; }
   .route-grid { grid-template-columns: 1fr; }
   .route-card { min-height: 22rem; }
   .site-footer { display: grid; gap: .5rem; }
@@ -447,6 +498,7 @@ a:focus-visible {
   .route-card { min-height: 20rem; padding: 1.25rem; }
   .route-card h3 { font-size: 2.5rem; }
   .route-status { max-width: 8rem; }
+  .production-signal { margin-top: 1rem; padding-top: 1rem; }
   .depth-notes strong { display: block; margin-bottom: .35rem; }
 }
 

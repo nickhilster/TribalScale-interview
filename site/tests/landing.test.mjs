@@ -19,6 +19,11 @@ test("landing page presents one thesis and four distinct routes", () => {
   assert.match(html, /SELECTED WORK \/ PREPARED FOR TRIBALSCALE \/ SEPTEMBER 2026/);
   assert.match(html, /Prepared following my September 30 conversation with Heather Page\./);
   assert.match(html, /Design the surface\. Build the system\. Keep the evidence visible\./);
+  assert.match(html, /PRODUCTION BACKGROUND/);
+  assert.match(html, /Before my product and AI work, I worked in animation, VFX, and production coordination/);
+  assert.match(html, /href=["']https:\/\/www\.imdb\.com\/name\/nm11338371\/["']/);
+  assert.match(html, /View credits on IMDb/);
+  assert.match(html, /target=["']_blank["'][^>]*rel=["']noopener noreferrer["']/);
   for (const [href, title] of routes) {
     assert.match(html, new RegExp(`href=["']${href.replaceAll("/", "\\/")}["']`), `missing route ${href}`);
     assert.match(html, new RegExp(title, "i"), `missing route title ${title}`);

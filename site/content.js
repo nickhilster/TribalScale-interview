@@ -237,15 +237,15 @@ const pageContent = {
       indexLabel: "TECHNICAL CONCEPT & INTERACTION",
       role: "Novel interaction and creative technology: making a difficult technical idea tangible and testable.",
       summary:
-        "A repo-backed interactive-art product thesis with substantial implementation: PlayRoom is the audience surface, ToyMaker is the creator surface, and a c2merse is the unit that moves between creation and distribution. Current runtime and operational caveats mean the page treats the work as observable and experimental, not as a clean production release.",
-      status: ["Documented", "Observable", "Experimental", "Verified"],
+        "A repo-backed interactive-art product with substantial implementation: PlayRoom is the audience surface, ToyMaker is the creator surface, and a c2merse is the unit that moves between creation and distribution. Current runtime and operational caveats mean the page treats the work as built, observable, and experimental, not as a clean production release.",
+      status: ["Built", "Observable", "Experimental", "Verified"],
       media: null,
       evidence: [
         {
-          label: "Product thesis",
+          label: "Product implementation",
           kind: "Repo-backed",
-          state: ["Documented"],
-          detail: "Local/repo-backed inspection: PlayRoom, ToyMaker, c2merses, and the product's interactive-art model.",
+          state: ["Built", "Documented"],
+          detail: "Local/repo-backed inspection: PlayRoom, ToyMaker, c2merses, and the product's interactive-art implementation.",
         },
         {
           label: "Current handoff",
