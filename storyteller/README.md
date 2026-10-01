@@ -2,6 +2,8 @@
 
 This folder consolidates the three story projects produced in StoryTeller during this session, alongside the HTML exports that were published from `portfolio-website`.
 
+`METHOD.md` documents a public, artifact-derived reproduction method for these examples. It does not reproduce StoryTeller's private generator or build pipeline.
+
 ## Contents
 
 - `stories/<slug>/` contains the editable StoryTeller inputs (`research.md`, `story.json`, `theme.json`) and generated preview (`index.html`).
@@ -9,9 +11,9 @@ This folder consolidates the three story projects produced in StoryTeller during
 
 | Story | Published page |
 | --- | --- |
-| Heather Page | https://www.nikdesign.ca/heather-page |
-| Sheetal Jaitly | https://www.nikdesign.ca/sheetal-jaitly |
-| Haseeb Danyal | https://www.nikdesign.ca/haseeb-danyal |
+| Heather Page | https://www.nikdesign.ca/tribalscale/storyteller/heather-page/ |
+| Sheetal Jaitly | https://www.nikdesign.ca/tribalscale/storyteller/sheetal-jaitly/ |
+| Haseeb Danyal | https://www.nikdesign.ca/tribalscale/storyteller/haseeb-danyal/ |
 
 The published exports reflect `portfolio-website` commits `ca8cd7a` (Heather and Sheetal) and `e3c6f85` (Haseeb). Story sources were copied from `C:\dev\StoryTeller` at local `main` commit `c2c77bf`; that repository was one commit ahead of its remote at transfer time.
 
