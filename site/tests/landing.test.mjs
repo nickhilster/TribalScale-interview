@@ -16,6 +16,8 @@ test("landing page presents one thesis and four distinct routes", () => {
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
   assert.match(html, /Product design, systems, and agency\./);
   assert.match(html, /Product design, AI systems, and production thinking are increasingly converging\./);
+  assert.match(html, /SELECTED WORK \/ PREPARED FOR TRIBALSCALE \/ SEPTEMBER 2026/);
+  assert.match(html, /Prepared following my September 30 conversation with Heather Page\./);
   assert.match(html, /Design the surface\. Build the system\. Keep the evidence visible\./);
   for (const [href, title] of routes) {
     assert.match(html, new RegExp(`href=["']${href.replaceAll("/", "\\/")}["']`), `missing route ${href}`);
@@ -55,7 +57,7 @@ test("client-facing pages do not carry internal interview framing", async () => 
     /Heather showed particular interest/i,
     /POST-INTERVIEW/i,
     /A direct follow-up/i,
-    /conversation with Heather/i,
+    /Follow-up to a conversation with Heather/i,
     /You asked Nikhil/i,
     /Thank you for the conversation/i,
   ];

@@ -168,6 +168,14 @@ a:focus-visible {
   font-size: .95rem;
 }
 
+.hero-provenance {
+  max-width: 31rem;
+  margin: .75rem 0 0;
+  color: var(--slate);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
 .hero-marker {
   align-self: start;
   margin-top: 1rem;
